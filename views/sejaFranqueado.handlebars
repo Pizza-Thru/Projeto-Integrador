@@ -1,0 +1,113 @@
+<main>
+  <div class="conteiner-main__img">
+    <img
+      src="/upload/img/Banner-monte-sua-pizza.png"
+      alt="Monte ja sua Pizza"
+    />
+  </div>
+  <header class="header__main">
+    <h1 class="header-main__title">Seja um(a) franqueado(a)</h1>
+  </header>
+  <div>
+    <form action="/" class="section__formulario" method="post">
+      <div class="conteiner__formulario">
+        <label for="name" class="formulario__label" id="nome">Nome</label><br />
+        <input class="c-name" type="text" name="Name" id="name" required />
+      </div>
+      <div class="conteiner__formulario">
+        <label
+          for="email"
+          class="formulario__label"
+          id="label__email"
+        >E-mail</label><br />
+        <input class="c-email" type="email" name="email" id="email" required />
+      </div>
+      <div class="conteiner__formulario">
+        <label for="cidade" class="formulario__label" id="label__cidade">Cidade
+          de interesse</label><br />
+        <input
+          class="c-cidade"
+          type="text"
+          name="cidade"
+          id="cidade"
+          required
+        />
+      </div>
+      <div class="conteiner__formulario">
+        <label for="estado" class="formulario__label" id="label__estado">Estado
+          de interesse</label>
+        <select class="c-estado" name="estado" id="estado" required>
+          <option disabled selected value="">selecione</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+          <option value="EX">Estrangeiro</option>
+        </select>
+      </div>
+      <div class="conteiner__formulario">
+        <label
+          for="investimento"
+          class="formulario__label"
+          id="label__investimento"
+        >Investimento disponivel</label><br />
+        <input
+          class="c-investimento"
+          type="number"
+          name="investimento"
+          id="investimento"
+          placeholder="Valor Mínimo R$ 10.000.000"
+          required
+        />
+      </div>
+      <div class="conteiner__formulario">
+        <label
+          for="ComoNosConheceu"
+          class="formulario__label"
+          id="label__ComoNosConheceu"
+        >Como nos conheceu</label>
+        <select
+          class="c-ComoNosConheceu"
+          name="ComoNosConheceu"
+          id="ComoNosConheceu"
+        >
+          <option disabled selected>selecione</option>
+          <option value="Wh">Whatsapp</option>
+          <option value="In">Instagram</option>
+          <option value="Fa">Facebook</option>
+          <option value="Go">Google</option>
+          <option value="Am">Amigos</option>
+          <option value="Ou">Outros</option>
+        </select>
+      </div>
+      <input
+        type="submit"
+        class="formulario__btn"
+        value="Quero ser um(a) franqueado(a)"
+      />
+    </form>
+  </div>
+</main>
