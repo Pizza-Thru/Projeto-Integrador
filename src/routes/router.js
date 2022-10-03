@@ -17,4 +17,8 @@ router.get('/sejaFranqueado', (req,res) => {
     res.render('sejaFranqueado')
 })
 
+router.get('/cadastroProduto', (req,res) => {
+    res.render('cadastroProduto')
+})
+
 module.exports = router

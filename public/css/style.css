@@ -818,6 +818,90 @@ p {
   column-gap: 50px;
 }
 
+.cadastro {
+  background-color: white;
+  padding: 5%;
+
+}
+
+.cadastro-main__title {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  color: black;
+  
+}
+
+.cadastro__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+
+.cadastro__label {
+width: 100%;
+height: 36px;
+font-weight: 600;
+font-size: 25px;
+line-height: 28px;
+align-items: center;
+text-align: center;
+display: block;
+color: #000000;
+margin-bottom: -3%;
+}
+
+.cadastro__input {
+  margin-bottom: 5%;
+  
+}
+
+.cadastro__select {
+  margin-bottom: 5%;
+  margin-left: 10%;
+}
+
+.cadastro--btn {
+  background: #D62828;
+  border-radius: 12px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  /* or 120% */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.cadastro--btn-back a {
+  color: black
+}
+
+.cadastro--btn-back{
+  background: white;
+  border-radius: 12px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  /* or 120% */
+  text-align: center;
+  color: #FFFFFF;
+  border: black solid 1px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
 /*Fim do Footer*/
 
 /*Inicio do @media*/
@@ -900,6 +984,12 @@ p {
     justify-content: center;
     column-gap: 50px;
   }
+
+  .cadastro--btn-back{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 992px) {
@@ -932,6 +1022,12 @@ p {
     top: 30px;
     left: 87%;
     column-gap: 40px;
+  }
+
+  .cadastro--btn-back{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -980,7 +1076,62 @@ p {
   .menu-principal-lista__login {
     height: 40px;
     width: 40px;
+
   }
-}
+
+  .cadastro-main__title{
+    margin-bottom: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    color: #000000;
+  }
+
+  .cadastro__form {
+    display: flex;
+    
+  }
+  
+  .cadastro__box {
+    display: grid;
+    grid-template-columns: 50% 50%;  
+    grid-template-rows: 50% 50%;
+  }
+  
+  .cadastro__label{
+    grid-row-start: 1;
+    grid-column-start: 1;    
+    
+  }
+  
+  .cadastro__input{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    margin-top: 0.4%;
+    margin-left: -30%;
+  }
+  
+  .cadastro__select {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    margin-left: -30%;
+    margin-top: 0.4%;
+  }
+
+  .cadastro--btn-back{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cadastro--btn {
+    width: 30%;
+  }
+
+  }
+
 
 /*Fim do @media*/
