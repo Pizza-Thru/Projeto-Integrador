@@ -3,3 +3,4 @@ DB_HOST =
 DB_USER = 
 DB_PASSWORD =    
 PORT = 
+DB_DIALECT =
