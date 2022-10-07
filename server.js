@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const exphbs = require("express-handlebars");
-const mysql = require("mysql");
+const conn = require("./db/conn");
 
 const app = express();
 
@@ -26,20 +26,11 @@ const router = require("./src/routes/router");
 app.use("/", router);
 
 /* start server */
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
-});
-
-connection.connect((err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log("Pizza_Thru");
-  }
-  app.listen(process.env.PORT, () => {
-    console.log(`Server rodando na porta ${process.env.PORT}`);
+conn
+  .sync()
+  //.sync({force: true}) Não tirar o comentário pois irá apagar e recriar o banco de dados!!!!!
+  .then(() => {
+    app.listen(process.env.PORT, () => {
+      console.log("Server running");
+    });
   });
-});
