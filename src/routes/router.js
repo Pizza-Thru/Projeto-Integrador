@@ -19,6 +19,9 @@ router.get('/sejaFranqueado', (req,res) => {
     res.render('sejaFranqueado')
 })
 
+router.get('/acessoUsuario', (req,res) => {
+    res.render('acessoUsuario')
+})
 // include the controller on the router
 
 router.get('/meu-pedido', views.meuPedidoView )
@@ -26,7 +29,5 @@ router.get('/meu-pedido', views.meuPedidoView )
 router.get('/pedido-realizado', views.pedRealizadoView )
 
 router.get('/admin/ordem-do-pedido', views.admOrderView)
-
-
 
 module.exports = router
