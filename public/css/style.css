@@ -791,33 +791,9 @@ input {
   margin: 50px auto;
   border: none;
 }
-
 /*Fim do seja um franqueado*/
-/*Início do Footer*/
-.footer-conteiner__endereco {
-  background-image: url("/upload/img/footer.png");
-  width: 100%;
-  height: 170px;
-}
 
-.container_endereco {
-  display: block;
-  margin: 0 auto;
-  width: 250px;
-}
-
-p {
-  text-align: center;
-  padding-top: 40px;
-  font-weight: bold;
-}
-
-.footer-nav__links {
-  display: flex;
-  justify-content: center;
-  column-gap: 50px;
-}
-
+/*Inicio do cadastroProduto*/
 .cadastro {
   background-color: white;
   padding: 5%;
@@ -861,7 +837,6 @@ margin-bottom: -3%;
 
 .cadastro__input {
   margin-bottom: 5%;
-  
 }
 
 .cadastro__select {
@@ -899,9 +874,34 @@ margin-bottom: -3%;
   width: 30%;
   margin-left: auto;
   margin-right: auto;
-  
+}
+/* Fim do cadastro do produto */
+
+
+/*Início do Footer*/
+.footer-conteiner__endereco {
+  background-image: url("/upload/img/footer.png");
+  width: 100%;
+  height: 170px;
 }
 
+.container_endereco {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+}
+
+p {
+  text-align: center;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+.footer-nav__links {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+}
 /*Fim do Footer*/
 
 /*Inicio do @media*/
