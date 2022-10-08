@@ -1,29 +1,18 @@
 const express = require('express')
 const router = express.Router()
 const views = require('../controller/ControllerView')
-const {user, bank,product,product_variation} = require("../models/models",);
+const {user, bank, product, product_variation} = require("../models/models",);
 const form = require('../controller/ControllerForm')
 
-router.get('/', (req,res) => {
-    res.render('home')
-})
+router.get('/', views.home)
 
-router.get('/finalizarCompra', (req,res) => {
-    res.render('finalizarCompra')
-})
+router.get('/finalizarCompra', views.finalizarCompra)
 
-router.get('/realizePedido', (req,res) => {
-    res.render('realizePedido')
-})
+router.get('/realizePedido', views.realizePedido)
 
-router.get('/sejaFranqueado', (req,res) => {
-    res.render('sejaFranqueado')
-})
+router.get('/sejaFranqueado', views.sejaFranqueado)
 
-router.get('/cadastroProduto', (req,res) => {
-    res.render('cadastroProduto')
-})
-// include the controller on the router
+router.get('/cadastroProduto', views.cadastroProduto)
 
 router.get('/meu-pedido', views.meuPedidoView)
 
@@ -34,7 +23,5 @@ router.get('/admin/ordem-do-pedido', views.admOrderView)
 router.get('/admin/admCreateView', views.admCreateView)
 
 router.post('/admin/criar-pedido', form.admCreate)
-
-
 
 module.exports = router
