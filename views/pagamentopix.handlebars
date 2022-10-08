@@ -1,0 +1,82 @@
+<body>
+        <header class="section-header__banner">
+        <div><img src="../upload/img/bannerprincipalpizzathru.png" alt="Banner da Pizza Thru"></div>
+    </header>
+    <section class="sec__container__pix">
+        <h1 id="title__main">Finalizar a Compra</h1>
+    </section>
+    <main>
+    <!--Início do conteúdo principal - FORM -->
+            <section id="sec__container__email">
+                <div class="container__form__email">
+                    <h3 id="forma__pagamento__h3">Forma de Pagamento</h3>
+                    <h5 id="pix__h5">PIX</h5>
+                </div>
+                <div class="container__form__email">
+                    <form action="/" method="get">
+                        <label for="email" id="lab__email">Informe o endereço de E-mail para enviar a chave de ativação</label>
+                        <input type="email" name="name" id="email">
+                    </form>
+                </div>
+                <div class="p_form__container__email">
+                    <p class="p__form__email">É simples e seguro:</p>
+                    <p class="p__form__email">1. Após finalizar a compra, o código ficará disponivel para você pagar no Banco da sua escolha.</p>                           
+                    <p class="p__form__email">2. O tempo limite para você pagar é de 30 minutos.</p>
+                </div>
+            </section>
+            <section id="sec__container__formulario">
+                <h5 id="form__h5">Resumo do Pedido:</h5>
+                <form action="/" method="get" id="form__pedido">
+                    <div class="container__form">
+                        <label for="numero__pedido" class="form__label">Número do Pedido</label>
+                        <input type="number" name="name" id="num__pedido">
+                    </div>
+                    <div class="container__form">
+                        <label for="qtd__pedacos" class="form__label">Quantidade de Pedaços</label>
+                        <select name="qtd__pedacos" id="pedacos_pizza"></select>
+                    </div>
+                    <div class="container__form">
+                        <label for="sabores" class="form__label">Sabores</label>
+                        <select name="sabores" id="cal"></select>
+                    </div>
+                    <div class="container__form">
+                        <label for="sabores" class="form__label">Espessura da Massa</label>
+                        <select name="sabores" id="cal"></select>
+                    </div>
+                    <div class="container__form">
+                        <label for="sabores" class="form__label">Tipo de Borda</label>
+                        <select name="sabores" id="cal"></select>
+                    </div>
+                    <div class="container__form">
+                        <label for="recheio__borda" class="form__label">Recheio da Borda</label>
+                        <select name="recheio__borda__pizza" id="recheio__borda"></select>
+                    </div>
+                    <div class="container__form">
+                        <label for="adds" class="form__label">Adicionais</label>
+                        <select name="adicionais" id="adds"></select>
+                    </div>
+                    <div class="container__form">
+                        <label for="form_obs" class="form__label">Observações</label>
+                        <textarea name="observacoes" id="form_obs" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="container__form">
+                        <label for="subtotal" class="form__label">Subtotal</label>
+                        <input type="number" name="name" id="subtotal">
+                    </div>
+                    <div class="container__form">
+                        <label for="cupom" class="form__label">Cupom de Desconto</label>
+                        <input type="text" name="name" id="cupom">
+                    </div>
+                    <div class="container__form">
+                        <label for="total" class="form__label">TOTAL</label>
+                        <input type="text" class="form__valor__total" name="name" id="num__total">
+                    </div>
+                </form>
+            </section>
+    <!--Fim do conteúdo principal - FORM -->
+    </main>
+    <div class="container__form" id="form__btn__finalizar">
+        <label for="finalizar__btn" class="form__label__btn"></label>
+        <input type="submit" class="form__btn" name="name" value="Finalizar a Compra" id="finalizar__btn" form="form__pedido">
+    </div>
+</body>
