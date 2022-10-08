@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const views = require('../controller/controller')
+const views = require('../controller/ControllerView')
 const {user, bank,product,product_variation} = require("../models/models",);
+const form = require('../controller/ControllerForm')
 
 router.get('/', (req,res) => {
     res.render('home')
@@ -24,13 +25,15 @@ router.get('/cadastroProduto', (req,res) => {
 })
 // include the controller on the router
 
-router.get('/meu-pedido', views.meuPedidoView )
+router.get('/meu-pedido', views.meuPedidoView)
 
 router.get('/pedido-realizado', views.pedRealizadoView )
 
 router.get('/admin/ordem-do-pedido', views.admOrderView)
 
-router.post('/admin/criar-pedido', views.admCreate)
+router.get('/admin/admCreateView', views.admCreateView)
+
+router.post('/admin/criar-pedido', form.admCreate)
 
 
 
