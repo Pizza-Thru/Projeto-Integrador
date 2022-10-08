@@ -30,7 +30,8 @@ router.get('/pedido-realizado', views.pedRealizadoView )
 
 router.get('/admin/ordem-do-pedido', views.admOrderView)
 
-router.get('/admin/criar-pedido', views.admCreateView)
+router.post('/admin/criar-pedido', views.admCreate)
+
 
 
 module.exports = router
