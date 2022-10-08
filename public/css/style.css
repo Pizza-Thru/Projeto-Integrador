@@ -1360,4 +1360,89 @@ p {
   
 }
 
+/*Estilização da pagina de acesso*/
+.l-pagina__acesso{
+  height:100vh;
+  width: 100%;
+  margin: auto;
+  color: white;
+}
+.container__acesso{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #003049;
+  margin: auto;
+  font-size: 24px;
+}
+.acesso__campo{
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px;
+  font-size: 24px;
+}
+.acesso__campo:invalid{
+  border: 3px solid red;
+}
+.l-formulario__acesso{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  gap: 10px;
+  width: 40%;
+  height:50%;
+  background: rgba(13, 67, 96, 0.4); 
+  padding:15px ;
+}
+.acesso__label{
+  display: none;
+}
+.link__acesso{
+  text-decoration: none;
+  color: white;
+
+}
+.botao__formulario{
+  width:100%;
+  height: 82px;
+  border-radius: 15px;
+  border: none;
+  background-color: #D62828;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: auto;
+  cursor: pointer;
+}
+.botao__formulario:active{
+  background-color: #FFFFFF;
+  color: #D62828;
+}
+.acesso__label-checkbox,.acesso__campo__checkbox:hover{
+  cursor: pointer;
+}
+.acesso__campo__checkbox{
+  width: 20px;
+  height: 20px;
+}
+.l-acesso__checkbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/*Estilização em mobile da pagina de acesso*/
+@media (max-width:900px) {
+  
+  .l-formulario__acesso{
+      width: 60%;
+      height: 60%;
+  }
+}
 /*Fim do @media*/
