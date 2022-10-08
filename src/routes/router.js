@@ -19,6 +19,9 @@ router.get('/sejaFranqueado', (req,res) => {
     res.render('sejaFranqueado')
 })
 
+router.get('/cadastroProduto', (req,res) => {
+    res.render('cadastroProduto')
+})
 // include the controller on the router
 
 router.get('/meu-pedido', views.meuPedidoView )
@@ -26,6 +29,8 @@ router.get('/meu-pedido', views.meuPedidoView )
 router.get('/pedido-realizado', views.pedRealizadoView )
 
 router.get('/admin/ordem-do-pedido', views.admOrderView)
+
+router.post('/admin/criar-pedido', views.admCreate)
 
 
 
