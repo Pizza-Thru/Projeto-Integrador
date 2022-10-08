@@ -1386,6 +1386,126 @@ p {
     margin-right: auto;
   }
 
+  /*pedido-realizado*/
+    
+.c-status-titlle {    
+  font-size: 64px;
+  line-height: 70px;
+}
+
+.l-container__status-pedido
+{
+  width: 90%;       
+}
+
+.l-container__status-pedido p
+{
+  margin: 0;
+  padding: 15px 40px;
+  line-height: 35px
+}
+.c-status-btn {
+  padding: 15px 40px; 
+}
+
+.c-status-txt {
+  font-size: 30px;
+  margin: 40px auto;
+}
+
+.container-section__information 
+  {
+      width: 90%; 
+  }
+  
+  .c-information
+  {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 100px;
+      margin-bottom: 20px;
+  }
+  .c-server-option
+  {
+      width: 50%;
+      font-size: 20px;
+      line-height: 28px;
+  }
+
+  .c-customer-request
+  {
+      width: 50%;
+      line-height: 35px;
+      font-size: 18px;
+  }
+  .l-container__payment h3
+  {
+      font-size: 35px;
+  }
+  .l-container__payment
+  {
+      width: 90%;
+  }
+  /*Meu pedido*/
+   .c-container-icon-text
+  {
+      width: 136px;
+  }
+  .l-status__icon
+  {
+      width: 136px;
+  }
+  .l-container__delivery-status p
+  {
+      width: 136px;
+      font-size: 18px;
+  }
+  .delivery-problem__box
+  {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+  }
+
+  .l-container__delivery-problem p
+  {
+      width: 500px
+  }
+  .c-btn-seller
+  {
+      width: 451px;
+      height: 83px;
+      font-size: 20px;
+  }
+  .c-btn-cancel
+  {
+      width: 451px;
+      height: 83px;
+      font-size: 20px;
+  }
+  .l-container__print-payment
+  {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+  }
+  .l-container__print-payment p
+  {
+      width: 500px;
+      padding: 0;
+  }
+
+  .c-btn-print
+  {
+      width: 451px;
+      height: 83px;
+      font-size: 20px;
+  }
+  
+
   .cadastro--btn {
     width: 30%;
   }

@@ -31,4 +31,6 @@ router.get('/pedido-realizado', views.pedRealizadoView )
 router.get('/admin/ordem-do-pedido', views.admOrderView)
 
 router.get('/admin/criar-pedido', views.admCreateView)
+
+
 module.exports = router
