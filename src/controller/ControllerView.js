@@ -12,6 +12,21 @@ module.exports = class views {
   static async admCreateView(req, res) {
     res.render("adminCreate");
   }
+  static async home(req, res) {
+    res.render("home");
+  }
+  static async finalizarCompra(req, res) {
+    res.render("finalizarCompra");
+  }
+  static async realizePedido(req, res) {
+    res.render("realizePedido");
+  }
+  static async sejaFranqueado(req, res) {
+    res.render("sejaFranqueado");
+  }
+  static async cadastroProduto(req, res) {
+    res.render("cadastroProduto");
+  }
 }; 
 
 
