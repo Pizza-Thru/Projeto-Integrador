@@ -637,6 +637,7 @@ input {
 }
 
 /*Fim do finalizar compra*/
+
 /*Inicio do realize seu pedido*/
 .conteiner__formulario {
   width: 100%;
@@ -878,6 +879,261 @@ margin-bottom: -3%;
 /* Fim do cadastro do produto */
 
 
+/* Página pedido-realizado*/
+
+.c-status-titlle {
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Inter';
+  font-size: 25px;
+  line-height: 28px;
+  color: white;
+}
+
+.l-container__status-pedido p{
+  padding: 0;
+}
+
+.l-container__status-pedido {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2px 5px 2px 10px;
+  background-color: rgba(13, 67, 96, 0.4);
+  color: white;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.l-status-btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.c-status-btn {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #EAE2B7;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: .5s;
+}
+
+.c-status-btn:hover {
+  background-color: #FCBF49;
+}
+
+.c-status-txt {
+  color: white;
+  margin: 0 auto;
+  font-family: Inter;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.container-section__information {
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2px 5px 2px 10px;
+  background-color: rgba(13, 67, 96, 0.4);
+  color: white;
+
+}
+
+.c-server-option {
+  margin: 8px auto;
+  padding: 0;
+  font-family: Inter;
+  font-size: large;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.c-customer-request {
+  
+  background-color: white;
+  border-radius: 12px;
+  margin: 10px auto;
+  padding: 0;
+  font-family: Inter;
+  color: grey;
+  font-size: medium;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+}
+
+.l-container__payment h3
+{
+    font-size: 25px;
+    margin: 9px 0 9px;
+}
+.l-container__payment p
+{
+  padding: 0;
+}
+
+.l-container__payment
+{
+    text-align: center;
+    width: 80%;
+    margin: 40 auto;
+    padding: 2px 5px 2px 10px;
+    background-color: rgba(13, 67, 96, 0.4);
+    color: white;
+    font-size: large;
+    line-height: 28px;
+}
+
+.c-payment
+{
+    background-color: white;
+    color: black;
+    font-size: medium;
+    padding: 0; 
+    border-radius: 12px;
+}
+
+/* Fim Página pedido-realizado*/
+
+/* Página meu pedido*/
+/*Meu pedido*/
+.l-container__delivery-status
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 60px 30px;
+}
+
+.c-container-icon-text
+{
+   display: flex;
+   flex-direction: column;
+   width: 78px;
+   margin: 0;
+   padding: 0;
+}
+
+.l-status__icon
+{
+    display: block;
+    width: 59px;
+    margin: auto;
+    padding: 0%;
+}
+
+.l-container__delivery-status p
+{
+    width: 78px;
+    font-family: 'Abel';
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0;
+}
+
+.l-container__delivery-problem
+{
+    padding: 0;
+    margin: 60px 30px;
+    text-align: center;
+}
+
+.l-container__delivery-problem p
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF; 
+}
+.c-btn-seller
+{
+    margin: 30px 0;
+    width: 241px;
+    height: 42px;
+    background: white;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: medium;
+    line-height: 28px;
+    border: none;
+}
+
+.c-btn-cancel
+{
+    margin: 30px 0;
+    width: 241px;
+    height: 42px;
+    background: #D62828;
+    border-radius: 15px;
+    font-family: 'Inter';
+    color: white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: medium;
+    line-height: 28px;
+    border: none;
+}
+
+.l-container__print-payment
+{
+    padding: 0;
+    margin: 60px 30px;
+    padding-bottom: 75px;
+    text-align: center;
+    align-items: center;
+}
+
+.l-container__print-payment p
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.c-btn-print
+{
+    margin: 30px 0;
+    width: 241px;
+    height: 42px;
+    background: white;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: medium;
+    line-height: 28px;
+    border: none;
+}
+
+/* Fim Página meu pedido*/
+
 /*Início do Footer*/
 .footer-conteiner__endereco {
   background-image: url("/upload/img/footer.png");
@@ -1079,6 +1335,8 @@ p {
 
   }
 
+  /* media cadastro produto 1200px */
+  
   .cadastro-main__title{
     margin-bottom: 5%;
     font-family: 'Inter';
@@ -1089,6 +1347,7 @@ p {
     /* or 120% */
     color: #000000;
   }
+
 
   .cadastro__form {
     display: flex;
@@ -1131,7 +1390,11 @@ p {
     width: 30%;
   }
 
-  }
-
-
 /*Fim do @media*/
+
+}
+
+  
+
+
+
