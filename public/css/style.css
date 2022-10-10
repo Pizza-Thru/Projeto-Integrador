@@ -1,0 +1,1520 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  min-width: 100%;
+  font-family: inter;
+  background-image: url("/upload/img/retanguloazul.png");
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.conteiner {
+  display: block;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Inicio do cabeçalho*/
+.menu-principal__header {
+  background-image: url("/upload/img/cabecalhoamarelo.png");
+  height: 60px;
+}
+
+.menu-principal-conteiner__logo {
+  display: flex;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.menu-principal__logo {
+  background-image: url("/upload/img/logo.png");
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 50px;
+  height: 50px;
+  margin: 7px;
+}
+
+.nav-principal__header {
+  margin-left: 45%;
+  margin-top: -55px;
+}
+
+.menu-principal__links {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu-principal__links a {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.menu-principal__links {
+  display: block;
+  position: absolute;
+  top: 2.6875rem;
+  left: 0;
+  background: #fcbf49;
+  text-align: center;
+  width: 100%;
+  height: 0;
+  z-index: 1;
+  visibility: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.menu-principal__links a {
+  padding: 1rem 0;
+  margin-inline: 1rem;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+}
+
+.menu-principal__btn {
+  background: none;
+  border: none;
+  font: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.hamburger {
+  border-top: 0.125rem solid;
+  width: 1.25rem;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 1.25rem;
+  height: 0.125rem;
+  background: currentColor;
+  margin-top: 0.3125rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-principal__header.active .menu-principal__links {
+  height: 50vh;
+  visibility: visible;
+  overflow-y: auto;
+}
+
+.nav-principal__header.active .hamburger {
+  border-top-color: transparent;
+}
+
+.nav-principal__header.active .hamburger::before {
+  transform: rotate(135deg);
+}
+
+.nav-principal__header.active .hamburger::after {
+  transform: rotate(-135deg);
+  top: -0.4375rem;
+}
+
+.menu-principal-conteiner__carrinho__login {
+  position: absolute;
+  display: flex;
+  top: 18px;
+  left: 72%;
+  column-gap: 19px;
+}
+
+/* Fim do cabeçalho*/
+
+/*Início do home*/
+.section-header__banner {
+  margin-top: 30px;
+}
+
+.section-nav__lista {
+  margin-bottom: 20px;
+}
+
+/*Fim do home*/
+/*Inicio do finalizar compra*/
+.conteiner__formulario {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formulario__label {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+textarea {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 80%;
+  height: 115px;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 80%;
+  height: 30px;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.conteiner-escolhas__pagamentos {
+  background-image: url("/upload/img/figuratransparente.png");
+  height: 220px;
+  margin: 20px;
+  background: rgba(13, 67, 96, 0.4);
+}
+
+.conteiner-formas__pagamento {
+  display: grid;
+  grid-template-columns: 50% 25%;
+  direction: rtl;
+  justify-content: end;
+  margin-top: 30px;
+}
+
+.c-radio {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+}
+
+.conteiner-main__img {
+  margin-top: 30px;
+}
+
+.header__title {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  color: #ffffff;
+  margin-top: 54px;
+}
+
+.section__formulario {
+  margin-top: 40px;
+}
+
+.formulario__btn {
+  display: block;
+  width: 80%;
+  height: 40px;
+  color: #fff;
+  background: #d62828;
+  border-radius: 12px;
+  margin: 50px auto;
+  border: none;
+}
+
+/*Fim do finalizar compra*/
+
+/*Inicio do realize seu pedido*/
+.conteiner__formulario {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formulario__label {
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+
+select {
+  margin-top: 15px;
+  width: 80%;
+  height: 30px;
+  background: #f5f5f5;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  text-align: center;
+}
+
+textarea {
+  margin-top: 15px;
+  width: 80%;
+  height: 119px;
+  background: #f5f5f5;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 50%;
+  height: 30px;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.conteiner-main__img {
+  margin-top: 30px;
+}
+
+.header-main__title {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  color: #ffffff;
+}
+
+.main__formulario {
+  margin-top: 40px;
+}
+
+option {
+  max-width: 20%;
+}
+
+.formulario__btn {
+  display: block;
+  width: 80%;
+  height: 40px;
+  color: #fff;
+  background: #d62828;
+  border-radius: 12px;
+  margin: 30px auto;
+  border: none;
+}
+
+/*Fim do realize seu pedido*/
+/*Inicio do seja um franqueado*/
+.conteiner__formulario {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formulario__label {
+  display: grid;
+  width: 100%;
+  color: #fff;
+}
+
+select {
+  margin-top: 15px;
+  width: 80%;
+  height: 30px;
+  background: #f5f5f5;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  text-align: center;
+}
+
+input {
+  width: 80%;
+  height: 30px;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 0px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.conteiner-main__img {
+  margin-top: 30px;
+}
+
+.header-main__title {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 56px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  color: #ffffff;
+}
+
+.section__formulario {
+  margin-top: 40px;
+}
+
+.formulario__btn {
+  display: block;
+  width: 80%;
+  height: 40px;
+  color: #fff;
+  background: #d62828;
+  border-radius: 12px;
+  margin: 50px auto;
+  border: none;
+}
+/*Fim do seja um franqueado*/
+
+/*Inicio do cadastroProduto*/
+.cadastro {
+  background-color: #FAF0E6;
+  padding: 5%;
+
+}
+
+.cadastro-main__title {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  color: black;
+  
+}
+
+.cadastro__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+
+.cadastro__label {
+width: 100%;
+height: 36px;
+font-weight: 600;
+font-size: 25px;
+line-height: 28px;
+align-items: center;
+text-align: center;
+display: block;
+color: #000000;
+margin-bottom: -3%;
+}
+
+.cadastro__input {
+  margin-bottom: 5%;
+}
+
+.cadastro__select {
+  margin-bottom: 5%;
+  margin-left: 10%;
+}
+
+.cadastro--btn {
+  background: #D62828;
+  border-radius: 12px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  /* or 120% */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.cadastro--btn-back a {
+  color: black
+}
+
+.cadastro--btn-back{
+  background: white;
+  border-radius: 12px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  /* or 120% */
+  text-align: center;
+  color: #FFFFFF;
+  border: black solid 1px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Fim do cadastro do produto */
+
+
+/* Página pedido-realizado*/
+
+.c-status-titlle {
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Inter';
+  font-size: 25px;
+  line-height: 28px;
+  color: white;
+}
+
+.l-container__status-pedido p{
+  padding: 0;
+}
+
+.l-container__status-pedido {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2px 5px 2px 10px;
+  background-color: rgba(13, 67, 96, 0.4);
+  color: white;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.l-status-btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.c-status-btn {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #EAE2B7;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: .5s;
+}
+
+.c-status-btn:hover {
+  background-color: #FCBF49;
+}
+
+.c-status-txt {
+  color: white;
+  margin: 0 auto;
+  font-family: Inter;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.container-section__information {
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2px 5px 2px 10px;
+  background-color: rgba(13, 67, 96, 0.4);
+  color: white;
+
+}
+
+.c-server-option {
+  margin: 8px auto;
+  padding: 0;
+  font-family: Inter;
+  font-size: large;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.c-customer-request {
+  
+  background-color: white;
+  border-radius: 12px;
+  margin: 10px auto;
+  padding: 0;
+  font-family: Inter;
+  color: grey;
+  font-size: medium;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+}
+
+.l-container__payment h3
+{
+    font-size: 25px;
+    margin: 9px 0 9px;
+}
+.l-container__payment p
+{
+  padding: 0;
+}
+
+.l-container__payment
+{
+    text-align: center;
+    width: 80%;
+    margin: 40 auto;
+    padding: 2px 5px 2px 10px;
+    background-color: rgba(13, 67, 96, 0.4);
+    color: white;
+    font-size: large;
+    line-height: 28px;
+}
+
+.c-payment
+{
+    background-color: white;
+    color: black;
+    font-size: medium;
+    padding: 0; 
+    border-radius: 12px;
+}
+
+/* Fim Página pedido-realizado*/
+
+/* Página meu pedido*/
+/*Meu pedido*/
+.l-container__delivery-status
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 60px 30px;
+}
+
+.c-container-icon-text
+{
+   display: flex;
+   flex-direction: column;
+   width: 78px;
+   margin: 0;
+   padding: 0;
+}
+
+.l-status__icon
+{
+    display: block;
+    width: 59px;
+    margin: auto;
+    padding: 0%;
+}
+
+.l-container__delivery-status p
+{
+    width: 78px;
+    font-family: 'Abel';
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0;
+}
+
+.l-container__delivery-problem
+{
+    padding: 0;
+    margin: 60px 30px;
+    text-align: center;
+}
+
+.l-container__delivery-problem p
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF; 
+}
+.c-btn-seller
+{
+    margin: 30px 0;
+    width: 241px;
+    height: 42px;
+    background: white;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: medium;
+    line-height: 28px;
+    border: none;
+}
+
+.c-btn-cancel
+{
+    margin: 30px 0;
+    width: 241px;
+    height: 42px;
+    background: #D62828;
+    border-radius: 15px;
+    font-family: 'Inter';
+    color: white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: medium;
+    line-height: 28px;
+    border: none;
+}
+
+.l-container__print-payment
+{
+    padding: 0;
+    margin: 60px 30px;
+    padding-bottom: 75px;
+    text-align: center;
+    align-items: center;
+}
+
+.l-container__print-payment p
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.c-btn-print
+{
+    margin: 30px 0;
+    width: 241px;
+    height: 42px;
+    background: white;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: medium;
+    line-height: 28px;
+    border: none;
+}
+
+/* Fim Página meu pedido*/
+
+/*Início do Footer*/
+.footer-conteiner__endereco {
+  background-image: url("/upload/img/footer.png");
+  width: 100%;
+  height: 170px;
+}
+
+.container_endereco {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+}
+
+p {
+  text-align: center;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+.footer-nav__links {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+}
+/*Fim do Footer*/
+
+/*Inicio do @media*/
+
+@media (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .menu-principal__header {
+    background-image: url("/upload/img/cabecalhoamarelo.png");
+    height: 80px;
+  }
+
+  .menu-principal__logo {
+    background-image: url("/upload/img/logoprincipal65x65.png");
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    width: 65px;
+    height: 65px;
+    margin: 7px;
+  }
+
+  .menu-principal__btn {
+    display: none;
+  }
+
+  .menu-principal__links {
+    display: flex;
+    top: 20px;
+    left: 90px;
+    background: #fcbf49;
+    width: 100%;
+    visibility: visible;
+    overflow-y: visible;
+    font-weight: bold;
+  }
+
+  .menu-principal-segunda__lista a {
+    padding: 0rem 0;
+    border-bottom: none;
+    width: 75%;
+    display: block;
+    font-size: 62%;
+  }
+
+  .menu-principal-conteiner__carrinho__login {
+    position: absolute;
+    display: flex;
+    top: 30px;
+    left: 85%;
+    column-gap: 30px;
+  }
+
+  .menu-principal-lista__carrinho {
+    height: 30px;
+    width: 30px;
+  }
+
+  .menu-principal-lista__login {
+    height: 30px;
+    width: 30px;
+  }
+
+  .container_endereco {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  p {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 60px;
+    font-weight: bold;
+  }
+
+  .footer-nav__links {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  .cadastro--btn-back{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .menu-principal__links {
+    display: flex;
+    top: 20px;
+    left: 100px;
+    background: #fcbf49;
+    width: 100%;
+    visibility: visible;
+    overflow-y: visible;
+    font-weight: bold;
+  }
+
+  .menu-principal-segunda__lista a {
+    padding: 0rem 0;
+    border-bottom: none;
+    width: 100%;
+    display: block;
+    font-size: 15px;
+  }
+
+  .menu-principal-conteiner__carrinho__login {
+    position: absolute;
+    display: flex;
+    top: 30px;
+    left: 87%;
+    column-gap: 40px;
+  }
+
+  .cadastro--btn-back{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .menu-principal__links {
+    display: flex;
+    top: 20px;
+    left: 150px;
+    background: #fcbf49;
+    width: 100%;
+    visibility: visible;
+    overflow-y: visible;
+    font-weight: bold;
+  }
+
+  .menu-principal-segunda__lista a {
+    padding: 0rem 0;
+    border-bottom: none;
+    width: 100%;
+    display: block;
+    font-size: 18px;
+  }
+
+  .menu-principal-segunda__lista {
+    display: flex;
+    font-size: 20px;
+  }
+
+  .menu-principal-conteiner__carrinho__login {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 85%;
+    column-gap: 50px;
+  }
+
+  .menu-principal-lista__carrinho {
+    height: 40px;
+    width: 40px;
+  }
+
+  .menu-principal-lista__login {
+    height: 40px;
+    width: 40px;
+
+  }
+
+  /* media cadastro produto 1200px */
+  
+  .cadastro-main__title{
+    margin-bottom: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    color: #000000;
+  }
+
+
+  .cadastro__form {
+    display: flex;
+    
+  }
+  
+  .cadastro__box {
+    display: grid;
+    grid-template-columns: 50% 50%;  
+    grid-template-rows: 50% 50%;
+  }
+  
+  .cadastro__label{
+    grid-row-start: 1;
+    grid-column-start: 1;    
+    
+  }
+  
+  .cadastro__input{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    margin-top: 0.4%;
+    margin-left: -30%;
+  }
+  
+  .cadastro__select {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    margin-left: -30%;
+    margin-top: 0.4%;
+  }
+
+  .cadastro--btn-back{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*pedido-realizado*/
+    
+.c-status-titlle {    
+  font-size: 64px;
+  line-height: 70px;
+}
+
+.l-container__status-pedido
+{
+  width: 90%;       
+}
+
+.l-container__status-pedido p
+{
+  margin: 0;
+  padding: 15px 40px;
+  line-height: 35px
+}
+.c-status-btn {
+  padding: 15px 40px; 
+}
+
+.c-status-txt {
+  font-size: 30px;
+  margin: 40px auto;
+}
+
+.container-section__information 
+  {
+      width: 90%; 
+  }
+  
+  .c-information
+  {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 100px;
+      margin-bottom: 20px;
+  }
+  .c-server-option
+  {
+      width: 50%;
+      font-size: 20px;
+      line-height: 28px;
+  }
+
+  .c-customer-request
+  {
+      width: 50%;
+      line-height: 35px;
+      font-size: 18px;
+  }
+  .l-container__payment h3
+  {
+      font-size: 35px;
+  }
+  .l-container__payment
+  {
+      width: 90%;
+  }
+  /*Meu pedido*/
+   .c-container-icon-text
+  {
+      width: 136px;
+  }
+  .l-status__icon
+  {
+      width: 136px;
+  }
+  .l-container__delivery-status p
+  {
+      width: 136px;
+      font-size: 18px;
+  }
+  .delivery-problem__box
+  {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+  }
+
+  .l-container__delivery-problem p
+  {
+      width: 500px
+  }
+  .c-btn-seller
+  {
+      width: 451px;
+      height: 83px;
+      font-size: 20px;
+  }
+  .c-btn-cancel
+  {
+      width: 451px;
+      height: 83px;
+      font-size: 20px;
+  }
+  .l-container__print-payment
+  {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+  }
+  .l-container__print-payment p
+  {
+      width: 500px;
+      padding: 0;
+  }
+
+  .c-btn-print
+  {
+      width: 451px;
+      height: 83px;
+      font-size: 20px;
+  }
+  
+
+  .cadastro--btn {
+    width: 30%;
+  }
+
+/*Fim do @media*/
+
+}
+
+  
+
+
+
