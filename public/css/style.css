@@ -1138,6 +1138,83 @@ margin-bottom: -3%;
 
 /* Fim Página meu pedido*/
 
+/*Início Página Cadastro*/
+img {
+  height: auto;
+  width: 100%;
+}
+
+.section-banner {
+  margin-top: 30px;
+}
+
+.section-titulo{
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-dados{
+  margin: 0px auto;
+  width: 80%;
+}
+
+.form-dados{
+  background-color: rgba(13, 67, 96, 0.4);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  place-items: center;
+}
+
+.form-dados__label{
+  color: white;
+  margin-left: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.form-dados__input{
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  width: 100%;
+}
+
+.form-dados__input::placeholder{
+  color: #003049;
+  padding-left: 10px;
+}
+
+.input-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+  place-items: center;
+  width: 90%;
+}
+
+.button-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin: 30px 0;
+  place-items: center;
+}
+
+.button-cadastrar{
+  background-color: red;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  height: 40px;
+  margin-top: 5px;
+  width: 30%;
+}
+/*Fim Página Cadastro*/
+
 /*Início do Footer*/
 .footer-conteiner__endereco {
   background-image: url("/upload/img/footer.png");
@@ -1295,6 +1372,36 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /*Início página cadastro*/
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    place-items: center;
+  }
+
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+
+  .button-cadastrar{
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    height: 30px;
+    margin-bottom: 40px;
+    margin-top: 5px;
+    width: 80%;
+  } 
+  /*Fim página cadastro*/
 }
 
 @media (min-width: 992px) {
@@ -1377,6 +1484,39 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /*Início página cadastro*/
+  body {
+    overflow-x: hidden;
+  }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+    
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 30px 0;
+    place-items: center;
+  }
+    
+  .button-cadastrar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    margin-top: 5px;
+    width: 30%;
+  }
+  /*Fim página Cadastro*/
 }
 
 @media (min-width: 1200px) {
@@ -1618,6 +1758,39 @@ p {
   .cadastro--btn {
     width: 30%;
   }
+
+  /*Início página cadastro*/
+  body {
+    overflow-x: hidden;
+  }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+    
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 30px 0;
+    place-items: center;
+  }
+    
+  .button-cadastrar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    margin-top: 5px;
+    width: 30%;
+  }
+  /*Fim página cadastro*/
 
 /*Fim do @media*/
 
