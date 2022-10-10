@@ -27,6 +27,9 @@ module.exports = class views {
   static async cadastroProduto(req, res) {
     res.render("cadastroProduto");
   }
+  static async cardapioView(req, res) {
+    res.render("cardapio");
+  }
 }; 
 
 
