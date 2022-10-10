@@ -881,6 +881,10 @@ margin-bottom: -3%;
 
 /* Página pedido-realizado*/
 
+.l-banner-principal{
+  margin-top: 30px;
+}
+
 .c-status-titlle {
   width: 80%;
   margin: 30px auto;
