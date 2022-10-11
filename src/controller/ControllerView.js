@@ -1,37 +1,37 @@
 // create a new controller to render the view
 module.exports = class views {
   static async meuPedidoView(req, res) {
-    res.render("meuPedido");
+    res.render("meuPedido", {layout:"main"});
   }
   static async pedRealizadoView(req, res) {
-    res.render("pedidoRealizado");
+    res.render("pedidoRealizado", {layout:"main"});
   }
   static async admOrderView(req, res) {
-    res.render("adminOrder");
+    res.render("adminOrder", {layout:"mainAdm"});
   }
   static async admCreateView(req, res) {
-    res.render("adminCreate");
+    res.render("adminCreate", {layout:"mainAdm"});
   }
   static async home(req, res) {
-    res.render("home");
+    res.render("home", {layout:"main"});
   }
   static async finalizarCompra(req, res) {
-    res.render("finalizarCompra");
+    res.render("finalizarCompra", {layout:"main"});
   }
   static async realizePedido(req, res) {
-    res.render("realizePedido");
+    res.render("realizePedido", {layout:"main"});
   }
   static async sejaFranqueado(req, res) {
-    res.render("sejaFranqueado");
+    res.render("sejaFranqueado", {layout:"main"});
   }
   static async cadastroProduto(req, res) {
-    res.render("cadastroProduto");
+    res.render("cadastroProduto", {layout:"main"});
   }
   static async cardapioView(req, res) {
-    res.render("cardapio");
+    res.render("cardapio", {layout:"main"});
   }
   static async cadastro(req, res) {
-    res.render("cadastro");
+    res.render("cadastro", {layout:"main"});
   }
 }; 
 
