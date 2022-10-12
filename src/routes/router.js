@@ -24,4 +24,8 @@ router.get('/admin/admCreateView', views.admCreateView)
 
 router.post('/admin/criar-pedido', form.admCreate)
 
+router.get('/cardapio', views.cardapioView)
+
+router.get('/cadastro', views.cadastro)
+
 module.exports = router

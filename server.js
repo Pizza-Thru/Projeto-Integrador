@@ -5,7 +5,7 @@ const conn = require("./db/conn");
 
 const app = express();
 
-app.engine("handlebars", exphbs.engine());
+app.engine("handlebars", exphbs.engine({extname:"handlebars", defaultLayout:"layout.handlebars"}));
 app.set("view engine", "handlebars");
 
 /* Ler o body */
