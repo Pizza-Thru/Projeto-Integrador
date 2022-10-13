@@ -1138,6 +1138,796 @@ margin-bottom: -3%;
 
 /* Fim Página meu pedido*/
 
+/* Início da página de cardápio */
+.title__cardapio{
+  width: 136px;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0 auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.container__cardapio{
+  width: 84%;
+  height: auto;
+  background: rgba(13, 67, 96, 0.4);
+  border: 1px solid #012D44;
+  margin: 0 auto;
+  margin-bottom: 30%;
+  padding-bottom: 10%;
+}
+
+.item__pizza{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.cardapio__nome__pizza{
+  width: 100%;
+  height: 52px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  background: url('/img/pizza.png');
+  background-repeat: no-repeat;
+  background-position-y: 10%;
+  background-position-x: 90%;
+}
+
+#pizza__4{
+  text-align: center;
+  padding-right: 29%;
+}
+
+.item__ingredientes{
+  width: 99%;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 0px;
+  margin: 0px;
+  margin-top: -5%;
+}
+
+.container__precos{
+  display: flex;
+  width: 99%;
+  height: 30px;
+  column-gap: 2.6%;
+}
+
+.pizza__preco{
+  width: 99%;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding-top: 0px;font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #012D44;
+  justify-content: center;
+}
+
+/* Fim da página de cardápio */
+
+/* Início da página de pagamento via cartão de crédito */
+.section-header__banner__credito {
+  margin-top: 30px;
+}
+
+.sec__container__credito {
+  width: 80%;
+  height: 10vh;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.sec__container__credito h1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center; 
+  color: #FFFFFF;
+}
+
+#title__main__credito{
+  text-align: center;
+  justify-content: center;
+}
+
+#sec__container__dados__credito{
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(13, 67, 96, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+
+#sec__container__dados__credito{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  flex-direction: column;
+}
+
+#form__pedido__credito{
+  width: 99%;
+}
+
+#lab__numero__cartao__credito{
+  justify-content: center;
+  padding-top: 15px;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.container__form__pagamento__credito, h3, h5{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+#forma__pagamento__h3__credito{
+  width: 100%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 10px;
+}
+
+#credito__h5 {
+  width: 99%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 30px;
+}
+
+.container__dados__cartao__credito{
+  display: flex;
+  width: 99%;
+  height: auto;
+  justify-content: space-around;
+}
+
+.mes__cartao__credito{
+  display: flex;
+  flex-direction: column;
+}
+
+#lab__mes__cartao__credito{
+  width: 100%;
+}
+
+#mes__cartao__credito{
+  width: 80%;
+}
+
+.ano__cartao__credito{
+  display: flex;
+  flex-direction: column;
+}
+
+#lab__ano__cartao__credito{
+  width: 100%;
+}
+
+#ano__cartao__credito{
+  width: 80%;
+  outline: none;
+}
+
+.container__codigo__seguranca__credito{
+  width: 99%;
+  height: auto;
+  margin-top: 5%;
+}
+
+.container__salvar__cartao__credito{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 99%;
+  height: auto;
+  margin-top: 5%;
+}
+
+#salvar__cartao__credito{
+  width: 30%;
+}
+
+/*Segundo Form*/
+
+#sec__container__formulario__credito{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(13, 67, 96, 0.4);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#form__h5__credito{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  display: flex;
+  color: #FFFFFF;
+  margin-bottom: 15%;
+}
+
+.input__select__credito{
+  width: 98%;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-color: transparent;
+  margin-top: 5%;
+}
+
+.container__form__credito{
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+.form__label__credito{
+  width: 100%;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  
+}
+
+#form__obs__credito {
+  width: 98%;
+  border-radius: 10px;
+}
+
+.form__valor__total{
+  width: 98%;
+  height: 48px;
+  border-radius: 15px;
+  margin-top: 5%;
+}
+
+#form__btn__finalizar__credito{
+  background: #003049;
+  padding-top: 5%;
+}
+
+.form__btn__credito{
+  width: 98%;
+  height: 40px;
+  color: #FFFFFF;
+  background-color: red;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  
+}
+
+/* Fim da página de pagamento via cartão de crédito */
+
+/* Início da página de pagamento via cartão de débito */
+.section-header__banner {
+  margin-top: 30px;
+}
+
+.sec__container__debito {
+  width: 80%;
+  height: 10vh;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.sec__container__debito h1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center; 
+  color: #FFFFFF;
+}
+
+#title__main{
+  text-align: center;
+  justify-content: center;
+}
+
+#sec__container__dados{
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(13, 67, 96, 0.4);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #FFFFFF;
+}
+
+#form__pedido{
+  width: 99%;
+}
+
+#lab__numero__cartao{
+  justify-content: center;
+  padding-top: 15px;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.container__form__pagamento, h3, h5{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+#forma__pagamento__h3{
+  width: 100%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 10px;
+}
+
+#debito__h5 {
+  width: 99%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 30px;
+}
+
+.container__dados__cartao{
+  display: flex;
+  width: 99%;
+  height: auto;
+  justify-content: space-around;
+}
+
+.mes__cartao{
+  display: flex;
+  flex-direction: column;
+}
+
+#lab__mes__cartao{
+  width: 100%;
+}
+
+#mes__cartao{
+  width: 80%;
+}
+
+.ano__cartao{
+  display: flex;
+  flex-direction: column;
+}
+
+#lab__ano__cartao{
+  width: 100%;
+}
+
+#ano__cartao{
+  width: 80%;
+  outline: none;
+}
+
+.container__codigo__seguranca{
+  width: 99%;
+  height: auto;
+  margin-top: 5%;
+}
+
+.container__salvar__cartao{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 99%;
+  height: auto;
+  margin-top: 5%;
+}
+
+#salvar__cartao{
+  width: 30%;
+}
+
+/*Segundo Form*/
+
+#sec__container__formulario{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(13, 67, 96, 0.4);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#form__h5{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  display: flex;
+  color: #FFFFFF;
+  margin-bottom: 15%;
+}
+
+.input__select__debito{
+  width: 98%;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-color: transparent;
+  margin-top: 5%;
+}
+
+.container__form{
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+.form__label{
+  width: 100%;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  
+}
+
+#form_obs {
+  width: 98%;
+  border-radius: 10px;
+}
+
+.form__valor__total{
+  width: 98%;
+  height: 48px;
+  border-radius: 15px;
+  margin-top: 5%;
+}
+
+#form__btn__finalizar{
+  background: #003049;
+  padding-top: 5%;
+}
+
+.form__btn{
+  width: 98%;
+  height: 40px;
+  color: #FFFFFF;
+  background-color: red;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  
+}
+
+/* Fim da página de pagamento via cartão de débito */
+
+/* Início da página de pagamento via PIX */
+.section-header__banner__top {
+  margin-top: 30px;
+}
+
+.sec__container__pix {
+  width: 80%;
+  height: 10vh;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.sec__container__pix h1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center; 
+  color: #FFFFFF;
+}
+
+#title__main__pix{
+  text-align: center;
+  justify-content: center;
+}
+
+#sec__container__email{
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(13, 67, 96, 0.4);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  flex-direction: column;
+}
+
+#lab__email{
+  justify-content: center;
+  padding-top: 15px;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#email{
+  width: 99%;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 10%;
+}
+
+.container__form__email, h3, h5{
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+#forma__pagamento__h3__pix{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 10px;
+}
+
+#pix__h5__pix {   
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 30px;
+}
+
+#sec__container__formulario__pix{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(13, 67, 96, 0.4);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#form__h5__pix{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px;
+  display: flex;
+  color: #FFFFFF;
+  margin-bottom: 15%;
+}
+
+.input__select__pix{
+  width: 98%;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-color: transparent;
+  margin-top: 5%;
+}
+
+.container__form__pix{
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+.form__label__pix{
+  width: 100%;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  
+}
+
+#form_obs__pix {
+  width: 98%;
+  border-radius: 10px;
+}
+
+.form__valor__total__pix{
+  width: 98%;
+  height: 48px;
+  border-radius: 15px;
+  margin-top: 5%;
+}
+
+#form__btn__finalizar{
+  background: #003049;
+  padding-top: 5%;
+}
+
+.form__btn__pix{
+  width: 98%;
+  height: 40px;
+  color: #FFFFFF;
+  background-color: red;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  
+}
+/* Fim da página de pagamento via PIX */
+
 /*Início do Footer*/
 .footer-conteiner__endereco {
   background-image: url("/upload/img/footer.png");
@@ -1295,6 +2085,106 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+
+    /* Início da página de cardápio */
+    .container__banner__top{
+      width: 100%;
+      height: 45vh;
+      background: url('/img/banner__top.png');
+      background-position: top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-top: 5%;
+  }
+  
+  .title__cardapio{
+      width: 33%;
+      font-size: 40px;
+      background: url('/img/pizza.png');
+      background-repeat: no-repeat;
+      background-position-y: 46%;
+      background-position-x: 100%;
+      margin-top: -5%;
+  }
+  
+  .container__cardapio{
+      width: 95%;
+  }
+  
+  .item__pizza{
+      padding: 0px;
+      width: 95%;
+      height: auto;
+  }
+  .cardapio__nome__pizza{
+      display: flex;
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      padding: 0px;
+      font-size: 28px;
+  }
+  
+  
+  .container__info__pizza{
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .item__ingredientes{
+      width: 50%;
+      margin: 0px;
+      font-size: 1rem;
+      background: url('/img/pizza.png');
+      background-repeat: no-repeat;
+      background-position-y: 46%;
+      background-position-x: 1%;
+      margin-top: -5%;
+      padding-left: 10%;
+  }
+  
+  .container__precos{
+      flex-direction: row;
+      width: 50%;
+      height: auto;
+      padding-left: 5%;
+      margin-top: -5%;
+  }
+  
+  .pizza__preco{
+      width: 99%;
+      height: 56px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding-top: 0px;font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #012D44;
+      justify-content: center;
+  }
+  /* Fim da página de cardápio */
+    
+  /* Início da página de pagamento via cartão de débito */
+    .form__valor__total{
+      margin-bottom: 5%;
+  }
+  
+  /* Fim da página de pagamento via cartão de débito */
+  
+  /* Início do media de pagamento via pix*/
+      .form__valor__total__pix{
+        margin-bottom: 5%;
+      }
+  
+      .sec__container__pix{
+        width: 100%;
+        height: 15vh;
+      }
+  /* Fim do media de pagamento via pix*/
 }
 
 @media (min-width: 992px) {
@@ -1377,7 +2267,547 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* Início da página de cardápio */
+  .container__banner__top{
+    width: 100%;
+    height: 50vh;
+    background: url('/img/banner__top.png');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 5%;
 }
+
+.title__cardapio{
+    width: 25%;
+    font-size: 40px;
+    background: url('/img/pizza.png');
+    background-repeat: no-repeat;
+    background-position-y: 46%;
+    background-position-x: 100%;
+}
+
+.container__cardapio{
+    width: 95%;
+}
+
+.item__pizza{
+    padding: 0px;
+    width: 95%;
+    height: auto;
+}
+.cardapio__nome__pizza{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    padding: 0px;
+    font-size: 32px;
+}
+
+
+.container__info__pizza{
+    display: flex;
+    flex-direction: row;
+}
+
+.item__ingredientes{
+    width: 50%;
+    margin: 0px;
+    background: url('/img/pizza.png');
+    background-repeat: no-repeat;
+    background-position-y: 46%;
+    background-position-x: 1%;
+    margin-top: -5%;
+    padding-left: 10%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.container__precos{
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+    padding-left: 5%;
+    margin-top: -5%;
+}
+
+.pizza__preco{
+    width: 99%;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding-top: 0px;font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #012D44;
+    justify-content: center;
+}
+  /* Fim da página de cardápio */
+  
+  /* Início da página de pagamento via cartão de crédito */
+
+#sec__container__dados__credito{
+    display: flex;
+    width: 35%;
+    height: auto;
+    margin-left: 1.7%;
+    margin-top: 1.41%;
+    flex-direction: row;
+}
+
+#forma__pagamento__h3__credito{
+    margin-top: 13%;
+}
+
+#cartao__h5{
+    width: 100%;
+}
+
+.container__form__numero__cartao__credito{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+#numero__cartao__credito{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.container__form__nome__cartao__credito{
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+#nome__cartao__credito{
+    width: 100%;
+    margin-top: 2%;
+}
+
+.p__container__cartao__credito{
+    width: 90%;
+    height: auto;
+    padding: 0px;
+    margin: 0 auto;
+
+}
+
+.container__dados__cartao__credito{
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+#mes__cartao__credito{
+    width: 100%;
+    margin-top: 2%;
+}
+#ano__cartao__credito{
+    width: 100%;
+    margin-top: 2%;
+}
+    
+.container__codigo__seguranca__credito{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+#cvv__cartao__credito{
+    width: 100%;
+    margin-top: 4%;
+}
+
+.container__salvar__cartao__credito{
+    width: 85%;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+#salvar__cartao__credito{
+    padding: 30px;
+    width: 31px;
+    height: 36px;
+    color: #FFFFFF;
+}
+
+#sec__container__formulario__credito{
+    display: flex;
+    width: 60%;
+    padding-right: 1.5%;
+    margin-right: 1.7%;
+}
+
+.p__form__email{
+    padding: 0px;
+}
+
+form{
+    width: 90%;
+}
+
+#form__h5__credito{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.container__form__credito{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.form__label__credito{
+    display: flex;
+    width: 45%;
+    justify-content: left;
+}
+
+.input__select__credito{
+    display: flex;
+    width: 80%;
+    justify-content: right;
+    margin-top: -0.5%;
+}
+
+#form__obs__credito{
+    width: 80%;
+}
+
+.form__valor__total{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#form__btn__finalizar__credito{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.form__btn__credito{
+    text-align: center;
+    width: 409px;
+    height: 107px;
+    background: #D62828;
+    border-radius: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+  /* Fim da página de pagamento via cartão de crédito */
+  
+  /* Início da página de pagamento via cartão de débito */
+  
+#sec__container__dados{
+    display: flex;
+    width: 35%;
+    height: auto;
+    margin-left: 1.7%;
+    margin-top: 1.41%;
+    flex-direction: row;
+}
+
+#forma__pagamento__h3{
+    margin-top: 13%;
+}
+
+#debito__h5{
+    width: 100%;
+}
+
+.container__form__numero__cartao{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+#numero__cartao{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.container__form__nome__cartao{
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+#nome__cartao{
+    width: 100%;
+    margin-top: 2%;
+}
+
+.p__container__cartao{
+    width: 90%;
+    height: auto;
+    padding: 0px;
+    margin: 0 auto;
+
+}
+
+.container__dados__cartao{
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+#mes__cartao{
+    width: 100%;
+    margin-top: 2%;
+}
+
+#ano__cartao{
+    width: 100%;
+    margin-top: 2%;
+}
+    
+.container__codigo__seguranca{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+#cvv__cartao{
+    width: 100%;
+    margin-top: 4%;
+}
+
+.container__salvar__cartao{
+    width: 85%;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+#salvar__cartao{
+    padding: 30px;
+    width: 31px;
+    height: 36px;
+    color: #FFFFFF;
+}
+
+#sec__container__formulario{
+    display: flex;
+    width: 60%;
+    padding-right: 1.5%;
+    margin-right: 1.7%;
+}
+
+.p__form__email{
+    padding: 0px;
+}
+
+form{
+    width: 90%;
+}
+
+#form__h5{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.container__form{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.form__label{
+    display: flex;
+    width: 45%;
+    justify-content: left;
+}
+
+.input__select__debito{
+    display: flex;
+    width: 80%;
+    justify-content: right;
+    margin-top: -0.5%;
+}
+
+#form_obs{
+    width: 80%;
+}
+
+.form__valor__total{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#form__btn__finalizar{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.form__btn{
+    text-align: center;
+    width: 409px;
+    height: 107px;
+    background: #D62828;
+    border-radius: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+  /* Fim da página de pagamento via cartão de débito */
+
+  /* Início do media de pagamento via pix*/
+main{
+  display: flex;
+}
+
+.sec__container__pix{
+  width: 100%;
+  height: 15vh;
+}
+
+#sec__container__email{
+  display: flex;
+  width: 35%;
+  height: auto;
+  margin-left: 1.7%;
+  margin-top: 2%;
+  flex-direction: row;
+}
+
+.container__form__email{
+  width: 100%;
+  height: 100px;
+}
+
+#forma__pagamento__h3__pix{
+  margin-top: -15%;
+}
+
+#pix__h5__pix{
+  width: 100%;
+}
+
+.container__form__email{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#lab__email{
+  margin-top: -35%;
+  margin-left: 5%;
+}
+
+#email{
+  width: 100%;
+  margin-left: 5%;
+}
+
+.p_form__container__email{
+  width: 90%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+#sec__container__formulario__pix{
+  display: flex;
+  width: 60%;
+  padding-right: 1.5%;
+  margin-right: 1.7%;
+}
+
+.p__form__email__pix{
+  padding: 0px;
+}
+
+form{
+  width: 90%;
+}
+
+#form__h5__pix{
+  width: 100%;
+  margin-top: 5%;
+}
+
+.container__form__pix{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.form__label__pix{
+  display: flex;
+  width: 45%;
+  justify-content: left;
+}
+
+.input__select__pix{
+  display: flex;
+  width: 80%;
+  justify-content: right;
+  margin-top: -0.5%;
+}
+
+#form_obs__pix{
+  width: 80%;
+}
+
+.form__valor__total__pix{
+  width: 80%;
+  height: 30px;
+  border-radius: 10px;
+}
+
+#form__btn__finalizar{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.form__btn__pix{
+  text-align: center;
+  width: 409px;
+  height: 107px;
+  background: #D62828;
+  border-radius: 12px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+/* Fim da media de pagamento via pix*/
+
+}
+
 
 @media (min-width: 1200px) {
 
@@ -1619,6 +3049,102 @@ p {
     width: 30%;
   }
 
-/*Fim do @media*/
+  /* Início da página de cardápio */
+  .container__banner__top{
+    width: 100%;
+    height: 50vh;
+    background: url('/img/banner__top.png');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+}
 
+.title__cardapio{
+    width: 25%;
+    font-size: 40px;
+    background: url('/img/pizza.png');
+    background-repeat: no-repeat;
+    background-position-y: 46%;
+    background-position-x: 100%;
+}
+
+.container__cardapio{
+    width: 95%;
+}
+
+.item__pizza{
+    padding: 0px;
+    width: 95%;
+    height: auto;
+}
+.cardapio__nome__pizza{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    padding: 0px;
+    font-size: 32px;
+}
+
+.container__info__pizza{
+    display: flex;
+    flex-direction: row;
+}
+
+.item__ingredientes{
+    width: 50%;
+    margin: 0px;
+    background: url('/img/pizza.png');
+    background-repeat: no-repeat;
+    background-position-y: 46%;
+    background-position-x: 1%;
+    margin-top: -5%;
+    padding-left: 10%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.container__precos{
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+    padding-left: 5%;
+    margin-top: -5%;
+}
+
+.pizza__preco{
+    width: 99%;
+    height: 90px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding-top: 0px;font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #012D44;
+    justify-content: center;
+}
+  /* Fim da página de cardápio */
+  
+  /* Início da página de pagamento via cartão de crédito */
+  #forma__pagamento__h3__credito{
+    margin-top: 5%;
+}
+  /* Fim da página de pagamento via cartão de crédito */
+  
+  /* Início da página de pagamento via cartão de débito */
+  #forma__pagamento__h3{
+    margin-top: 5%;
+}
+  /* Fim da página de pagamento via cartão de débito */ 
+
+
+/*Fim do @media*/
 }
