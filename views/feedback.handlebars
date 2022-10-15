@@ -1,0 +1,64 @@
+<main class="container__feedback">
+        <h1 class="feedback__titulo">Deixe sua Avaliação</h1>
+
+        <form  method="get" class="l-formulario__feedback" name="formulario__feedback">
+            
+            <div class="l-feedback__avaliacao">
+                <h2 class="feedback__titulo__avaliacao">Avaliae-nos</h2>
+                <div class="estrelas">
+                    <input type="radio" id="cm_star-empty" name="star__nota" value="" checked/>
+                    <label for="cm_star-1"><i class="star__nota"></i></label
+                    <input type="radio" id="cm_star-2" name="star__nota" value='1'/>
+                    <label for="cm_star-2"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-2" name="star__nota" value='2'/>
+                    <label for="cm_star-3"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-3" name="star__nota" value='3'/>
+                    <label for="cm_star-4"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-4" name="star__nota" value='4'/>
+                    <label for="cm_star-5"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-5" name="star__nota" value='5'/>
+                  </div>
+                </div>
+            <label for="feedback__comentario">Deixe um comentário:</label>
+            <textarea id="feedback__comentario" name="feedback__comentario" rows="8" cols="50"></textarea>
+    
+            <input type="submit" value="ENVIAR" class="botao__formulario__paulo">
+        </form>
+
+        <section class="l-story__feedback">
+            <h1 class="story__titulo">Avaliações recentes</h1>
+            <div class="container__story" id="avaliacao">
+            </div>
+
+
+        </section>
+    </main>
+    <script type="text/javascript">
+
+        const parametrosDaUrl = new URLSearchParams(document.location.search);
+
+        const feedback__comentario = parametrosDaUrl.get('feedback__comentario');
+        const star__nota = parametrosDaUrl.get('star__nota');
+        const note = star__nota;
+        const comment = feedback__comentario
+        
+            if(note==null || comment==null){
+                 avaliacao.innerHTML +=`
+                    <div>
+                        <p> 
+                        <p>
+                    </div>
+                `;
+            }else{
+                avaliacao.innerHTML += `
+                    <div>
+                        <p>${note}  
+                        <p>${comment}
+                    </div>
+                `;
+            }
+        
+        
+    </script>
+     
+   
