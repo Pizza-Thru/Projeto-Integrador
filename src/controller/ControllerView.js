@@ -9,9 +9,6 @@ module.exports = class views {
   static async admOrderView(req, res) {
     res.render("adminOrder", {layout:"mainAdm"});
   }
-  static async admCreateView(req, res) {
-    res.render("adminCreate", {layout:"mainAdm"});
-  }
   static async home(req, res) {
     res.render("home", {layout:"main"});
   }
@@ -25,7 +22,7 @@ module.exports = class views {
     res.render("sejaFranqueado", {layout:"main"});
   }
   static async cadastroProduto(req, res) {
-    res.render("cadastroProduto", {layout:"main"});
+    res.render("cadastroProduto", {layout:"mainAdm"});
   }
   static async cardapioView(req, res) {
     res.render("cardapio", {layout:"main"});
