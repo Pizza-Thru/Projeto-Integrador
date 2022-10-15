@@ -145,14 +145,6 @@ const franqueado = conn.define("franqueado", {
 		type: DataTypes.STRING(100),
 		allowNull: false,
 	},
-	franqueado_phone: {
-		type: DataTypes.STRING(11),
-		allowNull: false,
-	},
-	franqueado_cpf: {
-		type: DataTypes.STRING(11),
-		allowNull: false,
-	},
 	franqueado_state: {
 		type: DataTypes.STRING(50),
 		allowNull: false,
@@ -188,17 +180,17 @@ user.hasMany(bank, { foreignKey: 'id_user' });
 bank.belongsTo(user, { foreignKey: 'id_user' });
 
 // incluindo foreign key na tabela login user
-user.hasOne(login_user, { foreignKey: 'id_user' });
-login_user.belongsTo(user, { foreignKey: 'id_user' });
+
+
 
 // incluindo foreign key na tabela login admin
-admin.hasOne(login_admin, { foreignKey: 'id_admin' });
-login_admin.belongsTo(admin, { foreignKey: 'id_admin' });
+
+
 
 // incluindo foreign key na tabela product variation
-product.hasMany(product_variation, { foreignKey: 'id_prod' });
-product_variation.belongsTo(product, { foreignKey: 'id_prod' });
 
 
 
-module.exports = {user, bank,product,admin, order };
+
+
+module.exports = {user, bank, product, admin, order, franqueado };

@@ -1,8 +1,21 @@
 
-const {product} = require("../models/models")
+const {product, franqueado} = require("../models/models")
 
 module.exports = class Form {
-  static async finalizarcompra(req, res) {}
+  static async sejaFranqueado(req, res) {
+
+    const newFranqueado = {
+      franqueado_name: req.body.franqueado_name,
+      franqueado_email: req.body.franqueado_email,
+      franqueado_state: req.body.franqueado_state,
+      franqueado_city: req.body.franqueado_city,
+      franqueado_invest: req.body.franqueado_invest,
+      franqueado_findUs: req.body.franqueado_findUs,
+    };
+
+    await franqueado.create(newFranqueado);
+    res.redirect("/sejaFranqueado");
+  }
 
   static async admCreate(req, res) {
     

@@ -1,42 +1,29 @@
 <main>
   <div class="conteiner-main__img">
-    <img
-      src="/upload/img/Banner-monte-sua-pizza.png"
-      alt="Monte ja sua Pizza"
-    />
+    <img src="/upload/img/Banner-monte-sua-pizza.png" alt="Monte ja sua Pizza" />
   </div>
   <header class="header__main">
     <h1 class="header-main__title">Seja um(a) franqueado(a)</h1>
   </header>
   <div>
-    <form action="/" class="section__formulario" method="post">
+    <form action="/sejaFranqueado" class="section__formulario" method="POST">
       <div class="conteiner__formulario">
-        <label for="name" class="formulario__label" id="nome">Nome</label><br />
-        <input class="c-name" type="text" name="Name" id="name" required />
+        <label for="franqueado_name" class="formulario__label" id="nome">Nome</label><br />
+        <input class="c-name" type="text" name="franqueado_name" id="franqueado_name" required />
       </div>
       <div class="conteiner__formulario">
-        <label
-          for="email"
-          class="formulario__label"
-          id="label__email"
-        >E-mail</label><br />
-        <input class="c-email" type="email" name="email" id="email" required />
+        <label for="franqueado_email" class="formulario__label" id="label__email">E-mail</label><br />
+        <input class="c-email" type="email" name="franqueado_email" id="franqueado_email" required />
       </div>
       <div class="conteiner__formulario">
-        <label for="cidade" class="formulario__label" id="label__cidade">Cidade
+        <label for="franqueado_city" class="formulario__label" id="label__cidade">Cidade
           de interesse</label><br />
-        <input
-          class="c-cidade"
-          type="text"
-          name="cidade"
-          id="cidade"
-          required
-        />
+        <input class="c-cidade" type="text" name="franqueado_city" id="franqueado_city" required />
       </div>
       <div class="conteiner__formulario">
-        <label for="estado" class="formulario__label" id="label__estado">Estado
+        <label for="franqueado_state" class="formulario__label" id="label__estado">Estado
           de interesse</label>
-        <select class="c-estado" name="estado" id="estado" required>
+        <select class="c-estado" name="franqueado_state" id="franqueado_state" required>
           <option disabled selected value="">selecione</option>
           <option value="AC">Acre</option>
           <option value="AL">Alagoas</option>
@@ -69,31 +56,14 @@
         </select>
       </div>
       <div class="conteiner__formulario">
-        <label
-          for="investimento"
-          class="formulario__label"
-          id="label__investimento"
-        >Investimento disponivel</label><br />
-        <input
-          class="c-investimento"
-          type="number"
-          name="investimento"
-          id="investimento"
-          placeholder="Valor Mínimo R$ 10.000.000"
-          required
-        />
+        <label for="franqueado_invest" class="formulario__label" id="label__investimento">Investimento
+          disponivel</label><br />
+        <input class="c-investimento" type="number" name="franqueado_invest" id="franqueado_invest"
+          placeholder="Valor Mínimo R$ 10.000.000" required />
       </div>
       <div class="conteiner__formulario">
-        <label
-          for="ComoNosConheceu"
-          class="formulario__label"
-          id="label__ComoNosConheceu"
-        >Como nos conheceu</label>
-        <select
-          class="c-ComoNosConheceu"
-          name="ComoNosConheceu"
-          id="ComoNosConheceu"
-        >
+        <label for="franqueado_findUs" class="formulario__label" id="label__ComoNosConheceu">Como nos conheceu</label>
+        <select class="c-ComoNosConheceu" name="franqueado_findUs" id="franqueado_findUs">
           <option disabled selected>selecione</option>
           <option value="Wh">Whatsapp</option>
           <option value="In">Instagram</option>
@@ -103,11 +73,7 @@
           <option value="Ou">Outros</option>
         </select>
       </div>
-      <input
-        type="submit"
-        class="formulario__btn"
-        value="Quero ser um(a) franqueado(a)"
-      />
+      <input type="submit" class="formulario__btn" value="Quero ser um(a) franqueado(a)" />
     </form>
   </div>
 </main>

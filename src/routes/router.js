@@ -11,6 +11,7 @@ router.get('/finalizarCompra', views.finalizarCompra)
 router.get('/realizePedido', views.realizePedido)
 
 router.get('/sejaFranqueado', views.sejaFranqueado)
+router.post('/sejaFranqueado', form.sejaFranqueado)
 
 router.get('/cadastroProduto', views.cadastroProduto)
 
