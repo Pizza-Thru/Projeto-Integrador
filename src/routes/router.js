@@ -28,4 +28,10 @@ router.get('/cardapio', views.cardapioView)
 
 router.get('/cadastro', views.cadastro)
 
+router.get('/consultaOrdemPedido', views.cadastro)
+
+router.get('/senha', views.cadastro)
+
+router.get('/statusPedido', views.cadastro)
+
 module.exports = router

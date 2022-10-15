@@ -33,6 +33,15 @@ module.exports = class views {
   static async cadastro(req, res) {
     res.render("cadastro", {layout:"main"}, {layout:"main"});
   }
+  static async consultaOrdemPedido(req, res) {
+    res.render("consultaOrdemPedido", {layout:"main"});
+  }
+  static async senha(req, res) {
+    res.render("senha", {layout:"main"});
+  }
+  static async statusPedido(req, res) {
+    res.render("statusPedido", {layout:"main"});
+  }
 }; 
 
 
