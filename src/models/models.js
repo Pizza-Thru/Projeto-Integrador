@@ -1,7 +1,7 @@
 
-const { DataTypes } = require("sequelize");
+const { Sequelize } = require("sequelize");
 const conn = require("../../db/conn");
-
+const { DataTypes } = require("sequelize");
 
 const user = conn.define("user", {
 	id_user : {
@@ -61,20 +61,21 @@ const bank = conn.define("bank", {
 
 const product = conn.define("product", {
 	id_prod : {
-		type: DataTypes.INTEGER,
+		type: Sequelize.INTEGER,
 		autoIncrement: true,
-		primaryKey: true},
+		primaryKey: true,
+		allowNull : false},
 	name_prod:{ type: DataTypes.STRING(30),
-		allowNull: false,},
+		},
 	price_prod:{ type: DataTypes.STRING(10),
-		allowNull: false,},
+		},
 	stock_prod:{ type: DataTypes.STRING(5),
-		allowNull: false,},
-	description_prod:{ type: DataTypes.STRING(100),
-		allowNull: false,},
+		allowNull: true},
+	description_prod:{ type: DataTypes.STRING(300),
+	},
 	image_prod:{type: DataTypes.BLOB('long')},
 	category_prod:{ type: DataTypes.STRING(30),
-		allowNull: false,},
+		},
 
 });		
 

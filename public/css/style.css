@@ -530,6 +530,39 @@ img {
 
 /* Fim do cabeçalho*/
 
+/* Inicio do cabeçalho ADM */
+
+.menu-principalAdm__header{
+  background-color: #FFDEAD;
+  height: 80px;
+
+}
+
+.menu-principal-conteiner__logo__adm{
+  display: flex;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.menu-principal-conteiner__adm__login{
+  position: absolute;
+  display: flex;
+  top: 18px;
+  left: 72%;
+  column-gap: 19px;
+}
+
+
+/* Fim do cabeçalho ADM */
+
+/* Inicio do footer ADM */
+
+.footer-conteiner__endereco__adm{
+  background-color: #FFDEAD;
+  width: 100%;
+  height: 170px;
+}
+
 /*Início do home*/
 .section-header__banner {
   margin-top: 30px;
@@ -876,6 +909,20 @@ margin-bottom: -3%;
   margin-left: auto;
   margin-right: auto;
 }
+
+#cadastro__input-err{
+  display: none;
+
+}
+
+#cadastro__input-err.visible {
+  display: block;
+}
+
+input.invalid{
+  border-color: red;
+}
+
 /* Fim do cadastro do produto */
 
 
@@ -1295,6 +1342,14 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .menu-principal-conteiner__adm__login {
+    position: absolute;
+    display: flex;
+    top: 30px;
+    left: 85%;
+    column-gap: 30px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1376,6 +1431,14 @@ p {
     width: 20%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .menu-principal-conteiner__adm__login{
+    position: absolute;
+    display: flex;
+    top: 30px;
+    left: 87%;
+    column-gap: 40px;
   }
 }
 
@@ -1617,6 +1680,14 @@ p {
 
   .cadastro--btn {
     width: 30%;
+  }
+
+  .menu-principal-conteiner__adm__login{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 85%;
+    column-gap: 50px;
   }
 
 /*Fim do @media*/

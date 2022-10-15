@@ -20,9 +20,9 @@ router.get('/pedido-realizado', views.pedRealizadoView )
 
 router.get('/admin/ordem-do-pedido', views.admOrderView)
 
-router.get('/admin/admCreateView', views.admCreateView)
+router.get('/admin/salvar-produto', form.salvarProduto)
 
-router.post('/admin/criar-pedido', form.admCreate)
+router.post('/admin/criar-produto', form.admCreate)
 
 router.get('/cardapio', views.cardapioView)
 
