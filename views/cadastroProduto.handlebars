@@ -3,30 +3,33 @@
     <h1 class="cadastro-main__title"> Cadastro de Produto </h1>
   </header>
   <div class="cadastro__form">
-    <form action="/" method="get">
+    <form action="/admin/criar-produto" method="POST">
       <div class="cadastro__box">
           <label class="cadastro__label" for="name_prod"> Nome </label>
-          <input class="cadastro__input" type="text" id="name_prod" name="produto" placeholder="Nome do produto">
+          <input class="cadastro__input" type="text" id="name_prod" name="name_prod" placeholder="Nome do produto">
+          <span role="alert" id="cadastro__input-err" aria-hidden="true">
+            Por favor insira os dados
+           </span>
       </div>
       <div class="cadastro__box">
           <label class="cadastro__label" for="category_prod"> Categoria </label>
-          <select class="cadastro__select"  id="category_prod"> </select>
+          <input class="cadastro__input"  type="text" id="category_prod" name="category_prod"> </input>
       </div>
       <div class="cadastro__box">
           <label class="cadastro__label" for="description_prod"> Descrição </label>
-          <input class="cadastro__input" type="text" id="description_prod" name="descrição" placeholder="Descrição do produto">
+          <input class="cadastro__input" type="text" id="description_prod" name="description_prod" placeholder="Descrição do produto">
       </div>
      <div class="cadastro__box">
           <label class="cadastro__label" for="stock_prod"> Estoque </label>
-          <input class="cadastro__input" type="text" id="stock_prod" name="estoque" placeholder="Estoque do produto">
+          <input class="cadastro__input" type="text" id="stock_prod" name="stock_prod" placeholder="Estoque do produto">
       </div>
       <div class="cadastro__box">
           <label class="cadastro__label" for="image_prod"> Fotos </label>
-          <input class="cadastro__input" type="file" id="image_prod" name="produtosIMG">
+          <input class="cadastro__input" type="file" id="image_prod" name="image_prod">
       </div>
       <div class="cadastro__box">
           <label class="cadastro__label" for="price_prod"> Preço </label>
-          <input class="cadastro__input" type="number" id="price_prod" name="preço" placeholder="Insira o valor aqui">
+          <input class="cadastro__input" type="number" id="price_prod" name="price_prod" placeholder="Insira o valor aqui">
       </div>
       <input class="cadastro--btn" type="submit" value="Cadastrar">
     </form>
