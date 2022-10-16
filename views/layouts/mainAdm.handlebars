@@ -1,16 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/upload/img/favicon.ico" type="image/x-icon">
+<html lang="pt-BR">
+  <head>
+       <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="shortcut icon" href="/upload/img/favicon.ico" type="image/x-icon">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>PizzaThru</title>
-</head>
-{{{body}}}
+    <script defer src="/js/menuDropDown.js"></script>
+    <script defer src="/public/js/verificarBotao.js"></script>
+    <title>Admin Pizza Thru</title>
+  </head>
+  <body>
+    <header class="menu-principalAdm__header">
+      <div class="conteiner">
+        <div class="menu-principal-conteiner__logo__adm">
+          <a href="/" class="menu-principal__logo">Pizza Thru</a>
+        </div>
+        <div class="menu-principal-conteiner__adm__login">
+          <a href="#" class="menu-principal-lista__login"><img
+              src="/upload/img/iconelogin.png"
+              alt="Ícone de login"
+            /></a>
+        </div>
+        <nav class="nav-principal__header">
+          <button
+            class="menu-principal__btn"
+            aria-label="Abrir Menu"
+            aria-haspopup="true"
+            aria-controls="menu-principal__links"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+          <ul
+            class="menu-principal__links"
+            id="menu-principal__links"
+            role="menu"
+          >
+            <li class="menu-principal-segunda__lista"><a
+                href="/adminOrder"
+              >PEDIDO DO ADM</a></li>
+            <li class="menu-principal-segunda__lista"><a
+                href="/adminCreate"
+              >CRIAR PEDIDO ADM</a></li>
+            <li class="menu-principal-segunda__lista"><a
+                href="/cadastroProduto"
+              >CRIAR PRODUTO</a></li>
+            <li class="menu-principal-segunda__lista"><a
+                href="#"
+              >FEEDBACK</a></li>
+            <li class="menu-principal-segunda__lista"><a
+                href="/cardapio"
+              >CARDÁPIO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--Fim do cabeçalho-->
+    {{{body}}}
+    <footer>
+      <!--Inicio do Rodapé-->
+      <div class="conteiner">
+        <div class="footer-conteiner__endereco__adm">
+          <div class="container_endereco">
+            <p>123 Demo Street - New York NY | (555) 555-5555 |
+              email@example.com</p>
+          </div>
+          <nav>
+            <ul class="footer-nav__links">
+              <li class="footer-nav__lista"><img
+                  src="/upload/img/instagramicon.png"
+                  alt="Ícone do Instagram"
+                /></li>
+              <li class="footer-nav__lista"><img
+                  src="/upload/img/twittericon.png"
+                  alt="Ícone do Twitter"
+                />
+              </li>
+              <li class="footer-nav__lista"><img
+                  src="/upload/img/facebookicon.png"
+                  alt="Ícone do Facebook"
+                />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!--Fim do Rodapé-->
 </html>
