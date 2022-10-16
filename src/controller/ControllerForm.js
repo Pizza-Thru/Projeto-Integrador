@@ -51,7 +51,7 @@ module.exports = class Form {
         CVC : req.body.cvv__cartao__credito
       }
         console.log(newCardCredit);
-      let saveCard = req.body.salvar__cartao__credito
+      const saveCard = req.body.salvar__cartao__credito
       
         console.log(saveCard)
       if (saveCard = true) {
@@ -70,7 +70,7 @@ module.exports = class Form {
           CVC : req.body.cvv__cartao
         }
           console.log(newCardDebit);
-        let saveCard = req.body.salvar__cartao
+        const saveCard = req.body.salvar__cartao
         
           console.log(saveCard)
         if (saveCard = true) {
