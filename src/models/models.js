@@ -189,8 +189,4 @@ bank.belongsTo(user, { foreignKey: 'id_user' });
 
 // incluindo foreign key na tabela product variation
 
-
-
-
-
 module.exports = {user, bank, product, admin, order, franqueado };

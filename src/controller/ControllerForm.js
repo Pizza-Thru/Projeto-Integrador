@@ -33,11 +33,23 @@ module.exports = class Form {
     res.redirect("/cadastroProduto");
     
   }
-
-
-  static async salvarProduto(req, res) {
-    res.sendFile("cadastroProduto", {layout:"mainAdm"});
-  }
 };
 
+/*static async salvarProduto(req, res) {
+  res.sendFile("cadastroProduto", {layout:"mainAdm"}); //ERRADO!!!!! PAULO VERIFICAR!!
+}*/
 
+/*module.exports = class avaliation {   //TESTAR CONTROLLER DE AVALIAÇÃO
+    static async avaliar(req, res){}
+
+    static async feedback(req, res) {
+      const avaliacao = {
+        note: req.body.star__nota,
+        comment: req.body.feedback__comentario,
+      };
+  
+      await avaliacao.create(avaliacao);
+  
+      res.redirect("/feedback");
+    }
+  };*/
