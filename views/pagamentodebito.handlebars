@@ -15,14 +15,14 @@
                     </div>
                     <div class="container__form__numero__cartao">
                         <label for="numero__cartao" id="lab__numero__cartao">Número do Cartão*</label>
-                        <input class="input__select__debito" type="number" name="name" id="numero__cartao">
+                        <input class="input__select__debito" type="number" name="numero__cartao" id="numero__cartao">
                     </div>
                     <div class="p__container__cartao">
                         <p class="p__form__bandeira">A bandeira do cartão será automaticamente Identificada pelo sistema</p>
                     </div>
                     <div class="container__form__nome__cartao">
                         <label for="nome__cartao" id="lab__nome__cartao">Seu nome* (como impresso no cartão)</label>
-                        <input class="input__select__debito" type="text" name="name" id="nome__cartao">
+                        <input class="input__select__debito" type="text" name="nome__cartao" id="nome__cartao">
                     </div>
                     <div class="container__form__pagamento">
                         <h5 id="debito__h5">Vencimento</h5>
@@ -30,76 +30,26 @@
                     <div class="container__dados__cartao">
                         <div class="mes__cartao">
                             <label for="mes__cartao" id="lab__mes__cartao">Mês</label>
-                            <input class="input__select__debito" type="number" name="name" id="mes__cartao">
+                            <input class="input__select__debito" type="number" name="mes__cartao" id="mes__cartao">
                         </div>
                         <div class="ano__cartao">
                             <label for="nome__cartao" id="lab__ano__cartao">Ano</label>
-                            <input class="input__select__debito" type="number" name="name" id="ano__cartao">
+                            <input class="input__select__debito" type="number" name="ano__cartao" id="ano__cartao">
                         </div>
                     </div>
                     <div class="container__codigo__seguranca">
                         <label for="cvv__cartao" id="lab__cvv__cartao">Código de Segurança</label>
-                        <input class="input__select__debito" type="number" name="name" id="cvv__cartao">
+                        <input class="input__select__debito" type="number" name="cvv__cartao" id="cvv__cartao">
                     </div>
                     <div class="container__salvar__cartao">
                         <label for="salvar__cartao" id="lab__salvar__cartao">Salvar cartão para a próxima compra</label>
-                        <input class="input__select__debito" type="checkbox" name="name" id="salvar__cartao">
+                        <input class="input__select__debito" type="checkbox" name="salvar__cartao" id="salvar__cartao">
                     </div>
                     <div class="p__container__cartao">
                         <p class="p__form__bandeira">Para efetuar o pagamento, não há necessidade de salvar seu cartão. Esta função apenas facilita suas próximas compras com toda a segurança</p>
                     </div>
                 </form>
             </section>
-            <section id="sec__container__formulario">
-                <h5 id="form__h5">Resumo do Pedido:</h5>
-                <form action="/" method="get" id="form__pedido">
-                    <div class="container__form">
-                        <label for="numero__pedido" class="form__label">Número do Pedido</label>
-                        <input class="input__select__debito" type="number" name="name" id="num__pedido">
-                    </div>
-                    <div class="container__form">
-                        <label for="qtd__pedacos" class="form__label">Quantidade de Pedaços</label>
-                        <select class="input__select__debito" name="qtd__pedacos" id="pedacos_pizza"></select>
-                    </div>
-                    <div class="container__form">
-                        <label for="sabores" class="form__label">Sabores</label>
-                        <select class="input__select__debito" name="sabores" id="cal"></select>
-                    </div>
-                    <div class="container__form">
-                        <label for="sabores" class="form__label">Espessura da Massa</label>
-                        <select class="input__select__debito" name="sabores" id="cal"></select>
-                    </div>
-                    <div class="container__form">
-                        <label for="sabores" class="form__label">Tipo de Borda</label>
-                        <select class="input__select__debito" name="sabores" id="cal"></select>
-                    </div>
-                    <div class="container__form">
-                        <label for="recheio__borda" class="form__label">Recheio da Borda</label>
-                        <select class="input__select__debito" name="recheio__borda__pizza" id="recheio__borda"></select>
-                    </div>
-                    <div class="container__form">
-                        <label for="adds" class="form__label">Adicionais</label>
-                        <select class="input__select__debito" name="adicionais" id="adds"></select>
-                    </div>
-                    <div class="container__form">
-                        <label for="form_obs" class="form__label">Observações</label>
-                        <textarea name="observacoes" id="form_obs" cols="30" rows="5"></textarea>
-                    </div>
-                    <div class="container__form">
-                        <label for="subtotal" class="form__label">Subtotal</label>
-                        <input class="input__select__debito" type="number" name="name" id="subtotal">
-                    </div>
-                    <div class="container__form">
-                        <label for="cupom" class="form__label">Cupom de Desconto</label>
-                        <input class="input__select__debito" type="text" name="name" id="cupom">
-                    </div>
-                    <div class="container__form">
-                        <label for="total" class="form__label">TOTAL</label>
-                        <input type="text" class="form__valor__total" name="name" id="num__total">
-                    </div>
-                </form>
-            </section>
-    <!--Fim do conteúdo principal - FORM -->
     </main>
     <div class="container__form" id="form__btn__finalizar">
         <label for="finalizar__btn" class="form__label__btn"></label>

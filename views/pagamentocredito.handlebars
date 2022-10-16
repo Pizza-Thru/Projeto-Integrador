@@ -8,21 +8,21 @@
     <main>
     <!--Início do conteúdo principal - FORMA PAGAMENTO credito -->
             <section id="sec__container__dados__credito">
-                <form action="/pagamentoCartaoDebito.html" method="post" id="form__pedido__credito">
+                <form action="/pagamentoCredito" method="post" id="form__pedido__credito">
                     <div class="container__form__pagamento__credito">
                         <h3 id="forma__pagamento__h3__credito">Forma de Pagamento</h3>
                         <h5 id="credito__h5">Cartão de Credito</h5>
                     </div>
                     <div class="container__form__numero__cartao__credito">
                         <label for="numero__cartao__credito" id="lab__numero__cartao__credito">Número do Cartão*</label>
-                        <input class="input__select__credito" type="number" name="name" id="numero__cartao__credito">
+                        <input class="input__select__credito" type="number" name="numero__cartao__credito" id="numero__cartao__credito">
                     </div>
                     <div class="p__container__cartao__credito">
                         <p class="p__form__bandeira">A bandeira do cartão será automaticamente Identificada pelo sistema</p>
                     </div>
                     <div class="container__form__nome__cartao__credito">
                         <label for="nome__cartao__credito" id="lab__nome__cartao">Seu nome* (como impresso no cartão)</label>
-                        <input class="input__select__credito" type="text" name="name" id="nome__cartao__credito">
+                        <input class="input__select__credito" type="text" name="nome__cartao__credito" id="nome__cartao__credito">
                     </div>
                     <div class="container__form__pagamento__credito">
                         <h5 id="credito__h5">Vencimento</h5>
@@ -30,76 +30,26 @@
                     <div class="container__dados__cartao__credito">
                         <div class="mes__cartao__credito">
                             <label for="mes__cartao__credito" id="lab__mes__cartao__credito">Mês</label>
-                            <input class="input__select__credito" type="number" name="name" id="mes__cartao__credito">
+                            <input class="input__select__credito" type="number" name="mes__cartao__credito" id="mes__cartao__credito">
                         </div>
                         <div class="ano__cartao__credito">
                             <label for="ano__cartao__credito" id="lab__ano__cartao__credito">Ano</label>
-                            <input class="input__select__credito" type="number" name="name" id="ano__cartao__credito">
+                            <input class="input__select__credito" type="number" name="ano__cartao__credito" id="ano__cartao__credito">
                         </div>
                     </div>
                     <div class="container__codigo__seguranca__credito">
                         <label for="cvv__cartao__credito" id="lab__cvv__cartao">Código de Segurança</label>
-                        <input class="input__select__credito" type="number" name="name" id="cvv__cartao__credito">
+                        <input class="input__select__credito" type="number" name="cvv__cartao__credito" id="cvv__cartao__credito">
                     </div>
                     <div class="container__salvar__cartao__credito">
                         <label for="salvar__cartao__credito" id="lab__salvar__cartao">Salvar cartão para a próxima compra</label>
-                        <input class="input__select__credito" type="checkbox" name="name" id="salvar__cartao__credito">
+                        <input class="input__select__credito" type="checkbox" name="salvar__cartao__credito" id="salvar__cartao__credito" value="true">
                     </div>
                     <div class="p__container__cartao__credito">
                         <p class="p__form__bandeira">Para efetuar o pagamento, não há necessidade de salvar seu cartão. Esta função apenas facilita suas próximas compras com toda a segurança</p>
                     </div>
                 </form>
             </section>
-            <section id="sec__container__formulario">
-                <h5 id="form__h5">Resumo do Pedido:</h5>
-                <form action="/" method="get" id="form__pedido__credito">
-                    <div class="container__form__credito">
-                        <label for="numero__pedido" class="form__label__credito">Número do Pedido</label>
-                        <input class="input__select__credito" type="number" name="name" id="numero__pedido">
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="qtd__pedacos" class="form__label__credito">Quantidade de Pedaços</label>
-                        <select class="input__select__credito" name="qtd__pedacos" id="qtd__pedacos"></select>
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="sabores" class="form__label__credito">Sabores</label>
-                        <select class="input__select__credito" name="sabores" id="sabores"></select>
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="espessura__massa" class="form__label__credito">Espessura da Massa</label>
-                        <select class="input__select__credito" name="espessura__massa" id="espessura__massa"></select>
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="type__borda" class="form__label__credito">Tipo de Borda</label>
-                        <select class="input__select__credito" name="sabores" id="type__borda"></select>
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="recheio__borda" class="form__label__credito">Recheio da Borda</label>
-                        <select class="input__select__credito" name="recheio__borda__pizza" id="recheio__borda"></select>
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="adds" class="form__label__credito">Adicionais</label>
-                        <select class="input__select__credito" name="adicionais" id="adds"></select>
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="form__obs__credito" class="form__label__credito">Observações</label>
-                        <textarea name="observacoes" id="form__obs__credito" cols="30" rows="5"></textarea>
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="subtotal" class="form__label__credito">Subtotal</label>
-                        <input class="input__select__credito" type="number" name="name" id="subtotal">
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="cupom" class="form__label__credito">Cupom de Desconto</label>
-                        <input class="input__select__credito" type="text" name="name" id="cupom">
-                    </div>
-                    <div class="container__form__credito">
-                        <label for="num__total" class="form__label__credito">TOTAL</label>
-                        <input type="text" class="form__valor__total" name="name" id="num__total">
-                    </div>
-                </form>
-            </section>
-    <!--Fim do conteúdo principal - FORM -->
     </main>
     <div class="container__form__credito" id="form__btn__finalizar__credito">
         <label for="finalizar__btn" class="form__label__btn"></label>
