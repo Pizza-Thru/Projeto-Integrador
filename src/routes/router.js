@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const views = require("../controller/ControllerView");
-const { user, bank, product, product_variation } = require("../models/models");
 const form = require("../controller/ControllerForm");
 
 router.get("/", views.home);
@@ -33,8 +32,6 @@ router.get('/acessoUsuario', views.acessoUsuario);
 router.get('/feedback', views.feedback);
 
 router.post('/feedback/avaliacao' , form.feedbackAvaliacao);
-
-//router.get('/admin/salvar-produto', form.salvarProduto) VERIFICAR : Gabriel
 
 router.get('/consultaOrdemPedido', views.consultaOrdemPedido) 
 
