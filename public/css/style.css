@@ -932,6 +932,10 @@ input.invalid{
   margin-top: 30px;
 }
 
+.l-banner-principal{
+  margin-top: 30px;
+}
+
 .c-status-titlle {
   width: 80%;
   margin: 30px auto;
@@ -1185,6 +1189,333 @@ input.invalid{
 
 /* Fim Página meu pedido*/
 
+/*Início da Página Cadastro*/
+img {
+  height: auto;
+  width: 100%;
+}
+
+.section-banner {
+  margin-top: 30px;
+}
+
+.section-titulo{
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-dados{
+  margin: 0px auto;
+  width: 80%;
+}
+
+.form-dados{
+  background-color: rgba(13, 67, 96, 0.4);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  place-items: center;
+}
+
+.form-dados__label{
+  color: white;
+  margin-left: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.form-dados__input{
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  width: 100%;
+}
+
+.form-dados__input::placeholder{
+  color: #003049;
+  padding-left: 10px;
+}
+
+.input-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+  place-items: center;
+  width: 90%;
+}
+
+.button-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin: 30px 0;
+  place-items: center;
+}
+
+.button-cadastrar{
+  background-color: red;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  height: 40px;
+  margin-top: 5px;
+  width: 30%;
+}
+/*Fim da Página Cadastro*/
+
+/*Início da Página Consulta Ordem de pedido*/
+.img-banner {
+  width: 100%;
+  height: auto;
+}
+
+.section-banner {
+  margin-top: 30px;
+}
+
+.consulta-ordem{
+  color: white;
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.section-pesquisa{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.h1-pesquisa{
+  text-align: center;
+}
+
+.input-pesquisa{
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  margin-bottom: 20px;
+  width: 77.2%;
+}
+
+.input-pesquisa::placeholder{
+  color: #003049;
+  padding-left: 10px;
+}
+
+.form-dados{
+  background-color: rgba(13, 67, 96, 0.4);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  place-items: center;
+}
+
+.input-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+  place-items: center;
+  width: 90%;
+}
+
+.form-dados__label{
+  width: 100%;
+  text-align: center;
+}
+
+.form-dados__input{
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  width: 100%;
+}
+
+.button-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+  place-items: center;
+}
+
+.button-buscar{
+  background-color: red;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  height: 40px;
+  margin-bottom: 10px;
+  width: 30%;
+}
+/* Fim da Página Consulta Ordem de Pedido*/
+
+/* Início da Página Senha*/
+img {
+  width: 100%;
+  height: auto;
+}
+
+.section-banner {
+  margin-top: 30px;
+}
+
+.redefinicao-senha{
+  margin: 0px auto;
+  width: 80%;
+}
+
+.section-titulo{
+  color: white;
+  text-align: center;
+}
+
+.section-email{
+  padding: 20px;
+}
+
+.email-group{
+  background-color: rgba(13, 67, 96, 0.4);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  padding: 20px;
+}
+
+.label-email{
+  color: white;
+}
+
+.input-email{
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  width: 100%;
+}
+
+.input-email::placeholder{
+  color: #003049;
+  padding-left: 10px;
+}
+
+.button-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  place-items: center;
+}
+
+.button-redefinicao__senha{
+  background-color: red;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  height: 40px;
+  width: 50%;
+}
+/* Fim da Página Senha*/
+
+/* Início da Página Status Pedido*/
+img{
+  width: 100%;
+  height: auto;
+}
+
+.section-banner{
+  margin-top: 30px;
+}
+
+.status-pedido{
+  color: white;
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+}
+
+.section-titulo{
+  display: grid;
+  text-align: center;
+}
+
+.filtro-group{
+  display: grid;
+  gap: 0px;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  place-items: center;
+}
+
+.label-filtro{
+  width: 100%;
+  text-align: end;
+}
+
+.input-filtro{
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  margin-bottom: 0px;
+  width: 90%;
+}
+
+.form-dados{
+  background-color: rgba(13, 67, 96, 0.4);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 20px;
+  place-items: end;
+}
+
+.input-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+  place-items: center;
+  width: 90%;
+}
+
+.form-dados__label{
+  width: 100%;
+  text-align: center;
+}
+
+.form-dados__input{
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  width: 100%;
+}
+
+.button-group{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+  place-items: center;
+}
+
+.button-buscar{
+  background-color: red;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  width: 30%;
+}
+/* Fim da Página Status Pedido*/
+
 /*Início do Footer*/
 .footer-conteiner__endereco {
   background-image: url("/upload/img/footer.png");
@@ -1210,6 +1541,171 @@ p {
   column-gap: 50px;
 }
 /*Fim do Footer*/
+/*Inicio página de acesso*/
+.container__acesso{
+  width: 100%;
+  height: 70%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #003049;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.acesso_texto{
+  font-size: 1.4rem;
+}
+.acesso__campo{
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px;
+  font-size: 24px;
+}
+.acesso__campo:invalid{
+  border: 3px solid red;
+}
+.l-formulario__acesso{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  gap: 10px;
+  width: 80%;
+  height:80%;
+  background: rgba(13, 67, 96, 0.4); 
+  padding:15px ;
+  margin: 0;
+}
+.acesso__label{
+  display: none;
+}
+.link__acesso{
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+
+}
+.botao__formulario__paulo{
+  width:100%;
+  height: 70px;
+  border-radius: 15px;
+  border: none;
+  background-color: #D62828;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: auto;
+  cursor: pointer;
+}
+.botao__formulario__paulo:active{
+  background-color: #FFFFFF;
+  color: #D62828;
+}
+.acesso__label-checkbox,.acesso__campo__checkbox:hover{
+  cursor: pointer;
+}
+.acesso__campo__checkbox{
+  width: 25px;
+  height: 25px;
+  margin: 0;
+}
+.acesso__label-checkbox{
+  height: 25px;
+  margin: 0;
+}
+.l-acesso__checkbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 12px;
+  gap: 10px;
+}
+/*Fim pagina de acesso*/
+/*Inicio página de feedback*/
+.container__feedback{
+  width: 100%;
+  height: 1300px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #003049;
+  margin: auto;
+  
+  font-size: 24px;
+  gap: 30px;
+  color: #ffffff;
+}
+.l-formulario__feedback{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.l-feedback__avaliacao{text-align: center; padding-top: 50px}
+
+.estrelas input[type=radio] {
+display: none;
+}
+.estrelas label i.star__nota{
+font-size: 3.5em;
+}
+.estrelas label i.star__nota:before {
+content:'\2605';
+color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.star__nota:before {
+color: #CCC;
+
+}
+.feedback__comentario{
+  border-radius: 50px;
+}
+.l-story__feedback{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius:25px ;
+width: 90%;
+background-color: #FCBF49;
+height: 50%;
+gap: 15px;
+margin: 0;
+}
+.story__titulo{
+width: 100%;
+text-align: center;
+background-color:#D62828;
+margin: 0;
+font-size: 1.4rem;
+}
+.container__story{
+background-color: #FFFFFF;
+width: 95%;
+height: 80%;
+border-radius: 25px;
+color: #000;
+display: flex;
+flex-direction: column;
+align-items:flex-start;
+padding: 0 10px;
+}
+.container__story div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.25) ;
+  width: 100%;
+}
+.container__story div p{
+  margin: 10px;
+  padding: 0;
+}
+/*Fim página de feedback*/
 
 /*Inicio do @media*/
 
@@ -1343,13 +1839,133 @@ p {
     margin-right: auto;
   }
 
-  .menu-principal-conteiner__adm__login {
-    position: absolute;
-    display: flex;
-    top: 30px;
-    left: 85%;
-    column-gap: 30px;
+  /*Início da Página Cadastro*/
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    place-items: center;
   }
+
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+
+  .button-cadastrar{
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    height: 30px;
+    margin-bottom: 40px;
+    margin-top: 5px;
+    width: 80%;
+  } 
+  /*Fim da Página Cadastro*/
+
+  /*Início da Página Consulta Ordem Pedido*/
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+  
+  .button-buscar{
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 80%;
+  }
+  /*Fim da Página Consulta Ordem de Pedido*/
+
+  /*Início da Página Senha*/
+  .button-group{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+  
+  .button-redefinicao__senha{
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    height: 30px;
+    margin-top: 5px;
+    width: 89%;
+  }
+  /*Fim da Página Senha*/
+
+  /*Início da Página Status Pedido*/
+  .filtro-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    place-items: center;
+  }
+      
+  .label-filtro{
+    text-align: center;
+  }
+      
+  .input-filtro{
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 90%;
+   }
+    
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    place-items: center;
+  }
+    
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+      
+  .button-buscar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 83%;
+  }
+  /*Fim da Página Status Pedido*/
 }
 
 @media (min-width: 992px) {
@@ -1433,13 +2049,159 @@ p {
     margin-right: auto;
   }
 
-  .menu-principal-conteiner__adm__login{
-    position: absolute;
-    display: flex;
-    top: 30px;
-    left: 87%;
-    column-gap: 40px;
+  /*Início da Página Cadastro*/
+  body {
+    overflow-x: hidden;
   }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+    
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 30px 0;
+    place-items: center;
+  }
+    
+  .button-cadastrar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    margin-top: 5px;
+    width: 30%;
+  }
+  /*Fim da Página Cadastro*/
+
+  /*Início da Página Consulta Ordem de Pedido*/
+  body {
+    overflow-x: hidden;
+  }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+  
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+  
+  .button-buscar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    margin-bottom: 10px;
+    width: 30%;
+  }
+  /*Fim da Página Consulta Ordem de Pedido*/
+
+  /*Início da Página Senha*/
+  body{
+    overflow-x: hidden;
+  }
+
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    place-items: center;
+  }
+    
+  .button-redefinicao__senha{
+   background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    width: 50%;
+  }
+  /*Fim da Página Senha*/
+
+  /*Início da Página Status Pedido*/
+  body {
+    overflow-x: hidden;
+  }
+
+  .filtro-group{
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    place-items: center;
+  }
+    
+  .label-filtro{
+    width: 100%;
+    text-align: end;
+  }
+    
+  .input-filtro{
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    margin-bottom: 0px;
+    width: 90%;
+  }
+  
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 20px;
+    place-items: end;
+  }
+  
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+    
+  .button-buscar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 30%;
+  }
+  /*Fim da Página Status Pedido*/
 }
 
 @media (min-width: 1200px) {
@@ -1682,6 +2444,170 @@ p {
     width: 30%;
   }
 
+  /*Início da Página Cadastro*/
+  body {
+    overflow-x: hidden;
+  }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+    
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 30px 0;
+    place-items: center;
+  }
+    
+  .button-cadastrar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    margin-top: 5px;
+    width: 30%;
+  }
+  /*Fim da Página Cadastro*/
+
+  /*Início da Página Consulta Ordem de Pedido*/
+  body {
+    overflow-x: hidden;
+  }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+  
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+  
+  .button-buscar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    margin-bottom: 10px;
+    width: 30%;
+  }
+  /*Fim da Página Consulta Ordem de Pedido*/
+
+  /*Início da Página Senha*/
+  body{
+    overflow-x: hidden;
+  }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    place-items: center;
+  }
+    
+  .button-redefinicao__senha{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    width: 50%;
+  }
+  /*Fim da Página Senha*/
+
+  /* Início da Página Status Pedido*/
+  body {
+    overflow-x: hidden;
+  }
+
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    place-items: center;
+  }
+    
+  .filtro-group{
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    place-items: center;
+  }
+    
+  .label-filtro{
+    width: 100%;
+    text-align: end;
+  }
+    
+  .input-filtro{
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    margin-bottom: 0px;
+    width: 90%;
+  }
+  
+  .form-dados{
+    background-color: rgba(13, 67, 96, 0.4);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 20px;
+    place-items: end;
+  }
+  
+  .button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    place-items: center;
+  }
+    
+  .button-buscar{
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 30%;
+  }
+  /* Fim da Página Status Pedido*/
+
+
   .menu-principal-conteiner__adm__login{
     position: absolute;
     display: flex;
@@ -1693,3 +2619,153 @@ p {
 /*Fim do @media*/
 
 }
+/*Estilização da pagina de acesso*/
+@media (min-width: 1200px) {
+
+.l-pagina__acesso{
+  height:100vh;
+  width: 100%;
+  margin: auto;
+  color: white;
+}
+.container__acesso{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #003049;
+  margin: auto;
+  font-size: 24px;
+}
+.acesso__campo{
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px;
+  font-size: 24px;
+}
+.acesso__campo:invalid{
+  border: 3px solid red;
+}
+.l-formulario__acesso{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  gap: 10px;
+  width: 40%;
+  height:50%;
+  background: rgba(13, 67, 96, 0.4); 
+  padding:15px ;
+}
+.acesso__label{
+  display: none;
+}
+.link__acesso{
+  text-decoration: none;
+  color: white;
+
+}
+.botao__formulario{
+  width:100%;
+  height: 82px;
+  border-radius: 15px;
+  border: none;
+  background-color: #D62828;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: auto;
+  cursor: pointer;
+}
+.botao__formulario:active{
+  background-color: #FFFFFF;
+  color: #D62828;
+}
+.acesso__label-checkbox,.acesso__campo__checkbox:hover{
+  cursor: pointer;
+}
+.acesso__campo__checkbox{
+  width: 20px;
+  height: 20px;
+}
+.l-acesso__checkbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.l-formulario__feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.l-feedback__avaliacao{text-align: center; padding-top: 50px}
+
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.star__nota{
+  font-size: 3.5em;
+}
+.estrelas label i.star__nota:before {
+  content:'\2605';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.star__nota:before {
+  color: #CCC;
+  
+}
+.botao__formulario{
+    width:100%;
+    height: 82px;
+    border-radius: 15px;
+    border: none;
+    background-color: #D62828;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: auto;
+    cursor: pointer;
+}
+.botao__formulario:active{
+    background-color: #FFFFFF;
+    color: #D62828;
+}
+.feedback__comentario{
+    border-radius: 50px;
+}
+.l-story__feedback{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius:25px ;
+  width: 70%;
+  background-color: #FCBF49;
+  height: 50%;
+  gap: 15px;
+  margin: 0;
+}
+.story__titulo{
+  width: 100%;
+  text-align: center;
+  background-color:#D62828;
+  margin: 0;
+}
+.container__story{
+  background-color: #FFFFFF;
+  width: 95%;
+  height: 80%;
+  border-radius: 25px;
+}
+}
+/* FIm página de feedback */
+
+/*Fim do @media*/

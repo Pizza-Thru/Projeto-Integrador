@@ -9,6 +9,9 @@ module.exports = class views {
   static async admOrderView(req, res) {
     res.render("adminOrder", {layout:"mainAdm"});
   }
+  static async admCreateView(req, res) {
+    res.render("adminCreate", {layout:"mainAdm"});
+  }
   static async home(req, res) {
     res.render("home", {layout:"main"});
   }
@@ -27,9 +30,25 @@ module.exports = class views {
   static async cardapioView(req, res) {
     res.render("cardapio", {layout:"main"});
   }
-  static async cadastro(req, res) {
-    res.render("cadastro", {layout:"main"});
+  static async cadastroUsuario(req, res) {
+    res.render("cadastroUsuario", {layout:"main"});
   }
+  static async consultaOrdemPedido(req, res) {
+    res.render("consultaOrdemPedido", {layout:"main"});
+  }
+  static async recuperarSenha(req, res) {
+    res.render("recuperarSenha", {layout:"main"});
+  }
+   static async statusPedido(req, res) {
+    res.render("statusPedido", {layout:"main"});
+  }
+  static async acessoUsuario(req, res) {
+    res.render("acessoUsuario", {layout:"main"});
+  }
+  static async feedback(req, res) {
+    res.render("feedback", {layout:"main"});
+  }
+  
 }; 
 
 
