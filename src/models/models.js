@@ -51,20 +51,19 @@ const bank = conn.define("bank", {
 		autoIncrement: true,
 		primaryKey: true},
 	payment:{ type: DataTypes.STRING(30),
-		allowNull: false,},
+		},
 	account_holder:{ type: DataTypes.STRING(100),
-		allowNull: false,},
+		},
 	card_number:{ type: DataTypes.STRING(20),
-		allowNull: false,},
+		},
 	card_expiration:{
 		type: DataTypes.STRING(4),
-		allowNull: false,},
+		},
 	CVC:{ type: DataTypes.STRING(3),
-		allowNull: false,}, // card_validation_code 
-	//numero de parcelas
+		allowNull: false,}, 
 	installment:{
 		type: DataTypes.STRING(3),
-		allowNull: false,},
+		},
 	nickname:{ type: DataTypes.STRING(20)}
 }); 
 
