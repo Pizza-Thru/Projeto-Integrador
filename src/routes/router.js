@@ -11,6 +11,7 @@ router.get("/finalizarCompra", views.finalizarCompra);
 router.get("/realizePedido", views.realizePedido);
 
 router.get("/sejaFranqueado", views.sejaFranqueado);
+
 router.post("/sejaFranqueado", form.sejaFranqueado);
 
 router.get("/cadastroProduto", views.cadastroProduto);
@@ -25,14 +26,20 @@ router.post("/admin/criar-produto", form.admCreate);
 
 router.get("/cardapio", views.cardapioView);
 
-router.get("/cadastro", views.cadastro);
+router.get("/cadastroUsuario", views.cadastroUsuario);
 
-//router.get('/admin/salvar-produto', form.salvarProduto) VERIFICAR
+router.get('/acessoUsuario', views.acessoUsuario);
 
-//router.get('/consultaOrdemPedido', views.cadastro) VERIFICAR
+router.get('/feedback', views.feedback);
 
-//router.get('/senha', views.cadastro) VERIFICAR
+router.post('/feedback/avaliacao' , form.feedbackAvaliacao);
 
-//router.get('/statusPedido', views.cadastro) VERIFICAR
+//router.get('/admin/salvar-produto', form.salvarProduto) VERIFICAR : Gabriel
+
+router.get('/consultaOrdemPedido', views.consultaOrdemPedido) 
+
+router.get('/recuperarSenha', views.recuperarSenha) 
+
+router.get('/statusPedido', views.statusPedido) 
 
 module.exports = router;

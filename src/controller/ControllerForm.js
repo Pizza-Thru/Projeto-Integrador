@@ -1,5 +1,5 @@
 
-const {product, franqueado} = require("../models/models")
+const {product, franqueado, evaluation} = require("../models/models")
 
 module.exports = class Form {
   static async sejaFranqueado(req, res) {
@@ -33,23 +33,17 @@ module.exports = class Form {
     res.redirect("/cadastroProduto");
     
   }
-};
 
-/*static async salvarProduto(req, res) {
-  res.sendFile("cadastroProduto", {layout:"mainAdm"}); //ERRADO!!!!! PAULO VERIFICAR!!
-}*/
+    static async feedbackAvaliacao(req, res) {
 
-/*module.exports = class avaliation {   //TESTAR CONTROLLER DE AVALIAÇÃO
-    static async avaliar(req, res){}
-
-    static async feedback(req, res) {
-      const avaliacao = {
+      const newAvaliacao = {
         note: req.body.star__nota,
         comment: req.body.feedback__comentario,
       };
-  
-      await avaliacao.create(avaliacao);
+      await evaluation.create(newAvaliacao);
   
       res.redirect("/feedback");
     }
-  };*/
+
+};
+

@@ -162,6 +162,17 @@ const franqueado = conn.define("franqueado", {
 		allowNull: false,
 	},
 });
+const evaluation = conn.define("evaluation", {
+	id_avaliacao : {
+		type: DataTypes.INTEGER,
+		autoIncrement: true,
+		primaryKey: true},
+	note:{ type: DataTypes.STRING(1),
+		allowNull: false,},
+	comment:{ type: DataTypes.STRING(500),
+		allowNull: false,},
+
+});		
 
 //RELACIONAMENTOS
 
@@ -189,4 +200,4 @@ bank.belongsTo(user, { foreignKey: 'id_user' });
 
 // incluindo foreign key na tabela product variation
 
-module.exports = {user, bank, product, admin, order, franqueado };
+module.exports = {user, bank, product, admin, order, franqueado,evaluation };
