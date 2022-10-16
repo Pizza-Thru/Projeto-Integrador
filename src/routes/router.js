@@ -42,4 +42,12 @@ router.get('/recuperarSenha', views.recuperarSenha)
 
 router.get('/statusPedido', views.statusPedido) 
 
-module.exports = router;
+router.get('/pagamentoCredito', views.pagamentoCredito)
+
+router.post('/pagamentoCredito', form.finalizarcompraCredito);
+
+router.get('/pagamentodebito', views.pagamentoDebito);
+
+router.post('/pagamentodebito', form.finalizarcompraDebito);
+
+module.exports = router
