@@ -48,7 +48,12 @@ module.exports = class views {
   static async feedback(req, res) {
     res.render("feedback", {layout:"main"});
   }
-  
-}; 
+  static async pagamentoCredito(req, res) {
+    res.render("pagamentoCredito", {layout:"main"});
+  } 
 
+  static async pagamentoDebito(req, res) {
+    res.render("pagamentoDebito", {layout:"main"});
+  }
 
+}

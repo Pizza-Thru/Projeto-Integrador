@@ -1,5 +1,4 @@
-
-const {product, franqueado, evaluation} = require("../models/models")
+const {product, franqueado, evaluation, bank} = require("../models/models")
 
 module.exports = class Form {
   static async sejaFranqueado(req, res) {
@@ -45,5 +44,42 @@ module.exports = class Form {
       res.redirect("/feedback");
     }
 
+    static async finalizarcompraCredito (req, res) {
+      const newCardCredit = {
+        card_number : req.body.numero__cartao__credito,
+        account_holder : req.body.nome__cartao__credito,
+        CVC : req.body.cvv__cartao__credito
+      }
+        console.log(newCardCredit);
+      let saveCard = req.body.salvar__cartao__credito
+      
+        console.log(saveCard)
+      if (saveCard = true) {
+        await bank.create(newCardCredit);
+        res.redirect("/pedidoRealizado");
+            } else {
+        res.redirect("/pedidoRealizado");
+  
+            } 
+      
+      }
+      static async finalizarcompraDebito(req, res) {
+        const newCardDebit = {
+          card_number : req.body.numero__cartao,
+          account_holder : req.body.nome__cartao,
+          CVC : req.body.cvv__cartao
+        }
+          console.log(newCardDebit);
+        let saveCard = req.body.salvar__cartao
+        
+          console.log(saveCard)
+        if (saveCard = true) {
+          await bank.create(newCardDebit);
+          res.redirect("/pedidoRealizado");
+              } else {
+          res.redirect("/pedidoRealizado");
+    
+              } 
+      
+      }
 };
-
