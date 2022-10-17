@@ -1189,7 +1189,7 @@ input.invalid{
 
 /* Fim Página meu pedido*/
 
-/*Início da Página Cadastro*/
+/*Início da Página Cadastro Usuário*/
 img {
   height: auto;
   width: 100%;
@@ -1327,7 +1327,7 @@ img {
   margin-top: 5px;
   width: 30%;
 }
-/*Fim da Página Cadastro*/
+/*Fim da Página Cadastro Usuário*/
 
 /*Início da Página Consulta Ordem de pedido*/
 .img-banner {
@@ -1419,7 +1419,7 @@ img {
 }
 /* Fim da Página Consulta Ordem de Pedido*/
 
-/* Início da Página Senha*/
+/* Início da Página de Recuperação de Senha*/
 img {
   width: 100%;
   height: auto;
@@ -1449,6 +1449,7 @@ img {
   gap: 10px;
   grid-template-columns: 1fr;
   padding: 20px;
+  
 }
 
 .label-email{
@@ -1484,7 +1485,7 @@ img {
   height: 40px;
   width: 50%;
 }
-/* Fim da Página Senha*/
+/* Fim da Página de Recuperação de Senha*/
 
 /* Início da Página Status Pedido*/
 img{
@@ -1930,7 +1931,7 @@ padding: 0 10px;
     margin-right: auto;
   }
 
-  /*Início da Página Cadastro*/
+  /*Início da Página Cadastro Usuário*/
   .form-dados{
     background-color: rgba(13, 67, 96, 0.4);
     display: grid;
@@ -1959,7 +1960,7 @@ padding: 0 10px;
     margin-top: 5px;
     width: 80%;
   } 
-  /*Fim da Página Cadastro*/
+  /*Fim da Página Cadastro Usuário*/
 
   /*Início da Página Consulta Ordem Pedido*/
   .form-dados{
@@ -1990,7 +1991,7 @@ padding: 0 10px;
   }
   /*Fim da Página Consulta Ordem de Pedido*/
 
-  /*Início da Página Senha*/
+  /*Início da Página de Recuperação de Senha*/
   .button-group{
     display: grid;
     grid-template-columns: 1fr;
@@ -2007,7 +2008,7 @@ padding: 0 10px;
     margin-top: 5px;
     width: 89%;
   }
-  /*Fim da Página Senha*/
+  /*Fim da Página de Recuperação de Senha*/
 
   /*Início da Página Status Pedido*/
   .filtro-group{
@@ -2141,7 +2142,7 @@ padding: 0 10px;
     margin-right: auto;
   }
 
-  /*Início da Página Cadastro*/
+  /*Início da Página Cadastro Usuário*/
   body {
     overflow-x: hidden;
   }
@@ -2202,7 +2203,7 @@ padding: 0 10px;
     margin-top: 5px;
     width: 30%;
   }
-  /*Fim da Página Cadastro*/
+  /*Fim da Página Cadastro Usuário*/
 
   /*Início da Página Consulta Ordem de Pedido*/
   body {
@@ -2246,7 +2247,7 @@ padding: 0 10px;
   }
   /*Fim da Página Consulta Ordem de Pedido*/
 
-  /*Início da Página Senha*/
+  /*Início da Página de Recuperação de Senha*/
   body{
     overflow-x: hidden;
   }
@@ -2268,7 +2269,7 @@ padding: 0 10px;
     height: 40px;
     width: 50%;
   }
-  /*Fim da Página Senha*/
+  /*Fim da Página de Recuperação Senha*/
 
   /*Início da Página Status Pedido*/
   body {
@@ -2566,7 +2567,7 @@ padding: 0 10px;
     width: 30%;
   }
 
-  /*Início da Página Cadastro*/
+  /*Início da Página Cadastro Usuário*/
   body {
     overflow-x: hidden;
   }
@@ -2597,7 +2598,7 @@ padding: 0 10px;
     margin-top: 5px;
     width: 30%;
   }
-  /*Fim da Página Cadastro*/
+  /*Fim da Página Cadastro Usuário*/
 
   /*Início da Página Consulta Ordem de Pedido*/
   body {
@@ -2632,7 +2633,7 @@ padding: 0 10px;
   }
   /*Fim da Página Consulta Ordem de Pedido*/
 
-  /*Início da Página Senha*/
+  /*Início da Página de Recuração de Senha*/
   body{
     overflow-x: hidden;
   }
@@ -2663,7 +2664,7 @@ padding: 0 10px;
     height: 40px;
     width: 50%;
   }
-  /*Fim da Página Senha*/
+  /*Fim da Página de Recuração de Senha*/
 
   /* Início da Página Status Pedido*/
   body {
