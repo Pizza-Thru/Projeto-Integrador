@@ -7,112 +7,55 @@
     <form action="/" class="section__formulario" method="post">
       <div class="conteiner-escolhas__pagamentos">
         <div class="conteiner-formas__pagamento">
-          <label
-            for="cartaodecredito"
-            class="formulario__label"
-            id="label__credito"
-          >Cartão de Crédito</label>
-          <input
-            class="c-radio"
-            type="radio"
-            name="Name"
-            id="cartaodecredito"
-            required
-          />
+          <label for="cartaodecredito" class="formulario__label" id="label__credito">Cartão de Crédito</label>
+          <input class="c-radio" type="radio" name="Name" id="cartaodecredito"/>
         </div>
         <div class="conteiner-formas__pagamento">
-          <label
-            for="cartaodedebito"
-            class="formulario__label"
-            id="label__debito"
-          >Cartão de Débito</label>
-          <input
-            class="c-radio"
-            type="radio"
-            name="Name"
-            id="cartaodedebito"
-            required
-          />
+          <label for="cartaodedebito" class="formulario__label" id="label__debito">Cartão de Débito</label>
+          <input class="c-radio" type="radio" name="Name" id="cartaodedebito"/>
         </div>
         <div class="conteiner-formas__pagamento">
           <label for="pix" class="formulario__label" id="label__pix">Pix</label>
-          <input class="c-radio" type="radio" name="Name" id="pix" required />
+          <input class="c-radio" type="radio" name="Name" id="pix"/>
         </div>
       </div>
-    </form>
     <section class="resumo__pedido">
       <h2 class="header__title">Resumo do Pedido</h2>
-      <form action="/" class="formulario__section" method="post">
+      <div class="formulario__section">
         <div class="mini-conteiner__label__input">
-          <label
-            for="numerodopedido"
-            class="formulario__label"
-            id="label__pedido"
-          >Número do Pedido</label>
+          <label for="numerodopedido" class="formulario__label" id="label__pedido">Número do Pedido</label>
           <input type="text" name="name" id="numerodopedido" />
         </div>
         <div class="mini-conteiner__label__input">
-          <label
-            for="quantipedacos"
-            class="formulario__label"
-            id="label__quantpedecos"
-          >Quantidade de Pedaços</label>
+          <label for="quantipedacos" class="formulario__label" id="label__quantpedecos">Quantidade de Pedaços</label>
           <input type="text" name="name" id="quantipedacos" />
         </div>
         <div class="mini-conteiner__label__input">
-          <label
-            for="sabores"
-            class="formulario__label"
-            id="label__sabores"
-          >Sabores</label>
+          <label for="sabores" class="formulario__label" id="label__sabores">Sabores</label>
           <input type="text" name="name" id="sabores" />
         </div>
         <div class="mini-conteiner__label__input">
-          <label
-            for="espessuradamassa"
-            class="formulario__label"
-            id="label__massa"
-          >Espessura da Massa</label>
+          <label for="espessuradamassa" class="formulario__label" id="label__massa">Espessura da Massa</label>
           <input type="text" name="name" id="espessuradamassa" />
         </div>
         <div class="mini-conteiner__label__input">
-          <label
-            for="tiposdeborda"
-            class="formulario__label"
-            id="label__borda"
-          >Tipo de Borda</label>
+          <label for="tiposdeborda" class="formulario__label" id="label__borda">Tipo de Borda</label>
           <input type="text" name="name" id="tiposdeborda" />
         </div>
         <div class="mini-conteiner__label__input">
-          <label
-            for="adicionais"
-            class="formulario__label"
-            id="label__adicionais"
-          >Adicionais</label>
+          <label for="adicionais" class="formulario__label" id="label__adicionais">Adicionais</label>
           <input type="text" name="name" id="adicionais" />
         </div>
         <div class="mini-conteiner__label__input">
-          <label
-            for="Observacao"
-            class="formulario__label"
-            id="label__Observacoes"
-          >Observações</label>
+          <label for="Observacao" class="formulario__label" id="label__Observacoes">Observações</label>
           <textarea name="name" id="Observacao" cols="30" rows="5"></textarea>
         </div>
         <div class="mini-conteiner__label__input">
-          <label
-            for="Subtotal"
-            class="formulario__label"
-            id="label__subtotal"
-          >Subtotal</label>
+          <label for="Subtotal" class="formulario__label" id="label__subtotal">Subtotal</label>
           <input type="text" name="name" id="Subtotal" />
         </div>
         <div class="mini-conteiner__label__input">
-          <label
-            for="Cupomdedesconto"
-            class="formulario__label"
-            id="label__Cupomdesconto"
-          >Cupom de Desconto</label>
+          <label for="Cupomdedesconto" class="formulario__label" id="label__Cupomdesconto">Cupom de Desconto</label>
           <input type="text" name="name" id="Cupomdedesconto" />
         </div>
         <div class="mini-conteiner__label__input">
@@ -120,6 +63,7 @@
           <input type="text" name="name" id="TOTAL" />
         </div>
         <input type="submit" class="formulario__btn" value="Finalizar Compra" />
+      </div>
       </form>
     </section>
   </section>
