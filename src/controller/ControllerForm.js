@@ -1,6 +1,7 @@
 const {product, franqueado, evaluation, bank} = require("../models/models")
 
 module.exports = class Form {
+
   static async sejaFranqueado(req, res) {
 
     const newFranqueado = {
@@ -14,6 +15,24 @@ module.exports = class Form {
 
     await franqueado.create(newFranqueado);
     res.redirect("/sejaFranqueado");
+  }
+
+  static async realizePedido(req, res) {
+    const newOrder = {
+      qnt_slice: req.body.qnt__slice,
+      flavor_1: req.body.sabor__1,
+      flavor_2: req.body.sabor__2,
+      type_pasta: req.body.tipo__massa,
+      type_border: req.body.tipo__borda,
+      item_add_1: req.body.item__adicionais__1,
+      item_add_2: req.body.item__adicionais__2,
+      obs: req.body.obs__pedido,
+      status_order: req.body.status__pedido,
+      total_order: req.body.total__pedido,
+    };
+    
+    await order.create(newOrder);
+    res.redirect("/realizePedido");
   }
 
   static async admCreate(req, res) {
