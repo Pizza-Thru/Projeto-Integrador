@@ -8,6 +8,7 @@ router.get("/", views.home);
 router.get("/finalizarCompra", views.finalizarCompra);
 
 router.get("/realizePedido", views.realizePedido);
+router.post("/realizePedido", form.realizePedido);
 
 router.get("/sejaFranqueado", views.sejaFranqueado);
 
