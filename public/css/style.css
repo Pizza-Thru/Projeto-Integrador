@@ -1122,36 +1122,6 @@ input.invalid{
     line-height: 28px;
     color: #FFFFFF; 
 }
-.c-btn-seller
-{
-    margin: 30px 0;
-    width: 241px;
-    height: 42px;
-    background: white;
-    border-radius: 15px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: medium;
-    line-height: 28px;
-    border: none;
-}
-
-.c-btn-cancel
-{
-    margin: 30px 0;
-    width: 241px;
-    height: 42px;
-    background: #D62828;
-    border-radius: 15px;
-    font-family: 'Inter';
-    color: white;
-    font-style: normal;
-    font-weight: 500;
-    font-size: medium;
-    line-height: 28px;
-    border: none;
-}
 
 .l-container__print-payment
 {
@@ -1172,7 +1142,7 @@ input.invalid{
     color: #FFFFFF;
 }
 
-.c-btn-print
+.c-btn_status
 {
     margin: 30px 0;
     width: 241px;
@@ -1185,6 +1155,19 @@ input.invalid{
     font-size: medium;
     line-height: 28px;
     border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cancel
+{
+  background: #D62828;
+  color: white;
+}
+
+.c-btn_status:hover
+{
+    opacity: 0.7;
 }
 
 /* Fim Página meu pedido*/
@@ -2530,18 +2513,7 @@ padding: 0 10px;
   {
       width: 500px
   }
-  .c-btn-seller
-  {
-      width: 451px;
-      height: 83px;
-      font-size: 20px;
-  }
-  .c-btn-cancel
-  {
-      width: 451px;
-      height: 83px;
-      font-size: 20px;
-  }
+
   .l-container__print-payment
   {
       display: flex;
@@ -2555,14 +2527,13 @@ padding: 0 10px;
       padding: 0;
   }
 
-  .c-btn-print
+  .c-btn_status
   {
       width: 451px;
       height: 83px;
       font-size: 20px;
   }
   
-
   .cadastro--btn {
     width: 30%;
   }
@@ -2878,5 +2849,59 @@ padding: 0 10px;
 }
 }
 /* FIm página de feedback */
+
+@media print {
+header, 
+footer{
+  display: none;
+}
+.l-banner-principal,
+.l-container__status-pedido{
+  display: none;
+}
+  
+.container-section__information {
+  background-color: white;
+  border: #003049 2px solid;
+  border-radius: 15px;
+  color: #003049;
+  width: 90%;
+}
+.l-status__information h2{
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  height: 3em;
+  background-image: url("../upload/img/Logo-pizza-thru.png");
+  background-repeat: no-repeat;
+  background-size: 10%;
+}
+.c-information{
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: rgb(219, 214, 214);
+  line-height: 16px;
+}
+.c-server-option{
+  width: 50%;
+  text-align:start;
+}
+
+.c-customer-request{
+  color: #000;
+  background-color: rgb(219, 214, 214);
+  width: 50%;
+  text-align:center;
+  font-weight: lighter;
+}
+  
+}
 
 /*Fim do @media*/
