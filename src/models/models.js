@@ -19,8 +19,11 @@ const user = conn.define("user", {
 	user_state:{
 		type: DataTypes.STRING(50)},
 	user_city:{
-		type: DataTypes.STRING(51)
-	},
+		type: DataTypes.STRING(51)},
+	user_publicPlace:{
+		type: DataTypes.STRING(100)},
+	user_district:{
+		type: DataTypes.STRING(100)},
 	password_login_user: {
 		type: DataTypes.STRING(30),
 		allowNull: false,
