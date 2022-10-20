@@ -50,4 +50,6 @@ router.get('/pagamentodebito', views.pagamentoDebito);
 
 router.post('/pagamentodebito', form.finalizarcompraDebito);
 
+router.get('/pagamentopix', views.pagamentopix);
+
 module.exports = router
