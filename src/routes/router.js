@@ -28,6 +28,8 @@ router.get("/cardapio", views.cardapioView);
 
 router.get("/cadastroUsuario", views.cadastroUsuario);
 
+router.post("/cadastroUsuario/cadastrarUsuario",form.cadastrarUsuario);
+
 router.get('/acessoUsuario', views.acessoUsuario);
 
 router.get('/feedback', views.feedback);
