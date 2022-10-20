@@ -83,4 +83,8 @@ module.exports = class views {
     res.render("pagamentoDebito", { layout: "main" });
   }
 
+  static async pagamentopix(req, res) {
+    res.render("pagamentopix", { layout: "main" });
+  }
+
 }
