@@ -98,6 +98,10 @@ const order = conn.define("order", {
 	qnt_slice:{ 
 		type: DataTypes.STRING(3),
 		allowNull: false,},
+	// Quantidade de sabores
+	qnt_flavor:{
+		type: DataTypes.STRING(3),
+		allowNull: false,},
 	//Sabor 1 da pizza	
 	flavor_1:{ 	
 		type: DataTypes.STRING,
