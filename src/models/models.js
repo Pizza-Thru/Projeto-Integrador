@@ -72,10 +72,9 @@ const bank = conn.define("bank", {
 
 const product = conn.define("product", {
 	id_prod : {
-		type: Sequelize.INTEGER,
+		type: DataTypes.INTEGER,
 		autoIncrement: true,
-		primaryKey: true,
-		allowNull : false},
+		primaryKey: true},
 	name_prod:{ type: DataTypes.STRING(30),
 		},
 	price_prod:{ type: DataTypes.STRING(10),
@@ -97,37 +96,37 @@ const order = conn.define("order", {
 		primaryKey: true},
 	// Pedaços pizza	
 	qnt_slice:{ 
-		type: DataTypes.STRING(10),
+		type: DataTypes.STRING(3),
 		allowNull: false,},
 	//Sabor 1 da pizza	
 	flavor_1:{ 	
-		type: DataTypes.STRING(10),
+		type: DataTypes.STRING,
 		allowNull: false,},
 	//Sabor 2 da pizza
 	flavor_2:{
-		type: DataTypes.STRING(10),
+		type: DataTypes.STRING,
 		allowNull: true,},
 	// Tipo de Massa
 	type_pasta:{
-		type: DataTypes.STRING(10),
+		type: DataTypes.STRING,
 		allowNull: false,},
 	// Tipo de borda
 	type_border:{
-		type: DataTypes.STRING(10),
+		type: DataTypes.STRING,
 		allowNull: false,},
 
 	item_add_1:{
-		type: DataTypes.STRING(10),
+		type: DataTypes.STRING,
 		allowNull: true,},
 	item_add_2:{
-		type: DataTypes.STRING(10),
+		type: DataTypes.STRING,
 		allowNull: true,},
 	
 	obs:{
 		type: DataTypes.STRING(100),
 		allowNull: true,},
 			
-	status_order:{ type: DataTypes.STRING(30),
+	status_order:{ type: DataTypes.STRING(40),
 		allowNull: false,},
 	total_order:{ type: DataTypes.STRING(10),
 		allowNull: false,},
@@ -179,27 +178,18 @@ const evaluation = conn.define("evaluation", {
 //RELACIONAMENTOS
 
 // incluindo foreign key na tabela order
-user.hasMany(order, { foreignKey: 'id_user' });
-order.belongsTo(user, { foreignKey: 'id_user' });
 
-bank.hasMany(order, { foreignKey: 'id_bank' });
-order.belongsTo(bank, { foreignKey: 'id_bank' });
+user.hasMany(order, { foreignKey: 'user_id' });
+order.belongsTo(user, { foreignKey: 'user_id' });
 
-product.hasMany(order, { foreignKey: 'id_prod' });
-order.belongsTo(product, { foreignKey: 'id_prod' });
+bank.hasMany(order, { foreignKey: 'bank_id' });
+order.belongsTo(bank, { foreignKey: 'bank_id' });
+
+product.hasMany(order, { foreignKey: 'prod_id' });
+order.belongsTo(product, { foreignKey: 'prod_id' });
 
 // incluindo foreign key na tabela bank
-user.hasMany(bank, { foreignKey: 'id_user' });
-bank.belongsTo(user, { foreignKey: 'id_user' });
+user.hasMany(bank, { foreignKey: 'users_id' });
+bank.belongsTo(user, { foreignKey: 'users_id' });
 
-// incluindo foreign key na tabela login user
-
-
-
-// incluindo foreign key na tabela login admin
-
-
-
-// incluindo foreign key na tabela product variation
-
-module.exports = {user, bank, product, admin, order, franqueado,evaluation };
+module.exports = {user, bank,product,admin, order, franqueado, evaluation};
