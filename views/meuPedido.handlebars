@@ -1,37 +1,51 @@
-<main  class="conteiner">
-        <section class="l-banner-principal">
-            <img src="/upload/img/banner-Acompanhe-seu-pedido.png" alt="Escrita acompanhe seu pedido">
-        </section>
-        <section class="l-container__delivery-status">
-            <div class="c-container-icon-text">
-                <img class="l-status__icon" src="/upload/img/icon-aguardando-pagamento.png" alt="icone de um relógio">
-                <p>AGUARDANDO PAGAMENTO</p>
+<main class="conteiner">
+    <section class="l-banner-principal">
+        <img src="/upload/img/banner-Acompanhe-seu-pedido.png" alt="Escrita acompanhe seu pedido">
+    </section>
+    <section id="statusOrder" data-id="{{orders.status_order}}" class="l-container__delivery-status">
+        <div class="l-container_progress">
+        <div class="Progress_Status">
+            <div class="myprogressBar"></div>
+        </div>
+        </div>
+        <div class="c-container-icon-text">
+            <div class="l-status__icon">
+                <img id="statusA" src="/upload/img/icon-aguardando-pagamento.png" alt="icone de um relógio">
             </div>
-            <div>
-                <img class="l-status__icon" src="/upload/img/icon-preparando-pedido.png" alt="icone de uma mao segurando bandeja">
-                <p>PEDIDO SENDO PREPARADO</p>
+            <p id="textStatusA">AGUARDANDO PAGAMENTO</p>
+        </div>
+        <div class="c-container-icon-text">
+            <div class="l-status__icon">
+                <img id="statusB" src="/upload/img/icon-preparando-pedido.png" alt="icone de uma mao segurando bandeja">
             </div>
-            <div>
-                <img class="l-status__icon" src="/upload/img/icon-pedido-pronto.png" alt="icone correto">
-                <p>PEDIDO PRONTO</p>
+            <p id="textStatusB">PEDIDO SENDO PREPARADO</p>
+        </div>
+        <div class="c-container-icon-text">
+            <div class="l-status__icon">
+                <img id="statusC" src="/upload/img/icon-pedido-pronto.png" alt="icone correto">
             </div>
-        </section>
-        <hr size="10" width="100%" color="white">
-        <section class="l-container__delivery-problem">
-            <div class="delivery-problem__box">
-                <p>Ops! Problemas com a loja? <br>
-                Entre em contato</p>
-                <button class="c-btn-seller">Falar com o vendedor</button>
-            </div>
-            <div class="delivery-problem__box"> 
-                <p>Para cancelamento do pedido, depois do pagamento o vendedor tera 5% do valor do pedido.</p>
-                <button class="c-btn-cancel" type="submit" value="cancel">Cancelar pedido</button>
-            </div>
-        </section>
-        <hr size="10" width="100%" color="white">
-        <section class="l-container__print-payment">
-            <p>Imprimir comprovante</p> 
-            <button class="c-btn-print">Comprovante do pedido</button>
-        </section>
+            <p id="textStatusC">AGUARDANDO RETIRADA</p>
+        </div>
 
-    </main>
+    </section>
+    <hr size="10" width="100%" color="white">
+    <section class="l-container__delivery-problem">
+        <div class="delivery-problem__box">
+            <p>Ops! Problemas com a loja? <br>
+                Entre em contato</p>
+            <a href="tel:+5500000000">
+                <button class="c-btn_status seller">Falar com o vendedor</button>
+            </a>
+        </div>
+        <div class="delivery-problem__box">
+            <p>Para cancelamento do pedido, depois do pagamento o vendedor tera 5% do valor do pedido.</p>
+            <button class="c-btn_status cancel" type="submit" value="cancel">Cancelar pedido</button>
+        </div>
+    </section>
+    <hr size="10" width="100%" color="white">
+    <section class="l-container__print-payment">
+        <p>Imprimir comprovante</p>
+        <button id="{{orders.id_order}}" class="c-btn_status print">Comprovante do pedido</button>
+    </section>
+
+</main>
