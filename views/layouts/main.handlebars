@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
   <script defer src="/js/menuDropDown.js"></script>
+  <script defer src="/js/script.js"></script>
   <title>Pizza Thru</title>
 </head>
 
@@ -30,7 +31,7 @@
           <span class="hamburger"></span>
         </button>
         <ul class="menu-principal__links" id="menu-principal__links" role="menu">
-          <li class="menu-principal-segunda__lista"><a href="/meu-pedido">STATUS DO
+          <li class="menu-principal-segunda__lista"><a href="/meu-pedido/{{orders.id_order}}">STATUS DO
               PEDIDO</a></li>
           <!--<li class="menu-principal-segunda__lista"><a href="/cadastroUsuario">CADASTRO</a></li>-->
           <li class="menu-principal-segunda__lista"><a href="/realizePedido">MONTE SUA

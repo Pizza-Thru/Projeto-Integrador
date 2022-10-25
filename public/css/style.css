@@ -1067,6 +1067,32 @@ input.invalid{
 
 /* Página meu pedido*/
 /*Meu pedido*/
+.l-container_progress{ 
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.Progress_Status {
+  position: absolute;
+  display: flex;  
+  margin:0 auto;
+  margin-bottom: 2em;
+  padding: 0;
+  min-width: 75%;
+  border-radius: 20px;
+  }
+    
+  .myprogressBar {
+    border-radius: 15px;
+    width: 1%;
+    height: 10px;
+    background-color:#FCBF49;
+    text-align: center;
+    line-height: 32px;
+  }
+  
 .l-container__delivery-status
 {
     display: flex;
@@ -1078,11 +1104,12 @@ input.invalid{
 
 .c-container-icon-text
 {
+   position: relative;
    display: flex;
    flex-direction: column;
    width: 78px;
    margin: 0;
-   padding: 0;
+   padding: 0;   
 }
 
 .l-status__icon
@@ -1091,6 +1118,13 @@ input.invalid{
     width: 59px;
     margin: auto;
     padding: 0%;
+    background-color: #003049;
+   border-radius: 50%;
+}
+
+.l-container__delivery-status img{
+  opacity: 0.5;
+  border-radius: 50%;
 }
 
 .l-container__delivery-status p
@@ -2051,6 +2085,11 @@ padding: 0 10px;
     width: 83%;
   }
   /*Fim da Página Status Pedido*/
+
+  /*Barra de progresso do Status*/
+  .Progress_Status {
+    min-width: 92%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -2319,6 +2358,12 @@ padding: 0 10px;
     margin-top: 5px;
     width: 30%;
   }
+  .l-container_progress{ 
+    width: 95%;
+  }
+  .Progress_Status {
+    min-width: 95%;
+    }
   /*Fim da Página Status Pedido*/
 }
 
@@ -2722,6 +2767,16 @@ padding: 0 10px;
     column-gap: 50px;
   }
 
+  /*Barra Progresso status*/
+.Progress_Status {
+  margin-bottom: 5em;
+  width: 90%;
+  }
+    
+  .myprogressBar {
+    height: 35px;
+  }
+
 }
 /*Estilização da pagina de acesso*/
 @media (min-width: 1200px) {
@@ -2913,7 +2968,7 @@ footer{
   text-align:center;
   font-weight: lighter;
 }
-  
+
 }
 
 /*Fim do @media*/
