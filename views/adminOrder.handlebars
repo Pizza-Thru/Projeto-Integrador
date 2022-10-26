@@ -1,50 +1,65 @@
- <main>
-        <section class="conteiner">
-            <section class="l-banner-principal">
-                <img src="/upload/img/banner-Principal.png" alt="">
-            </section>
-            <h1 class="c-status-titlle">Ordem Pedido</h1>
-                <div class="container-section__information">
-                    <div  class="c-information pedido">
-                        <p class="c-server-option">Número do Pedido</p>
-                        <p class="c-customer-request">{{OrderClient.orderId}}</p>
-                    </div>
-                    <div class="c-information client">
-                        <p class="c-server-option">Cliente</p>
-                        <p class="c-customer-request"> {{OrderClient.name}} </p>
-                    </div>
-                    <div  class="c-information pedaços">
-                        <p class="c-server-option">Quantidade de Pedaços</p>
-                        <p class="c-customer-request"> 08 pedaços </p>
-                    </div>
-                    <div  class="c-information sabores">
-                        <p class="c-server-option">Sabores</p>
-                        <p class="c-customer-request">Portuguesa</p>
-                    </div>
-                    <div  class="c-information massa">
-                        <p class="c-server-option">Espessura da Massa</p>
-                        <p class="c-customer-request">Fina</p>
-                    </div>
-                    <div  class="c-information borda">
-                        <p class="c-server-option">Tipo de Borda</p>
-                        <p class="c-customer-request">Borda recheada</p>
-                    </div>
-                    <div  class="c-information borda-recheio">
-                        <p class="c-server-option">Recheio da Borda</p>
-                        <p class="c-customer-request">Catupiry</p>
-                    </div>
-                    <div  class="c-information adicionais">
-                        <p class="c-server-option">Adicionais</p>
-                        <p class="c-customer-request">Queijo provolone</p>
-                    </div>
-                    <div  class="c-information observacao">
-                        <p class="c-server-option">Observações</p>
-                        <p class="c-customer-request c-observation">Sem presunto</p>
-                    </div>
-                    <div  class="c-information time">
-                        <p class="c-server-option">Hora da Entrega</p>
-                        <p class="c-customer-request">45 minutos</p>
-                    </div>
-                </div>    
+<main>
+    <section class="conteiner">
+        <section class="l-banner-principal">
+            <img src="/upload/img/banner-Principal.png" alt="">
         </section>
- </main>
+        <h1 class="c-status-titlle">Ordem Pedido</h1>
+        <div class="container-section__information">
+            <div class="c-information pedido">
+                <p class="c-server-option">Número do Pedido</p>
+                <p class="c-customer-request">{{orders.id_order}}</p>
+            </div>
+            <div class="c-information client">
+                <p class="c-server-option">Cliente</p>
+                <p class="c-customer-request"> {{users.user_name}} </p>
+            </div>
+            <div class="c-information pedaços">
+                <p class="c-server-option">Quantidade de Pedaços</p>
+                <p class="c-customer-request">{{orders.qnt_slice}} </p>
+            </div>
+            <div class="c-information sabores">
+                <p class="c-server-option">Sabor</p>
+                <p class="c-customer-request">{{orders.flavor_1}}</p>
+            </div>
+            {{#if flavors}}
+            <div class="c-information sabores">
+                <p class="c-server-option">Segundo sabor</p>
+                <p class="c-customer-request">{{orders.flavor_2}}</p>
+            </div>
+            {{/if}}
+            <div class="c-information massa">
+                <p class="c-server-option">Espessura da Massa</p>
+                <p class="c-customer-request">Fina</p>
+            </div>
+            <div class="c-information borda">
+                <p class="c-server-option">Tipo de Borda</p>
+                <p class="c-customer-request">Borda recheada</p>
+            </div>
+            <div class="c-information borda-recheio">
+                <p class="c-server-option">Recheio da Borda</p>
+                <p class="c-customer-request">Catupiry</p>
+            </div>
+            {{#if item.[0].item_1 }}
+            <div class="c-information adicionais">
+                <p class="c-server-option">Item adicional</p>
+                <p class="c-customer-request">{{orders.item_add_1}}</p>
+            </div>
+            {{/if}}
+            {{#if item.[0].item_2 }}
+            <div class="c-information adicionais">
+                <p class="c-server-option">Item adicional 2</p>
+                <p class="c-customer-request">{{orders.item_add_2}}</p>
+            </div>
+            {{/if}}
+
+            <div class="c-information observacao">
+                <p class="c-server-option">Observações</p>
+                <p class="c-customer-request c-observation">{{orders.obs}}</p>
+            </div>
+            <div class="c-information time">
+                <p class="c-server-option">Hora da Entrega</p>
+                <p class="c-customer-request">45 minutos</p>
+            </div>
+        </div>
+    </section>
+</main>

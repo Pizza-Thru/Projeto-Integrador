@@ -16,11 +16,11 @@ router.post("/sejaFranqueado", form.sejaFranqueado);
 
 router.get("/cadastroProduto", views.cadastroProduto);
 
-router.get("/meu-pedido", views.meuPedidoView);
+router.get("/meu-pedido/:id", views.meuPedidoView);
 
-router.get("/pedido-realizado", views.pedRealizadoView); //não funcional
+router.get("/pedido-realizado/:id", views.pedRealizadoView);
 
-router.get("/admin/ordem-do-pedido", views.admOrderView); 
+router.get("/admin/ordem-do-pedido", views.admOrderView);
 
 router.post("/admin/criar-produto", form.admCreate);
 

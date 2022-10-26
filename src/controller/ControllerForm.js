@@ -30,6 +30,7 @@ module.exports = class Form {
       item_add_2: req.body.select__Adicional_2,
       obs: req.body.Observacao,
       total_order: req.body.Subtotal,
+      status_order: "Pedido em aberto",
     };
     
     console.log(newOrder);

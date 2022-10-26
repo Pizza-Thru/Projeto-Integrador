@@ -9,7 +9,7 @@
     <h1 class="header-main__title">Realize o seu Pedido</h1>
   </header>
   <div class="formulario">
-    <form action="/" class="main__formulario" method="get">
+    <form action="/realizePedido" class="main__formulario" method="Post">
       <div class="conteiner__formulario">
         <label
           class="formulario__label"
@@ -17,7 +17,7 @@
           id="label__pedacos"
         >Quantidade de Pedaços</label><br />
         <select
-          name="main-section-select__pedacos"
+          name="select__pedacos"
           id="select__pedacos"
           required
         >
@@ -34,7 +34,7 @@
           id="label__sabores"
         >Quantidade de Sabores</label><br />
         <select
-          name="main-section-select__sabores"
+          name="select__sabores"
           id="select__sabores"
           required
         >
@@ -50,14 +50,14 @@
           for="select__sabor1"
           id="label__sabor1"
         >Sabor 1</label><br />
-        <select name="main-section-select__sabor1" id="select__sabor1" required>
+        <select name="select__sabor1" id="select__sabor1" required>
           <option disabled selected value="">Selecione</option>
-          <option value="Ca">Calabresa</option>
-          <option value="Po">Portuguesa</option>
-          <option value="Ma">Marguerita</option>
-          <option value="FrC">Frango com Catupiry</option>
-          <option value="Mu">Mussarela</option>
-          <option value="Na">Napolitana</option>
+          <option value="Calabresa">Calabresa</option>
+          <option value="Portuguesa">Portuguesa</option>
+          <option value="Marguerita">Marguerita</option>
+          <option value="Frango com Catupiry">Frango com Catupiry</option>
+          <option value="Mussarela">Mussarela</option>
+          <option value="Napolitana">Napolitana</option>
         </select>
       </div>
       <div class="conteiner__formulario">
@@ -66,15 +66,15 @@
           for="select__sabor2"
           id="label__sabor2"
         >Sabor 2</label><br />
-        <select name="main-section-select__sabor2" id="select__sabor2" required>
+        <select name="select__sabor2" id="select__sabor2" required>
           <option disabled selected value="">Selecione</option>
           <option value="Na">Sem Opção</option>
-          <option value="Ca">Calabresa</option>
-          <option value="Po">Portuguesa</option>
-          <option value="Ma">Marguerita</option>
-          <option value="FrC">Frango com Catupiry</option>
-          <option value="Mu">Mussarela</option>
-          <option value="Na">Napolitana</option>
+          <option value="Calabresa">Calabresa</option>
+          <option value="Portuguesa">Portuguesa</option>
+          <option value="Marguerita">Marguerita</option>
+          <option value="Frango com Catupiry">Frango com Catupiry</option>
+          <option value="Mussarela">Mussarela</option>
+          <option value="Napolitana">Napolitana</option>
         </select>
       </div>
       <div class="conteiner__formulario">
@@ -84,7 +84,7 @@
           id="label__Espessura-da-Massa"
         >Espessura da Massa</label><br />
         <select
-          name="main-section-select__Espessura-da-Massa"
+          name="select__Espessura_da_Massa"
           id="select__Espessura-da-Massa"
           required
         >
@@ -101,14 +101,14 @@
           id="label__Recheio-da-Borda"
         >Recheio da Borda</label><br />
         <select
-          name="main-section-select__Recheio-da-Borda"
+          name="select__Recheio_da_Borda"
           id="select__Recheio-da-Borda"
           required
         >
           <option disabled selected value="">Selecione</option>
-          <option value="SR">Sem Recheio</option>
-          <option value="Cat">Catupiry</option>
-          <option value="Che">Cheddar</option>
+          <option value="Sem Recheio">Sem Recheio</option>
+          <option value="Catupiry">Catupiry</option>
+          <option value="Cheddar">Cheddar</option>
         </select>
       </div>
       <div class="conteiner__formulario">
@@ -135,16 +135,16 @@
           id="label__Adicional-1"
         >Adicional 1</label><br />
         <select
-          name="main-section-select__Adicional-1"
+          name="select__Adicional_1"
           id="select__Adicional-1"
         >
           <option disabled selected value="">Selecione</option>
-          <option value="Ce">Cebola</option>
-          <option value="QE">Queijo Extra</option>
-          <option value="Ma">Azeitona</option>
-          <option value="Cat">Catupiry</option>
-          <option value="Ba">Bacon</option>
-          <option value="Che">Cheddar</option>
+          <option value="Cebola">Cebola</option>
+          <option value="Queijo Extra">Queijo Extra</option>
+          <option value="Azeitona">Azeitona</option>
+          <option value="Catupiry">Catupiry</option>
+          <option value="Bacon">Bacon</option>
+          <option value="Cheddar">Cheddar</option>
         </select>
       </div>
       <div class="conteiner__formulario">
@@ -154,16 +154,16 @@
           id="label__Adicional-2"
         >Adicional 2</label><br />
         <select
-          name="main-section-select__Adicional-2"
+          name="select__Adicional_2"
           id="select__Adicional-2"
         >
           <option disabled selected value="">Selecione</option>
-          <option value="Ce">Cebola</option>
-          <option value="QE">Queijo Extra</option>
-          <option value="Ma">Azeitona</option>
-          <option value="Cat">Catupiry</option>
-          <option value="Ba">Bacon</option>
-          <option value="Che">Cheddar</option>
+          <option value="Cebola">Cebola</option>
+          <option value="Queijo Extra">Queijo Extra</option>
+          <option value="Azeitona">Azeitona</option>
+          <option value="Catupiry">Catupiry</option>
+          <option value="Bacon">Bacon</option>
+          <option value="Cheddar">Cheddar</option>
         </select>
       </div>
       <div class="conteiner__formulario">
@@ -173,7 +173,7 @@
           id="label__Observacao"
         >Observação</label><br />
         <textarea
-          name="main-section-label__Observacao"
+          name="Observacao"
           id="Observacao"
           cols="25"
           rows="3"
