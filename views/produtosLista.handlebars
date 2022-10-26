@@ -1,0 +1,48 @@
+<main class="cadastro">
+  <header class="cadastro__titulo">
+    <h1 class="cadastro-main__title"> Lista de produtos </h1>
+  </header>
+  <div class="cadastro__form">
+    <section>
+      <div class="listaDePedidos">
+            <table>
+               <tr> 
+                <th>Id </th>
+                <th>Nome </th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+                </tr>
+              {{#each productList}}
+                <tr>
+               <td>{{id_prod}}</td>
+               <td>{{name_prod}}</td>
+               <td>{{stock_prod}}</td>
+               <td>R${{price_prod}}</td>
+               <td><button onclick="editProduct"><i><span class="material-symbols-outlined">
+               edit
+               </span></i></button></td>
+               <td><button onclick="deleteProduct"><i><span class="material-symbols-outlined">
+                delete
+               </span></i></button></td>
+                </tr>
+              {{/each}}
+            </table>
+          
+        
+            
+      
+            
+          
+         </ul>
+        
+
+      </div>
+    </section>
+  </div>
+    <div class="cadastro--btn-back">
+      <a href="#"> Voltar </a>
+    </div>
+  </div>
+</main>

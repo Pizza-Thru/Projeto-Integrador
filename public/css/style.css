@@ -1825,6 +1825,36 @@ padding: 0 10px;
 }
 /*Fim página de feedback*/
 
+
+/* Inicio da lista de produtos*/
+
+.listaDePedidos {
+  
+  text-align: center;
+  
+  margin-bottom: 2em;
+}
+
+.listaDePedidos table {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.listaDePedidos td {
+  border: 1px solid black;
+
+}
+
+.listaDePedidos button {
+  background-color: transparent;
+  border: none;
+
+}
+
+/* Fim da lista de produtos */
+
 /*Inicio do @media*/
 
 @media (min-width: 768px) {
