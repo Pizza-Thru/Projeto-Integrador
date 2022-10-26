@@ -20,7 +20,7 @@ router.get("/meu-pedido/:id", views.meuPedidoView);
 
 router.get("/pedido-realizado/:id", views.pedRealizadoView);
 
-router.get("/admin/ordem-do-pedido", views.admOrderView);
+router.get("/admin/ordem-do-pedido/:id", views.admOrderView);
 
 router.post("/admin/criar-produto", form.admCreate);
 
