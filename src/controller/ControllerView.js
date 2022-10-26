@@ -6,7 +6,7 @@ module.exports = class views {
   static async meuPedidoView(req, res) {
     const id = req.params.id;
     const orders = await order.findOne({ where: { id_order: id }, raw: true, });
-  
+
     res.render("meuPedido", { layout: "main", orders });
   };
   static async pedRealizadoView(req, res) {
@@ -34,7 +34,23 @@ module.exports = class views {
     res.render("pedidoRealizado", { layout: "main", orders, users, products, banks });
   }
   static async admOrderView(req, res) {
-    res.render("adminOrder", { layout: "mainAdm" });
+    const id = req.params.id;
+
+    const orders = await order.findOne({
+      include: [user, product],
+      raw: true,
+      where: { id_order: id },
+    });
+    const users = await user.findOne({
+      raw: true,
+      where: { id_user: orders.user_id }
+    });
+    const flavors = orders.flavor_2 !== null;
+    const item = [{
+      item_1: orders.item_add_1 !== null,
+      item_2: orders.item_add_2 !== null,
+    }]
+    res.render("adminOrder", { layout: "mainAdm", orders, users, flavors, item });
   }
   static async admCreateView(req, res) {
     res.render("adminCreate", { layout: "mainAdm" });
