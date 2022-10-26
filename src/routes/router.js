@@ -52,4 +52,6 @@ router.post('/pagamentodebito', form.finalizarcompraDebito);
 
 router.get('/pagamentopix', views.pagamentopix); //falta css
 
+router.get('/produtosLista', views.produtosLista);
+
 module.exports = router
