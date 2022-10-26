@@ -24,7 +24,7 @@ router.get("/admin/ordem-do-pedido/:id", views.admOrderView);
 
 router.post("/admin/criar-produto", form.admCreate);
 
-router.get("/cardapio", views.cardapioView);
+router.get("/cardapio", views.cardapioView); //sem css
 
 router.get("/cadastroUsuario", views.cadastroUsuario);
 
@@ -42,14 +42,16 @@ router.get('/recuperarSenha', views.recuperarSenha)
 
 router.get('/statusPedido', views.statusPedido) 
 
-router.get('/pagamentoCredito', views.pagamentoCredito)
+router.get('/pagamentoCredito', views.pagamentoCredito) //falta css
 
 router.post('/pagamentoCredito', form.finalizarcompraCredito);
 
-router.get('/pagamentodebito', views.pagamentoDebito);
+router.get('/pagamentodebito', views.pagamentoDebito); //falta css
 
 router.post('/pagamentodebito', form.finalizarcompraDebito);
 
-router.get('/pagamentopix', views.pagamentopix);
+router.get('/pagamentopix', views.pagamentopix); //falta css
+
+router.get('/produtosLista', views.produtosLista);
 
 module.exports = router

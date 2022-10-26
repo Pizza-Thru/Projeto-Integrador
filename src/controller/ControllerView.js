@@ -99,6 +99,11 @@ module.exports = class views {
     res.render("pagamentoDebito", { layout: "main" });
   }
 
+  static async produtosLista(req, res) {
+    const productList = await product.findAll({raw: true})
+    res.render("produtosLista", { layout: "mainAdm", productList});
+  }
+
   static async pagamentopix(req, res) {
     res.render("pagamentopix", { layout: "main" });
   }
