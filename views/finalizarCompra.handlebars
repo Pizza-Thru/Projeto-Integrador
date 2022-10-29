@@ -4,21 +4,38 @@
   </header>
   <section class="formulario">
     <h2 class="header__title">Formas de Pagamento</h2>
-    <form action="/" class="section__formulario" method="post">
+    <form  class="section__formulario" name="formadepagamento">
       <div class="conteiner-escolhas__pagamentos">
         <div class="conteiner-formas__pagamento">
           <label for="cartaodecredito" class="formulario__label" id="label__credito">Cartão de Crédito</label>
-          <input class="c-radio" type="radio" name="Name" id="cartaodecredito"/>
+          <input class="c-radio" type="radio" name="Name" id="cartaodecredito" value="cartaocredito"/>
         </div>
         <div class="conteiner-formas__pagamento">
           <label for="cartaodedebito" class="formulario__label" id="label__debito">Cartão de Débito</label>
-          <input class="c-radio" type="radio" name="Name" id="cartaodedebito"/>
+          <input class="c-radio" type="radio" name="Name" id="cartaodedebito" value="cartaodebito"/>
         </div>
         <div class="conteiner-formas__pagamento">
           <label for="pix" class="formulario__label" id="label__pix">Pix</label>
-          <input class="c-radio" type="radio" name="Name" id="pix"/>
+          <input class="c-radio" type="radio" name="Name" id="pix" value="pix"/>
         </div>
       </div>
+      <button type="submit">teste</button>
+      </form>
+      <script>
+        const formulario = document.forms['formadepagamento'];
+        formulario.addEventListener('submit', function(event){
+          event.preventDefault();
+          const formadepagamento = document.querySelector('input[name="Name"]:checked');
+          console.log(formadepagamento);
+          if (formadepagamento.value === 'cartaocredito') {
+            window.location.href = '/pagamentocredito';
+          } else if (formadepagamento.value === 'cartaodebito') {
+            window.location.href = '/pagamentodebito';
+          } else if (formadepagamento.value === 'pix') {
+            window.location.href = '/pagamentopix';
+          }
+        });
+      </script>
     <section class="resumo__pedido">
       <h2 class="header__title">Resumo do Pedido</h2>
       <div class="formulario__section">
@@ -64,7 +81,7 @@
         </div>
         <input type="submit" class="formulario__btn" value="Finalizar Compra" />
       </div>
-      </form>
+      <!--</form>-->
     </section>
   </section>
 </main>
