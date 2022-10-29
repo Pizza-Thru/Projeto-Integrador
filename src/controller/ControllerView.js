@@ -108,4 +108,17 @@ module.exports = class views {
     res.render("pagamentopix", { layout: "main" });
   }
 
+  static async deletarProduto(req, res) {
+    product.destroy({
+      where: {'id_prod': req.params.id}
+    }).then(() => { 
+    res.redirect("/produtosLista")
+  }).catch((e)=>{ res.send("Produto não apagado com sucesso!")})
 }
+
+  static async editarProdutoView (req, res) {
+    res.render("/editarProdutoView", { layout: "mainAdm" })
+  }
+
+}
+

@@ -54,4 +54,11 @@ router.get('/pagamentopix', views.pagamentopix); //falta css
 
 router.get('/produtosLista', views.produtosLista);
 
+router.get("/del-produto/:id", views.deletarProduto);
+
+router.get("/editarProdutoView", views.editarProdutoView);
+
+
+router.get("/admin/editar-produto", form.editarProduto )
+
 module.exports = router
