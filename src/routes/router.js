@@ -42,11 +42,11 @@ router.get('/recuperarSenha', views.recuperarSenha)
 
 router.get('/statusPedido', views.statusPedido) 
 
-router.get('/pagamentoCredito', views.pagamentoCredito) //falta css
+router.get('/pagamentocredito', views.pagamentocredito) //falta css
 
-router.post('/pagamentoCredito', form.finalizarcompraCredito);
+router.post('/pagamentocredito', form.finalizarcompraCredito);
 
-router.get('/pagamentodebito', views.pagamentoDebito); //falta css
+router.get('/pagamentodebito', views.pagamentodebito); //falta css
 
 router.post('/pagamentodebito', form.finalizarcompraDebito);
 
