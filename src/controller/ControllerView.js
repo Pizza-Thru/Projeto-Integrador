@@ -91,12 +91,12 @@ module.exports = class views {
   static async feedback(req, res) {
     res.render("feedback", { layout: "main" });
   }
-  static async pagamentoCredito(req, res) {
-    res.render("pagamentoCredito", { layout: "main" });
+  static async pagamentocredito(req, res) {
+    res.render("pagamentocredito", { layout: "main" });
   }
 
-  static async pagamentoDebito(req, res) {
-    res.render("pagamentoDebito", { layout: "main" });
+  static async pagamentodebito(req, res) {
+    res.render("pagamentodebito", { layout: "main" });
   }
 
   static async produtosLista(req, res) {
