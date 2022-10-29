@@ -1,9 +1,9 @@
 <main class="cadastro">
   <header class="cadastro__titulo">
-    <h1 class="cadastro-main__title"> Cadastro de Produto </h1>
+    <h1 class="cadastro-main__title"> Edição de Produto </h1>
   </header>
   <div class="cadastro__form">
-    <form action="/admin/criar-produto" method="POST">
+    <form action="/admin/editar-produto" method="PATCH">
       <div class="cadastro__box">
           <label class="cadastro__label" for="name_prod"> Nome </label>
           <input class="cadastro__input" type="text" id="name_prod" name="name_prod" placeholder="Nome do produto">
@@ -35,7 +35,7 @@
     </form>
   </div>
     <div class="cadastro--btn-back">
-      <a href="produtosLista"> Voltar </a>
+      <a href="#"> Voltar </a>
     </div>
   </div>
 </main>

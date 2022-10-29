@@ -51,7 +51,7 @@ module.exports = class Form {
     };
 
     await product.create(newProduct);
-    res.redirect("/cadastroProduto");
+    res.redirect("/produtosLista");
     
   }
 
@@ -123,4 +123,12 @@ module.exports = class Form {
               } 
       
       }
+      static async editarProduto (req, res) { 
+        product.put ({
+          where: {'id_prod' : req.params.id}
+        }).then (()=> {
+          res.redirect("/produtosLista")
+        }).catch ((e)=> {res.send ("Produto não conseguiu ser editado!")})
+      }
+    
 };
