@@ -1,58 +1,56 @@
 <body>
-        <header class="section-header__banner__credito">
-        <div><img src="../upload/img/bannerprincipalpizzathru.png" alt="Banner da Pizza Thru"></div>
-    </header>
-    <section class="sec__container__credito">
-        <h1 id="title__main__credito">Finalizar a Compra</h1>
-    </section>
-    <main>
-    <!--Início do conteúdo principal - FORMA PAGAMENTO credito -->
-            <section id="sec__container__dados__credito">
-                <form action="/pagamentoCredito" method="post" id="form__pedido__credito">
-                    <div class="container__form__pagamento__credito">
-                        <h3 id="forma__pagamento__h3__credito">Forma de Pagamento</h3>
-                        <h5 id="credito__h5">Cartão de Credito</h5>
-                    </div>
-                    <div class="container__form__numero__cartao__credito">
-                        <label for="numero__cartao__credito" id="lab__numero__cartao__credito">Número do Cartão*</label>
-                        <input class="input__select__credito" type="number" name="numero__cartao__credito" id="numero__cartao__credito">
-                    </div>
-                    <div class="p__container__cartao__credito">
-                        <p class="p__form__bandeira">A bandeira do cartão será automaticamente Identificada pelo sistema</p>
-                    </div>
-                    <div class="container__form__nome__cartao__credito">
-                        <label for="nome__cartao__credito" id="lab__nome__cartao">Seu nome* (como impresso no cartão)</label>
-                        <input class="input__select__credito" type="text" name="nome__cartao__credito" id="nome__cartao__credito">
-                    </div>
-                    <div class="container__form__pagamento__credito">
-                        <h5 id="credito__h5">Vencimento</h5>
-                    </div>
-                    <div class="container__dados__cartao__credito">
-                        <div class="mes__cartao__credito">
-                            <label for="mes__cartao__credito" id="lab__mes__cartao__credito">Mês</label>
-                            <input class="input__select__credito" type="number" name="mes__cartao__credito" id="mes__cartao__credito">
-                        </div>
-                        <div class="ano__cartao__credito">
-                            <label for="ano__cartao__credito" id="lab__ano__cartao__credito">Ano</label>
-                            <input class="input__select__credito" type="number" name="ano__cartao__credito" id="ano__cartao__credito">
-                        </div>
-                    </div>
-                    <div class="container__codigo__seguranca__credito">
-                        <label for="cvv__cartao__credito" id="lab__cvv__cartao">Código de Segurança</label>
-                        <input class="input__select__credito" type="number" name="cvv__cartao__credito" id="cvv__cartao__credito">
-                    </div>
-                    <div class="container__salvar__cartao__credito">
-                        <label for="salvar__cartao__credito" id="lab__salvar__cartao">Salvar cartão para a próxima compra</label>
-                        <input class="input__select__credito" type="checkbox" name="salvar__cartao__credito" id="salvar__cartao__credito" value="true">
-                    </div>
-                    <div class="p__container__cartao__credito">
-                        <p class="p__form__bandeira">Para efetuar o pagamento, não há necessidade de salvar seu cartão. Esta função apenas facilita suas próximas compras com toda a segurança</p>
-                    </div>
-                </form>
-            </section>
-    </main>
-    <div class="container__form__credito" id="form__btn__finalizar__credito">
-        <label for="finalizar__btn" class="form__label__btn"></label>
-        <input type="submit" class="form__btn__credito" name="name" value="Finalizar a Compra" id="finalizar__btn" form="form__pedido__credito">
+  <div class="conteiner-main__img">
+    <img src="/upload/img/banner-Principal.png" alt="Monte ja sua Pizza" />
+  </div>
+  <section>
+    <h1 class="header-main__title">Compra no cartão</h1>
+  </section>
+  <main>
+  <form id="form-checkout" class="main__formulario">
+    <div class="conteiner__formulario">
+        <label class="formulario__label">Numero do cartão</label>
+        <input type="text" id="form-checkout__cardNumber">
     </div>
+    <div class="conteiner__formulario">
+        <label class="formulario__label">Data de expiração</label>
+        <input type="text" id="form-checkout__expirationDate">
+    </div>
+    <div class="conteiner__formulario">
+        <label class="formulario__label">Codigo de segurança</label>
+        <input type="text" id="form-checkout__securityCode">
+    </div>
+    <div class="conteiner__formulario">
+        <label class="formulario__label">Nome como escrito no cartão</label>
+        <input type="text" id="form-checkout__cardholderName"/>
+    </div>
+    <div class="conteiner__formulario">
+        <label class="formulario__label"> Bandeira do cartão </label>
+        <select id="form-checkout__issuer"></select>
+    </div>
+    <div class="conteiner__formulario">
+        <label class="formulario__label"> Parcelas </label>
+        <select id="form-checkout__installments"></select>
+    </div>
+    <div class="conteiner__formulario">
+        <label class="formulario__label"> Identificação </label>
+        <select id="form-checkout__identificationType"></select>
+    </div>
+    <div>
+        <label class="formulario__label"> CPF </label>
+        <input type="text" id="form-checkout__identificationNumber" />
+    </div>
+    <div>
+        <label class="formulario__label"> E-mail </label>
+        <input type="email" id="form-checkout__cardholderEmail" />
+    </div>
+    
+
+    <button class="formulario__btn" type="submit" id="form-checkout__submit">Pagar</button>
+    <progress value="0" class="progress-bar">Carregando...</progress>
+  </form>
+  </main>
+  <script defer src="/js/finalizacaoPagamentoCartao"></script>
+  <script src="https://sdk.mercadopago.com/js/v2">
+  const mp = new MercadoPago("TEST-628d8c33-9dfb-442e-b0d7-7adec5fd94f2");
+  </script>
 </body>

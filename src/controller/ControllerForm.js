@@ -1,5 +1,5 @@
 const {product, franqueado, evaluation, bank, order} = require("../models/models")
-
+const mercadopago = require ("mercadopago")
 module.exports = class Form {
 
   static async sejaFranqueado(req, res) {
@@ -131,4 +131,26 @@ module.exports = class Form {
         }).catch ((e)=> {res.send ("Produto não conseguiu ser editado!")})
       }
     
+      static async MercadoPago (){
+        mercadopago.configure({
+          access_token: 'PROD_ACCESS_TOKEN'
+        });
+        let preference = {
+          items: [
+            {
+              title: 'Meu produto',
+              unit_price: 100,
+              quantity: 1,
+            }
+          ]
+        };
+        mercadopago.preferences.create(preference)
+        .then(function(response){
+          global.id = response.body.id;
+        }).catch(function(error){
+          console.log(error);
+        });
+      }
+
+
 };
