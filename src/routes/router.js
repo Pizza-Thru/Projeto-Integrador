@@ -5,7 +5,7 @@ const form = require("../controller/ControllerForm");
 
 router.get("/", views.home);
 
-router.get("/finalizarCompra", views.finalizarCompra);
+router.get("/finalizarCompra/:id", views.finalizarCompra);
 
 router.get("/realizePedido", views.realizePedido);
 router.post("/realizePedido", form.realizePedido);
