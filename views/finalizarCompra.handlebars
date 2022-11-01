@@ -19,69 +19,52 @@
           <input class="c-radio" type="radio" name="Name" id="pix" value="pix"/>
         </div>
       </div>
-      <button type="submit">teste</button>
-      </form>
-      <script>
-        const formulario = document.forms['formadepagamento'];
-        formulario.addEventListener('submit', function(event){
-          event.preventDefault();
-          const formadepagamento = document.querySelector('input[name="Name"]:checked');
-          console.log(formadepagamento);
-          if (formadepagamento.value === 'cartaocredito') {
-            window.location.href = '/pagamentocredito';
-          } else if (formadepagamento.value === 'cartaodebito') {
-            window.location.href = '/pagamentodebito';
-          } else if (formadepagamento.value === 'pix') {
-            window.location.href = '/pagamentopix';
-          }
-        });
-      </script>
     <section class="resumo__pedido">
       <h2 class="header__title">Resumo do Pedido</h2>
       <div class="formulario__section">
         <div class="mini-conteiner__label__input">
-          <label for="numerodopedido" class="formulario__label" id="label__pedido">Número do Pedido</label>
-          <input type="text" name="name" id="numerodopedido" />
+          <p class="formulario__label">Número do Pedido</p>
+          <span class="itensDoPedido">{{orders.id_order}}</span>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="quantipedacos" class="formulario__label" id="label__quantpedecos">Quantidade de Pedaços</label>
-          <input type="text" name="name" id="quantipedacos" />
+          <p class="formulario__label">Quantidade de Pedaços</p>
+          <span class="itensDoPedido">{{orders.qnt_slice}}</span>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="sabores" class="formulario__label" id="label__sabores">Sabores</label>
-          <input type="text" name="name" id="sabores" />
+          <p class="formulario__label">Sabores</p>
+          <span class="itensDoPedido">{{orders.qnt_flavor}}</span>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="espessuradamassa" class="formulario__label" id="label__massa">Espessura da Massa</label>
-          <input type="text" name="name" id="espessuradamassa" />
+          <p class="formulario__label">Espessura da Massa</p>
+          <span class="itensDoPedido">{{orders.type_pasta}}</span>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="tiposdeborda" class="formulario__label" id="label__borda">Tipo de Borda</label>
-          <input type="text" name="name" id="tiposdeborda" />
+          <p class="formulario__label">Tipo de Borda</p>
+          <span class="itensDoPedido">{{orders.type_border}}</span>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="adicionais" class="formulario__label" id="label__adicionais">Adicionais</label>
-          <input type="text" name="name" id="adicionais" />
+          <p class="formulario__label">Adicionais</p>
+          <span class="itensDoPedido">{{orders.item_add_1}}  &  {{orders.item_add_2}}</span>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="Observacao" class="formulario__label" id="label__Observacoes">Observações</label>
-          <textarea name="name" id="Observacao" cols="30" rows="5"></textarea>
+          <p class="formulario__label">Observações</p>
+          <div class="observacao" cols="30" rows="5">{{orders.obs}}</div>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="Subtotal" class="formulario__label" id="label__subtotal">Subtotal</label>
-          <input type="text" name="name" id="Subtotal" />
+          <p class="formulario__label">Subtotal</p>
+          <span class="itensDoPedido"></span>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="Cupomdedesconto" class="formulario__label" id="label__Cupomdesconto">Cupom de Desconto</label>
-          <input type="text" name="name" id="Cupomdedesconto" />
+          <p class="formulario__label">Cupom de Desconto</p>
+          <span class="itensDoPedido"></span>
         </div>
         <div class="mini-conteiner__label__input">
-          <label for="TOTAL" class="formulario__label" id="total">TOTAL</label>
-          <input type="text" name="name" id="TOTAL" />
+          <p class="formulario__label">TOTAL</p>
+          <span class="itensDoPedido">{{orders.total_order}}</span>
         </div>
         <input type="submit" class="formulario__btn" value="Finalizar Compra" />
       </div>
-      <!--</form>-->
+    </form>
     </section>
   </section>
 </main>
