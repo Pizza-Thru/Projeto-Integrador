@@ -59,7 +59,29 @@ module.exports = class views {
     res.render("home", { layout: "main" });
   }
   static async finalizarCompra(req, res) {
-    res.render("finalizarCompra", { layout: "main" });
+    const id = req.params.id;
+
+    const orders = await order.findOne({
+      include: [user, product, bank],
+      raw: true,
+      where: { id_order: id },
+    });
+
+    const users = await user.findOne({
+      raw: true,
+      where: { id_user: orders.user_id }
+    });
+
+    const products = await product.findOne({
+      raw: true, where: { id_prod: orders.prod_id }
+    });
+    const banks = await bank.findOne({
+      raw: true,
+      where: { id_bank: orders.bank_id }
+    });
+
+    res.render("finalizarCompra", { layout: "main", orders, users, products, banks });
+
   }
   static async realizePedido(req, res) {
     res.render("realizePedido", { layout: "main" });
