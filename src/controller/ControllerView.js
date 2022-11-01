@@ -139,7 +139,7 @@ module.exports = class views {
 }
 
   static async editarProdutoView (req, res) {
-    res.render("/editarProdutoView", { layout: "mainAdm" })
+    res.render("editarProdutoView", { layout: "mainAdm" })
   }
 
 }

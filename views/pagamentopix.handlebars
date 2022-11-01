@@ -1,82 +1,73 @@
 <body>
-        <header class="section-header__banner">
-        <div><img src="../upload/img/bannerprincipalpizzathru.png" alt="Banner da Pizza Thru"></div>
-    </header>
-    <section class="sec__container__pix">
-        <h1 id="title__main__pix">Finalizar a Compra</h1>
-    </section>
-    <main>
-    <!--Início do conteúdo principal - FORM -->
-            <section id="sec__container__email">
-                <div class="container__form__email">
-                    <h3 id="forma__pagamento__h3__pix">Forma de Pagamento</h3>
-                    <h5 id="pix__h5__pix">PIX</h5>
-                </div>
-                <div class="container__form__email">
-                    <form action="/" method="get">
-                        <label for="email" id="lab__email">Informe o endereço de E-mail para enviar a chave de ativação</label>
-                        <input class="input__select__pix" type="email" name="name" id="email">
-                    </form>
-                </div>
-                <div class="p_form__container__email">
-                    <p class="p__form__email__pix">É simples e seguro:</p>
-                    <p class="p__form__email__pix">1. Após finalizar a compra, o código ficará disponivel para você pagar no Banco da sua escolha.</p>                           
-                    <p class="p__form__email__pix">2. O tempo limite para você pagar é de 30 minutos.</p>
-                </div>
-            </section>
-            <section id="sec__container__formulario__pix">
-                <h5 id="form__h5__pix">Resumo do Pedido:</h5>
-                <form action="/" method="get" id="form__pedido">
-                    <div class="container__form__pix">
-                        <label for="numero__pedido__pix" class="form__label__pix">Número do Pedido</label>
-                        <input class="input__select__pix" type="number" name="name" id="numero__pedido__pix">
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="qtd__pedacos__pix" class="form__label__pix">Quantidade de Pedaços</label>
-                        <select class="input__select__pix" name="qtd__pedacos" id="qtd__pedacos__pix"></select>
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="sabores" class="form__label__pix">Sabores</label>
-                        <select class="input__select__pix" name="sabores" id="sabores"></select>
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="espessura__massa" class="form__label__pix">Espessura da Massa</label>
-                        <select class="input__select__pix" name="espessura__massa" id="espessura__massa"></select>
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="tipo__borda" class="form__label__pix">Tipo de Borda</label>
-                        <select class="input__select__pix" name="tipo__borda" id="tipo__borda"></select>
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="recheio__borda" class="form__label__pix">Recheio da Borda</label>
-                        <select class="input__select__pix" name="recheio__borda__pizza" id="recheio__borda"></select>
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="adds" class="form__label__pix">Adicionais</label>
-                        <select class="input__select__pix" name="adicionais" id="adds"></select>
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="form_obs__pix" class="form__label__pix">Observações</label>
-                        <textarea name="observacoes" id="form_obs__pix" cols="30" rows="5"></textarea>
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="subtotal" class="form__label__pix">Subtotal</label>
-                        <input class="input__select__pix" type="number" name="name" id="subtotal">
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="cupom" class="form__label__pix">Cupom de Desconto</label>
-                        <input class="input__select__pix" type="text" name="name" id="cupom">
-                    </div>
-                    <div class="container__form__pix">
-                        <label for="num__total" class="form__label__pix">TOTAL</label>
-                        <input type="text" class="form__valor__total__pix" name="name" id="num__total">
-                    </div>
-                </form>
-            </section>
-    <!--Fim do conteúdo principal - FORM -->
-    </main>
-    <div class="container__form__pix" id="form__btn__finalizar">
-        <label for="finalizar__btn" class="form__label__btn"></label>
-        <input type="submit" class="form__btn__pix" name="name" value="Finalizar a Compra" id="finalizar__btn" form="form__pedido">
+  <div class="conteiner-main__img">
+    <img src="/upload/img/banner-Principal.png" alt="Monte ja sua Pizza" />
+  </div>
+  <section>
+    <h1 class="header-main__title">Pagamento Pix</h1>
+  </section>
+  <main>
+    <div class="formulario">
+      <form
+        class="main__formulario"
+        id="form-checkout"
+        action="/process_payment"
+        method="post"
+      >
+        <div class="conteiner__formulario">
+          <label class="formulario__label" for="payerFirstName">Nome</label>
+          <input id="form-checkout__payerFirstName" name="payerFirstName" type="text"/>
+        </div>
+        <div class="conteiner__formulario">
+          <label class="formulario__label" for="payerLastName">Sobrenome</label>
+          <input
+            id="form-checkout__payerLastName"
+            name="payerLastName"
+            type="text"
+          />
+        </div>
+        <div class="conteiner__formulario">
+          <label class="formulario__label" for="email">E-mail</label>
+          <input id="form-checkout__email" name="email" type="text" />
+        </div>
+        <div class="conteiner__formulario">
+          <label class="formulario__label" for="identificationType">Tipo de
+            documento</label>
+          <select
+            id="form-checkout__identificationType"
+            name="identificationType"
+            type="text"
+          ></select>
+        </div>
+        <div class="conteiner__formulario">
+          <label class="formulario__label" for="identificationNumber">Número do
+            documento</label>
+          <input
+            id="form-checkout__identificationNumber"
+            name="identificationNumber"
+            type="text"
+          />
+        </div>
+        <div class="conteiner__formulario">
+          <input
+            type="hidden"
+            name="transactionAmount"
+            id="transactionAmount"
+            value="100"
+          />
+          <input
+            type="hidden"
+            name="description"
+            id="description"
+            value="Nome do Produto"
+          />
+          <a href="https://www.mercadopago.com.br/payments/123456789/ticket?caller_id=123456&hash=123e4567-e89b-12d3-a456-426655440000" target="_blank">
+        <button class="formulario__btn" type="submit">Pagar</button> </a>
+        </div>
+      </form>
     </div>
+  </main>
+  <script defer src="https://sdk.mercadopago.com/js/v2">
+    const mp = new MercadoPago("TEST-628d8c33-9dfb-442e-b0d7-7adec5fd94f2");
+  </script>
+  <script defer src="/js/requisitarDocumentos.js"></script>
 </body>
