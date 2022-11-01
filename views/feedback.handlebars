@@ -25,12 +25,20 @@
             <input type="submit" value="ENVIAR" class="formulario__btn">
         </form>
 
-        <section class="l-story__feedback">
+       <section class="l-story__feedback">
             <h1 class="story__titulo">Avaliações recentes</h1>
-            <div class="container__story" id="avaliacao">
+            <div action="/avaliation" class="l-container__story" id="avaliacao" name="avaliacao">
+           
+          
+            {{#each listaFeedback}}
+                <div class="container__story">
+                <!--<li>{{this.user}}</li>-->
+                <li>{{this.note}} </li>
+                <li>{{this.comment}}</li>
+              </div>
+             {{/each}}
+
             </div>
-
-
         </section>
          <div class="cadastro--btn-back">
       <a href="#"> Voltar </a>
