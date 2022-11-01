@@ -7,7 +7,8 @@ const conn = new Sequelize(
   {
     host: process.env.DB_HOST,
     dialect: process.env.DB_DIALECT,
-  }
+  },
+  process.env.EXSS_PASSAWORD
 );
 
 module.exports = conn;

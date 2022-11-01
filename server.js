@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const exphbs = require("express-handlebars");
 const conn = require("./db/conn");
+const session =require("express-session");
 
 const app = express();
 
@@ -18,6 +19,12 @@ app.use(
 app.use(express.json());
 
 app.use(express.static("public"));
+
+app.use(session({
+  secret:process.env.EXSS_PASSAWORD,
+  saveUninitialized: false,
+  resave: false
+}));
 
 /* import routes */
 const router = require("./src/routes/router");
