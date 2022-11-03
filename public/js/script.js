@@ -9,11 +9,11 @@ const printOrder = document.querySelector(".print").onclick = function () {
 
 // Criando barras de progresso dinamicamente
 window.onload = function update() {
-    var element = document.querySelector(".myprogressBar");
-    var width = 1;
-    var identity = setInterval(scene, 10);
+    let element = document.querySelector(".myprogressBar");
+    let width = 1;
+    let identity = setInterval(scene, 10);
 
-    var status = document.getElementById('statusOrder').getAttribute('data-id');
+    let status = document.getElementById('statusOrder').getAttribute('data-id');
 
     function scene() {
         if (status == "Pagamento Aprovado" || status == "Preparando Pedido") {
