@@ -15,7 +15,7 @@ module.exports = class views {
     const orders = await order.findOne({
       include: [user, product, bank],
       raw: true,
-      where: { id_order: id },
+      where: { id_order: id, user_id:req.session.userid},
     });
 
     const users = await user.findOne({
@@ -26,12 +26,8 @@ module.exports = class views {
     const products = await product.findOne({
       raw: true, where: { id_prod: orders.prod_id }
     });
-    const banks = await bank.findOne({
-      raw: true,
-      where: { id_bank: orders.bank_id }
-    });
 
-    res.render("pedidoRealizado", { layout: "main", orders, users, products, banks });
+    res.render("pedidoRealizado", { layout: "main", orders, users, products });
   }
   static async admOrderView(req, res) {
     const id = req.params.id;
@@ -64,27 +60,27 @@ module.exports = class views {
     const orders = await order.findOne({
       include: [user, product, bank],
       raw: true,
-      where: { id_order: id },
+      where: { id_order: id, user_id:req.session.userid },
     });
 
     const users = await user.findOne({
       raw: true,
-      where: { id_user: orders.user_id }
+      where: { id_user: req.session.userid }
     });
 
-    const products = await product.findOne({
-      raw: true, where: { id_prod: orders.prod_id }
-    });
-    const banks = await bank.findOne({
+    const products = await product.findAll({
+      raw: true,});
+    /*const banks = await bank.findOne({
       raw: true,
       where: { id_bank: orders.bank_id }
-    });
+    });*/
 
-    res.render("finalizarCompra", { layout: "main", orders, users, products, banks });
+    res.render("finalizarCompra", { layout: "main", orders, users, products });
 
   }
   static async realizePedido(req, res) {
-    res.render("realizePedido", { layout: "main" });
+    const products = await product.findAll({raw: true});
+    res.render("realizePedido", { layout: "main" , products});
   }
   static async sejaFranqueado(req, res) {
     res.render("sejaFranqueado", { layout: "main" });
