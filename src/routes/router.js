@@ -2,14 +2,15 @@ const express = require("express");
 const router = express.Router();
 const views = require("../controller/ControllerView");
 const form = require("../controller/ControllerForm");
- const alth = require("../controller/ControllerAuth");
+const auth = require("../controller/ControllerAuth");
+const checkAuth = require("../helpers/auth").checkAuth;
 
 router.get("/", views.home);
 
 router.get("/finalizarCompra/:id", views.finalizarCompra);
 
 router.get("/realizePedido", views.realizePedido);
-router.post("/realizePedido", form.realizePedido);
+router.post("/realizePedido", checkAuth, form.realizePedido);
 
 router.get("/sejaFranqueado", views.sejaFranqueado);
 
@@ -17,9 +18,9 @@ router.post("/sejaFranqueado", form.sejaFranqueado);
 
 router.get("/cadastroProduto", views.cadastroProduto);
 
-router.get("/meu-pedido/:id", views.meuPedidoView);
+router.get("/meu-pedido/:id",checkAuth, views.meuPedidoView);
 
-router.get("/pedido-realizado/:id", views.pedRealizadoView);
+router.get("/pedido-realizado/:id",checkAuth, views.pedRealizadoView);
 
 router.get("/admin/ordem-do-pedido/:id", views.admOrderView);
 
@@ -29,9 +30,11 @@ router.get("/cardapio", views.cardapioView); //sem css
 
 router.get("/cadastroUsuario", views.cadastroUsuario);
 
-router.post("/cadastrarUsuario",alth.register);
+router.post("/cadastroUsuario", auth.register);
 
-router.get('/acessoUsuario', views.acessoUsuario);
+router.get('/login', views.acessoUsuario);
+router.post('/login', auth.login);
+router.get('/logout', auth.logout); 
 
 router.get('/feedback', views.feedback);
 
