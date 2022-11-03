@@ -1,38 +1,35 @@
 <main class="container__acesso">
-        <h1 class="acesso__titulo">Entrar</h1>
+  <h1 class="acesso__titulo">Entrar</h1>
 
-        <form action="/loginUser" method="post" class="l-formulario__acesso">
-            <h2 class="acesso_texto">Acessar a minha conta</h2>
-            <label class="acesso__label" for="email__usuario">E-mail</label>
-            <input 
-                class="acesso__campo" 
-                type="email" 
-                name="email__usuario" 
-                placeholder="Digite seu e-mail">
+  <form action="/login" method="post" class="l-formulario__acesso">
+    <h2 class="acesso_texto">Acessar a minha conta</h2>
+    <label class="acesso__label" for="email__usuario">E-mail</label>
+    <input class="acesso__campo" type="email" name="email__usuario" placeholder="Digite seu e-mail">
+    <label class="acesso__label" for="senha__usuario">Senha</label>
+    <input class="acesso__campo" type="password" name="senha__usuario" placeholder="Digite sua senha">
+    <div class="c-flash_message">
+      {{#if messages.loginError}}
+      <span class="message loginError">
+        {{messages.loginError}}
+      </span>
+      {{/if}}
+    </div>
+    <div class="l-acesso__checkbox">
+      <input class="acesso__campo__checkbox" type="checkbox" id="lembrar__acesso" name="lembrar__acesso">
+      <label class="acesso__label-checkbox" for="lembrar__acesso">Lembrar</label>
+    </div>
 
-            <label class="acesso__label" for="senha__usuario">Senha</label>
-            <input 
-                class="acesso__campo" 
-                type="password"
-                name="senha__usuario" 
-                placeholder="Digite sua senha">
+    <a class="link__acesso" href="recuperarSenha">Esquecei a minha senha</a>
 
-            <div class="l-acesso__checkbox">
-            <input class="acesso__campo__checkbox" type="checkbox" id="lembrar__acesso" name="lembrar__acesso">
-            <label class="acesso__label-checkbox" for="lembrar__acesso">Lembrar</label>
-            </div>
+    <input type="submit" value="ACESSAR" class="formulario__btn">
+  </form>
+  <div class="acesso__bts">
+    <div class="cadastro--btn-back">
+      <a href="#"> Voltar </a>
+    </div>
 
-            <a class="link__acesso" href="recuperarSenha">Esquecei a minha senha</a>
-
-            <input type="submit" value="ACESSAR" class="formulario__btn">
-        </form>
-        <div class="acesso__bts">
-          <div class="cadastro--btn-back">
-            <a href="#"> Voltar </a>
-          </div>
-
-          <div class="cadastro__btn">
-            <a href="/cadastroUsuario">Cadastre-se</a>
-          </div>
-         </div>
-    </main>
+    <div class="cadastro__btn">
+      <a href="/cadastroUsuario">Cadastre-se</a>
+    </div>
+  </div>
+</main>
