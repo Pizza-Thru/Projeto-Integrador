@@ -18,8 +18,8 @@ module.exports = class Form {
   }
 
   static async realizePedido(req, res) {
-
-    const newOrder = {
+         
+      const newOrder = {
       qnt_slice: req.body.select__pedacos,
       qnt_flavor: req.body.select__sabores,
       flavor_1: req.body.select__sabor1,
@@ -30,6 +30,7 @@ module.exports = class Form {
       item_add_2: req.body.select__Adicional_2,
       obs: req.body.Observacao,
       total_order: req.body.Subtotal,
+      user_id: req.session.userid,
       status_order: "Pedido em aberto",
     };
     
