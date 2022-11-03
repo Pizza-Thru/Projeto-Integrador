@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const views = require("../controller/ControllerView");
 const form = require("../controller/ControllerForm");
+ const alth = require("../controller/ControllerAuth");
 
 router.get("/", views.home);
 
@@ -28,7 +29,7 @@ router.get("/cardapio", views.cardapioView); //sem css
 
 router.get("/cadastroUsuario", views.cadastroUsuario);
 
-router.post("/cadastroUsuario/cadastrarUsuario",form.cadastrarUsuario);
+router.post("/cadastrarUsuario",alth.register);
 
 router.get('/acessoUsuario', views.acessoUsuario);
 
