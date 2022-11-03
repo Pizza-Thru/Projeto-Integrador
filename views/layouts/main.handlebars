@@ -7,12 +7,11 @@
   <link rel="shortcut icon" href="/upload/img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script defer src="/js/menuDropDown.js"></script>
   <script defer src="/js/script.js"></script>
   <script defer src="/js/scriptSelectPay.js"></script>
-  <script defer src="/js/pagamentoCartao.js" ></script>
+  <script defer src="/js/pagamentoCartao.js"></script>
   <title>Pizza Thru</title>
 </head>
 
@@ -24,8 +23,18 @@
         <a href="/" class="menu-principal__logo">Pizza Thru</a>
       </div>
       <div class="menu-principal-conteiner__carrinho__login">
-        <a href="/acessoUsuario" class="menu-principal-lista__login"><img src="/upload/img/iconelogin.png"
+        <a href="#" class="menu-principal-lista__carrinho"><img src="/upload/img/carrinho-de-compras.png"
+            alt="Ícone carrinho de compras" /></a>
+        {{#if session.userid }}
+        <a href="/logout" class="menu-principal-lista__login">
+          <img src="/upload/img/icone-logout.png" alt="icone de logout">
+          <!-- <i><span class="material-symbols-outlined" >logout</span></i>-->
+        </a>
+        {{else}}
+        <a href="/login" class="menu-principal-lista__login"><img src="/upload/img/iconelogin.png"
             alt="Ícone de login" /></a>
+        {{/if}}
+
       </div>
       <nav class="nav-principal__header">
         <button class="menu-principal__btn" aria-label="Abrir Menu" aria-haspopup="true"
@@ -67,7 +76,7 @@
     </div>
   </footer>
   <!--Fim do Rodapé-->
-  
+
 </body>
 
 </html>
