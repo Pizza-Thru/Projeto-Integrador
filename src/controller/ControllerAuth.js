@@ -45,12 +45,18 @@ module.exports = class auth {
             return
         }
 
-        const salt = bcrypt.genSaltSync(10)
+        const salt = bcrypt.genSaltSync(30)
         const password = bcrypt.hashSync(senha, salt)
 
         const newUser = {
-            /* Paulo - Incluir seu códio aqui */
-
+            user_name: req.body.nome,
+            user_cpf:cpf,
+            user_email:email,
+            user_phone:req.body.telefone,
+            user_city:req.body.cidade,
+            user_state:req.body.estado,
+            user_publicPlace:req.body.logradouro,
+            user_district:req.body.bairro,
             password_login_user: password
         };
 
