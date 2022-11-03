@@ -29,26 +29,26 @@ module.exports = class auth {
     }
 
     static async register(req, res) {
-        const { email, cpf, senha } = req.body;
+      const { email, cpf, senha } = req.body;
 
         const userExist = await user.findOne({ where: { user_email: email } });
         if (userExist) {
             req.flash('userExist', 'E-mail já cadastrado, faça o login.');
-            res.render('cadastroUsuario', { layout: "main", });
+            res.render('cadastroUsuario', { layout: "main"});
             return
         }
 
         const userCpfExist = await user.findOne({ where: { user_cpf: cpf } });
         if (userCpfExist) {
             req.flash('cpfExist', 'CPF já cadastrado, faça o login.');
-            res.render('cadastroUsuario', { layout: "main", });
+            res.render('cadastroUsuario', { layout: "main" });
             return
         }
 
-        const salt = bcrypt.genSaltSync(30)
-        const password = bcrypt.hashSync(senha, salt)
+        const salt = bcrypt.genSaltSync(10);
+        const password = bcrypt.hashSync(senha, salt);
 
-        const newUser = {
+         const newUser = {
             user_name: req.body.nome,
             user_cpf:cpf,
             user_email:email,
