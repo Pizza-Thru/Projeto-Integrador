@@ -24,6 +24,7 @@ app.use(express.static("public"));
 
 //session middleware
 app.use(session({
+  name: process.env.SESSION_NAME,
   secret:process.env.EXSS_PASSAWORD,
   saveUninitialized: false,
   resave: false,
