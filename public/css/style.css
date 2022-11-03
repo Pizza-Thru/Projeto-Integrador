@@ -1363,6 +1363,9 @@ img {
   place-items: center;
   width: 100%;
 }
+.form-dados .c-flash_message {
+  grid-column: 1/9;
+}
 
 
 .button-cadastrar{
@@ -1608,7 +1611,7 @@ p {
   align-items:flex-start;
   gap: 10px;
   width: 80%;
-  height:500px;
+  /*height:500px;*/
   background: rgba(13, 67, 96, 0.4); 
   padding:15px ;
   margin-bottom: 15px;
@@ -1620,7 +1623,10 @@ p {
   text-decoration: none;
   color: white;
   font-size: 1.4rem;
-
+  transition: .5s;
+}
+.link__acesso:hover{
+  color: #FCBF49;
 }
 .botao__formulario__paulo{
   width:100%;
@@ -1774,6 +1780,32 @@ padding: 0 10px;
 
 /* Inicio da pagina pagamento Credito */
 
+/*Flash message*/
+
+.c-flash_message{
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  padding: 1em;
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px soli d#b8daff;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 60%;
+  font-size: small;
+}
+
+.loginError{
+  max-width: 100%;
+}
+
 /*Inicio do @media*/
 
 @media (min-width: 768px) {
@@ -1874,6 +1906,9 @@ padding: 0 10px;
     margin: 50px auto;
     border: none;
     cursor: pointer;
+  }
+  .formulario__btn:hover {
+    opacity: 0.7;
   }
 
   .container_endereco {
@@ -2381,7 +2416,7 @@ padding: 0 10px;
   align-items:flex-start;
   gap: 10px;
   width: 40%;
-  height:600px;
+  /*height:600px;*/
   background: rgba(13, 67, 96, 0.4); 
   padding:15px ;
 }
@@ -2389,9 +2424,7 @@ padding: 0 10px;
   display: none;
 }
 .link__acesso{
-  text-decoration: none;
   color: white;
-
 }
 .botao__formulario__paulo{
   width:100%;
