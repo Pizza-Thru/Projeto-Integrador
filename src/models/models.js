@@ -25,7 +25,7 @@ const user = conn.define("user", {
 	user_district:{
 		type: DataTypes.STRING(100)},
 	password_login_user: {
-		type: DataTypes.STRING(30),
+		type: DataTypes.STRING,
 		allowNull: false,
 	},	
 
