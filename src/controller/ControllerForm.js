@@ -66,25 +66,6 @@ module.exports = class Form {
       res.redirect("/feedback");
     }
 
-    static async cadastrarUsuario(req,res){
-
-      const newUser = {
-        user_name: req.body.nome,
-        user_cpf: req.body.cpf,
-        user_email:req.body.email,
-        user_phone:req.body.telefone,
-        user_city:req.body.cidade,
-        user_state:req.body.estado,
-        user_publicPlace:req.body.logradouro,
-        user_district:req.body.bairro,
-        password_login_user:req.body.senha
-      };
-      await user.create(newUser);
-      
-      res.redirect("/cadastroUsuario");
-
-    }
-
     static async finalizarcompraCredito (req, res) {
       const newCardCredit = {
         card_number : req.body.numero__cartao__credito,
