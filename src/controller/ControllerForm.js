@@ -18,7 +18,7 @@ module.exports = class Form {
   }
 
   static async realizePedido(req, res) {
-         
+      const idUser= req.session.userid;
       const newOrder = {
       qnt_slice: req.body.select__pedacos,
       qnt_flavor: req.body.select__sabores,
@@ -36,7 +36,7 @@ module.exports = class Form {
     
     console.log(newOrder);
     await order.create(newOrder);
-    res.redirect("/finalizarCompra");
+    res.redirect(`/finalizarCompra/${idUser}`);
   }
 
   static async admCreate(req, res) {
