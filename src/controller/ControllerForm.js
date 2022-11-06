@@ -68,25 +68,6 @@ module.exports = class Form {
       res.redirect("/feedback");
     }
 
-    static async cadastrarUsuario(req,res){
-
-      const newUser = {
-        user_name: req.body.nome,
-        user_cpf: req.body.cpf,
-        user_email:req.body.email,
-        user_phone:req.body.telefone,
-        user_city:req.body.cidade,
-        user_state:req.body.estado,
-        user_publicPlace:req.body.logradouro,
-        user_district:req.body.bairro,
-        password_login_user:req.body.senha
-      };
-      await user.create(newUser);
-      
-      res.redirect("/cadastroUsuario");
-
-    }
-
       static async editarProduto (req, res) { 
         product.put ({
           where: {'id_prod' : req.params.id}
