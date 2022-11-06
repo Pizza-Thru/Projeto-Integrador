@@ -48,13 +48,15 @@ router.get('/statusPedido', views.statusPedido)
 
 router.get('/pagamentocredito', views.pagamentocredito) //falta css
 
-router.post('/pagamentocredito', form.finalizarcompraCredito);
+//router.post('/pagamentocredito', form.finalizarcompraCredito);
 
 router.get('/pagamentodebito', views.pagamentodebito); //falta css
 
-router.post('/pagamentodebito', form.finalizarcompraDebito);
+//router.post('/pagamentodebito', form.finalizarcompraDebito);
 
-router.get('/pagamentopix', views.pagamentopix); //falta css
+router.get('/pagamentopix', views.pagamentopix);
+
+router.get('/pagamentopix', form.PagamentoPix);
 
 router.get('/produtosLista', views.produtosLista);
 

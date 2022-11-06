@@ -1,5 +1,6 @@
 const {product, franqueado, evaluation, bank, order} = require("../models/models")
 const mercadopago = require ("mercadopago")
+mercadopago.configurations.setAccessToken("TEST-3135694526464578-040222-f91f40177f41b05d51570be97d91f72b-209999602");
 module.exports = class Form {
 
   static async sejaFranqueado(req, res) {
@@ -67,44 +68,25 @@ module.exports = class Form {
       res.redirect("/feedback");
     }
 
-    static async finalizarcompraCredito (req, res) {
-      const newCardCredit = {
-        card_number : req.body.numero__cartao__credito,
-        account_holder : req.body.nome__cartao__credito,
-        CVC : req.body.cvv__cartao__credito
-      }
-        console.log(newCardCredit);
-      const saveCard = req.body.salvar__cartao__credito
+    static async cadastrarUsuario(req,res){
+
+      const newUser = {
+        user_name: req.body.nome,
+        user_cpf: req.body.cpf,
+        user_email:req.body.email,
+        user_phone:req.body.telefone,
+        user_city:req.body.cidade,
+        user_state:req.body.estado,
+        user_publicPlace:req.body.logradouro,
+        user_district:req.body.bairro,
+        password_login_user:req.body.senha
+      };
+      await user.create(newUser);
       
-        console.log(saveCard)
-      if (saveCard = true) {
-        await bank.create(newCardCredit);
-        res.redirect("/pedidoRealizado");
-            } else {
-        res.redirect("/pedidoRealizado");
-  
-            } 
-      
-      }
-      static async finalizarcompraDebito(req, res) {
-        const newCardDebit = {
-          card_number : req.body.numero__cartao,
-          account_holder : req.body.nome__cartao,
-          CVC : req.body.cvv__cartao
-        }
-          console.log(newCardDebit);
-        const saveCard = req.body.salvar__cartao
-        
-          console.log(saveCard)
-        if (saveCard = true) {
-          await bank.create(newCardDebit);
-          res.redirect("/pedidoRealizado");
-              } else {
-          res.redirect("/pedidoRealizado");
-    
-              } 
-      
-      }
+      res.redirect("/cadastroUsuario");
+
+    }
+
       static async editarProduto (req, res) { 
         product.put ({
           where: {'id_prod' : req.params.id}
@@ -113,26 +95,24 @@ module.exports = class Form {
         }).catch ((e)=> {res.send ("Produto não conseguiu ser editado!")})
       }
     
-      static async MercadoPago (){
-        mercadopago.configure({
-          access_token: 'PROD_ACCESS_TOKEN'
-        });
-        let preference = {
-          items: [
-            {
-              title: 'Meu produto',
-              unit_price: 100,
-              quantity: 1,
+      static async PagamentoPix (req,res){
+        var payment_data = {
+          transaction_amount: 100,
+          description: 'Título do produto',
+          payment_method_id: 'pix',
+          date_of_expiration : 300,
+          payer: {
+            email: req.body.form-checkout__email,
+            first_name: req.body.payerFirstName,
+            last_name: req.body.payerLastName,
+            identification: {
+                type: req.body.identificationType,
+                number: req.body.identificationNumber
             }
-          ]
+          }
         };
-        mercadopago.preferences.create(preference)
-        .then(function(response){
-          global.id = response.body.id;
-        }).catch(function(error){
-          console.log(error);
-        });
+        
+        await mercadopago.payment.create(payment_data)
+        res.redirect(ticket_url);
       }
-
-
 };
