@@ -1363,8 +1363,17 @@ img {
   place-items: center;
   width: 100%;
 }
+.input-group-10{
+  display: grid;
+  grid-column: 1/9;
+  grid-row: 9;
+  margin-bottom: 20px;
+  place-items: center;
+  width: 100%;
+}
 .form-dados .c-flash_message {
   grid-column: 1/9;
+  grid-row: 10;
 }
 
 
