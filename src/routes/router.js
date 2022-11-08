@@ -44,7 +44,7 @@ router.get('/recuperarSenha', views.recuperarSenha);
 
 router.put('/statusPagamentos',form.statusPagamento);
 router.get('/listaPedidos',views.listaPedidos);
-router.get('/statusPedido', views.statusPedido) 
+
 
 router.get('/pagamentocredito', views.pagamentocredito) //falta css
 
