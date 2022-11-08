@@ -1,4 +1,4 @@
-const {product, franqueado, evaluation, bank, order} = require("../models/models")
+const {product, franqueado, evaluation, bank, order, user} = require("../models/models")
 const mercadopago = require ("mercadopago")
 module.exports = class Form {
 
@@ -57,10 +57,16 @@ module.exports = class Form {
   }
 
     static async feedbackAvaliacao(req, res) {
-
+      const userName  = await user.findOne({
+        raw:true,
+        id_user:req.session.userid
+        
+      });
       const newAvaliacao = {
+        name_feed:userName.user_name,
         note: req.body.star__nota,
         comment: req.body.feedback__comentario,
+        user_id: req.session.userid,
       };
       await evaluation.create(newAvaliacao);
   
