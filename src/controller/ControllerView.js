@@ -101,7 +101,11 @@ module.exports = class views {
     res.render("statusPedido", { layout: "main" });
   }
   static async listaPedidos(req, res) {
-    res.render("listaPedidos", { layout: "main" });
+
+    const listaPedidos = await order.findAll({
+      raw:true,
+    })
+    res.render("listaPedidos", { layout: "main",listaPedidos});
   }
   static async acessoUsuario(req, res) {
     res.render("acessoUsuario", { layout: "main" });
