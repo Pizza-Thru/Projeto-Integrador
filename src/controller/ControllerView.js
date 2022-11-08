@@ -94,9 +94,6 @@ module.exports = class views {
   static async cadastroUsuario(req, res) {
     res.render("cadastroUsuario", { layout: "main" });
   }
-  static async consultaOrdemPedido(req, res) {
-    res.render("consultaOrdemPedido", { layout: "main" });
-  }
   static async recuperarSenha(req, res) {
     res.render("recuperarSenha", { layout: "main" });
   }
