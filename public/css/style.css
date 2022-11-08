@@ -1388,59 +1388,6 @@ img {
 }
 /*Fim da Página Cadastro Usuário*/
 
-/*Início da Página Consulta Ordem de pedido*/
-.img-banner {
-  width: 100%;
-  height: auto;
-}
-
-.section-banner {
-  margin-top: 30px;
-}
-
-.consulta-ordem{
-  color: white;
-  margin: 0 auto;
-  padding: 20px;
-  width: 80%;
-}
-
-.section-pesquisa{
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr;
-  place-items: center;
-}
-
-.h1-pesquisa{
-  text-align: center;
-}
-
-.input-pesquisa{
-  border: none;
-  border-radius: 15px;
-  height: 30px;
-  margin-bottom: 20px;
-  width: 77.2%;
-}
-
-.input-pesquisa::placeholder{
-  color: #003049;
-  padding-left: 10px;
-}
-
-.input-group{
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr;
-  margin-bottom: 20px;
-  place-items: center;
-  width: 90%;
-}
-.label-filtro{
-  display: none;
-}
-/* Fim da Página Consulta Ordem de Pedido*/
 
 /* Início da Página de Recuperação de Senha*/
 img {
