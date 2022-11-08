@@ -140,5 +140,13 @@ module.exports = class Form {
         });
       }
 
+      static async statusPagamento (){
 
+
+        order.put({
+          where: {'id_prod' : req.body.numeroPedido}
+        }).then (()=> {
+          res.redirect("/listaPedidos")
+        }).catch ((e)=> {res.send ("Pedido não conseguiu ser editado!")})
+      }
 };
