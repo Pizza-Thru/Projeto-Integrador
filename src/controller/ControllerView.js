@@ -100,6 +100,9 @@ module.exports = class views {
   static async statusPedido(req, res) {
     res.render("statusPedido", { layout: "main" });
   }
+  static async listaPedidos(req, res) {
+    res.render("listaPedidos", { layout: "main" });
+  }
   static async acessoUsuario(req, res) {
     res.render("acessoUsuario", { layout: "main" });
   }
