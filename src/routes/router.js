@@ -39,9 +39,7 @@ router.get('/logout', auth.logout);
 router.get('/feedback', views.feedback);
 
 router.post('/feedback/avaliacao', checkAuth, form.feedbackAvaliacao);
-
-router.get('/consultaOrdemPedido', views.consultaOrdemPedido) 
-
+ 
 router.get('/recuperarSenha', views.recuperarSenha) 
 
 router.get('/statusPedido', views.statusPedido) 
