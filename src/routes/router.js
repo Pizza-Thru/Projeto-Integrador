@@ -40,8 +40,9 @@ router.get('/feedback', views.feedback);
 
 router.post('/feedback/avaliacao', checkAuth, form.feedbackAvaliacao);
  
-router.get('/recuperarSenha', views.recuperarSenha) 
+router.get('/recuperarSenha', views.recuperarSenha);
 
+router.get('/listaPedidos',views.listaPedidos);
 router.get('/statusPedido', views.statusPedido) 
 
 router.get('/pagamentocredito', views.pagamentocredito) //falta css
