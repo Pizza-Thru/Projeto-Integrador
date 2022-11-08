@@ -170,6 +170,8 @@ const evaluation = conn.define("evaluation", {
 		type: DataTypes.INTEGER,
 		autoIncrement: true,
 		primaryKey: true},
+	name_feed:{ type: DataTypes.STRING(80),
+			allowNull: false,},
 	note:{ type: DataTypes.STRING(1),
 		allowNull: false,},
 	comment:{ type: DataTypes.STRING(500),
@@ -207,6 +209,9 @@ order.belongsTo(product, { foreignKey: 'prod_id' });
 user.hasMany(bank, { foreignKey: 'users_id' });
 bank.belongsTo(user, { foreignKey: 'users_id' });
 
+//incluindo foreign key na tabela evaluation
+user.hasMany(evaluation, { foreignKey: 'user_id' });
+evaluation.belongsTo(user, { foreignKey: 'user_id' });
 //teste
 product.hasMany(product_variation, { foreignKey: 'prod_id_var' });
 product_variation.belongsTo(product, { foreignKey: 'prod_id_var' });
