@@ -30,10 +30,11 @@
             <div action="/avaliation" class="l-container__story" id="avaliacao" name="avaliacao">
            
           
-            {{#each listaFeedback}}
+            {{#each listFeed}}
                 <div class="container__story">
-                <!--<li>{{this.user}}</li>-->
-                <li>{{this.note}} </li>
+                <!--<li>{{this.user_id}}</li>-->
+                <li>{{this.name_feed}}</li>
+                <li class="star__img__note">{{this.note}} </li>
                 <li>{{this.comment}}</li>
               </div>
              {{/each}}
