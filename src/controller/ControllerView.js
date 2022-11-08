@@ -97,9 +97,6 @@ module.exports = class views {
   static async recuperarSenha(req, res) {
     res.render("recuperarSenha", { layout: "main" });
   }
-  static async statusPedido(req, res) {
-    res.render("statusPedido", { layout: "main" });
-  }
   static async listaPedidos(req, res) {
 
     const listaPedidos = await order.findAll({
