@@ -1231,7 +1231,6 @@ img {
   background-color: rgba(13, 67, 96, 0.4);
   display: grid;
   gap: 10px;
-  grid-template-rows:repeat(5, 1fr);
   padding: 20px;
   place-items:center;
   margin: auto;
@@ -1366,14 +1365,14 @@ img {
 .input-group-10{
   display: grid;
   grid-column: 1/9;
-  grid-row: 9;
+  grid-row: 10;
   margin-bottom: 20px;
   place-items: center;
   width: 100%;
 }
 .form-dados .c-flash_message {
   grid-column: 1/9;
-  grid-row: 10;
+  grid-row: 2;
 }
 
 
