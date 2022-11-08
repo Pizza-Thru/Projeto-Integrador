@@ -107,8 +107,20 @@ module.exports = class views {
     res.render("acessoUsuario", { layout: "main" });
   }
   static async feedback(req, res) {
-    res.render("feedback", { layout: "main" });
+    const listFeed = await evaluation.findAll(
+
+      {
+        raw: true,
+        limit:4,
+        order:[
+          ['createdAt','DESC',]
+        ],
+        
+
+    });
+    res.render("feedback", { layout: "main",listFeed });
   }
+  
   static async pagamentocredito(req, res) {
     res.render("pagamentocredito", { layout: "main" });
   }
