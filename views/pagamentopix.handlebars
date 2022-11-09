@@ -7,61 +7,43 @@
   </section>
   <main>
     <div class="formulario">
-      <form
-        class="main__formulario"
-        id="form-checkout"
-        action="/process_payment"
-        method="post"
-      >
+      <form class="main__formulario" id="form-checkout" action="/pagamentopix" method="POST">
         <div class="conteiner__formulario">
           <label class="formulario__label" for="payerFirstName">Nome</label>
           <input id="form-checkout__payerFirstName" name="payerFirstName" type="text"/>
         </div>
         <div class="conteiner__formulario">
           <label class="formulario__label" for="payerLastName">Sobrenome</label>
-          <input
-            id="form-checkout__payerLastName"
-            name="payerLastName"
-            type="text"
-          />
+          <input id="form-checkout__payerLastName" name="payerLastName" type="text"/>
         </div>
         <div class="conteiner__formulario">
           <label class="formulario__label" for="email">E-mail</label>
           <input id="form-checkout__email" name="email" type="text" />
         </div>
         <div class="conteiner__formulario">
-          <label class="formulario__label" for="identificationType">Tipo de
-            documento</label>
-          <select
-            id="form-checkout__identificationType"
-            name="identificationType"
-            type="text"
-          ></select>
+          <label class="formulario__label" for="identificationType">Tipo de documento</label>
+          <select id="form-checkout__identificationType" name="identificationType" type="text">
+          </select>
         </div>
         <div class="conteiner__formulario">
           <label class="formulario__label" for="identificationNumber">Número do
             documento</label>
-          <input
-            id="form-checkout__identificationNumber"
-            name="identificationNumber"
-            type="text"
-          />
+          <input id="form-checkout__identificationNumber" name="identificationNumber" type="text"/>
         </div>
         <div class="conteiner__formulario">
           <input
             type="hidden"
             name="transactionAmount"
             id="transactionAmount"
-            value="100"
+            value="500"
           />
           <input
             type="hidden"
             name="description"
             id="description"
-            value="Nome do Produto"
+            value="Pizza tal"
           />
-          <a href="https://www.mercadopago.com.br/payments/123456789/ticket?caller_id=123456&hash=123e4567-e89b-12d3-a456-426655440000" target="_blank">
-        <button class="formulario__btn" type="submit">Pagar</button> </a>
+        <button class="formulario__btn" type="submit">Pagar</button>
         </div>
       </form>
     </div>
