@@ -1738,9 +1738,14 @@ padding: 0 10px;
 
 .andamentoPedidos td {
   border: 1px solid black;
-
 }
 
+.btn--listaPedidos{
+  background-color: red;
+  font-weight: 600;
+  border-radius:5px;
+ 
+}
 /* Fim da lista de pedidos */
 
 /* Inicio da lista de produtos*/
