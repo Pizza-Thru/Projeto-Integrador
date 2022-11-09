@@ -29,7 +29,7 @@ module.exports = class auth {
     }
 
     static async register(req, res) {
-      const { email, cpf, senha } = req.body;
+      const { email, confirmarEmail, senha, confirmarSenha } = req.body;
 
         const userExist = await user.findOne({ where: { user_email: email } });
         if (userExist) {
@@ -38,10 +38,16 @@ module.exports = class auth {
             return
         }
 
-        const userCpfExist = await user.findOne({ where: { user_cpf: cpf } });
-        if (userCpfExist) {
-            req.flash('cpfExist', 'CPF já cadastrado, faça o login.');
-            res.render('cadastroUsuario', { layout: "main" });
+        if (email !== confirmarEmail) {
+            req.flash('userExist', 'os E-mails não conferem, tente novamente');
+            res.render('cadastroUsuario', { layout: "main"});
+            //res.status(400).json({ msg: 'Password do not match' });
+            return
+        }
+
+        if (senha !== confirmarSenha) {
+            req.flash('userExist', 'As senhas não conferem, tente novamente');
+            res.render('cadastroUsuario',{ layout: "main"});
             return
         }
 
@@ -50,7 +56,6 @@ module.exports = class auth {
 
          const newUser = {
             user_name: req.body.nome,
-            user_cpf:cpf,
             user_email:email,
             user_phone:req.body.telefone,
             user_city:req.body.cidade,

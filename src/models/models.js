@@ -14,8 +14,6 @@ const user = conn.define("user", {
 		type: DataTypes.STRING(11),},
 	user_email:{
 		type: DataTypes.STRING(100)},
-	user_cpf:{
-		type: DataTypes.STRING(11)},
 	user_state:{
 		type: DataTypes.STRING(50)},
 	user_city:{
@@ -172,12 +170,27 @@ const evaluation = conn.define("evaluation", {
 		type: DataTypes.INTEGER,
 		autoIncrement: true,
 		primaryKey: true},
+	name_feed:{ type: DataTypes.STRING(80),
+			allowNull: false,},
 	note:{ type: DataTypes.STRING(1),
 		allowNull: false,},
 	comment:{ type: DataTypes.STRING(500),
 		allowNull: false,},
 
-});		
+});
+
+const product_variation = conn.define("product_variation", {
+	id_var : {
+		type: DataTypes.INTEGER,
+		autoIncrement: true,
+		primaryKey: true},
+	type_var:{ type: DataTypes.STRING(30),
+		allowNull: false,},
+	value_var:{ type: DataTypes.STRING(30),
+		allowNull: false,},
+	price_var:{ type: DataTypes.STRING(10),
+		allowNull: false,},
+});	
 
 //RELACIONAMENTOS
 
@@ -195,5 +208,12 @@ order.belongsTo(product, { foreignKey: 'prod_id' });
 // incluindo foreign key na tabela bank
 user.hasMany(bank, { foreignKey: 'users_id' });
 bank.belongsTo(user, { foreignKey: 'users_id' });
+
+//incluindo foreign key na tabela evaluation
+user.hasMany(evaluation, { foreignKey: 'user_id' });
+evaluation.belongsTo(user, { foreignKey: 'user_id' });
+//teste
+product.hasMany(product_variation, { foreignKey: 'prod_id_var' });
+product_variation.belongsTo(product, { foreignKey: 'prod_id_var' });
 
 module.exports = {user, bank,product,admin, order, franqueado, evaluation};

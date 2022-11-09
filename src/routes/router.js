@@ -38,13 +38,13 @@ router.get('/logout', auth.logout);
 
 router.get('/feedback', views.feedback);
 
-router.post('/feedback/avaliacao' , form.feedbackAvaliacao);
+router.post('/feedback/avaliacao', checkAuth, form.feedbackAvaliacao);
+ 
+router.get('/recuperarSenha', views.recuperarSenha);
 
-router.get('/consultaOrdemPedido', views.consultaOrdemPedido) 
+router.put('/statusPagamentos',form.statusPagamento);
+router.get('/listaPedidos',views.listaPedidos);
 
-router.get('/recuperarSenha', views.recuperarSenha) 
-
-router.get('/statusPedido', views.statusPedido) 
 
 router.get('/pagamentocredito', views.pagamentocredito) //falta css
 

@@ -1231,7 +1231,6 @@ img {
   background-color: rgba(13, 67, 96, 0.4);
   display: grid;
   gap: 10px;
-  grid-template-rows:repeat(5, 1fr);
   padding: 20px;
   place-items:center;
   margin: auto;
@@ -1264,20 +1263,20 @@ img {
   place-items: center;
   width: 90%;
 }
-.input-group-B{
+.input-group-1A{
   display: grid;
   gap: 10px;
   grid-column: 1/9;
-  grid-row: 2;
+  grid-row: 1;
   margin-bottom: 20px;
   place-items: center;
   width: 90%;
 }
-.input-group-C{
+.input-group-5A{
   display: grid;
   gap: 10px;
   grid-column: 1/9;
-  grid-row: 3;
+  grid-row: 2;
   margin-bottom: 20px;
   place-items: center;
   width: 90%;
@@ -1363,8 +1362,17 @@ img {
   place-items: center;
   width: 100%;
 }
+.input-group-10{
+  display: grid;
+  grid-column: 1/9;
+  grid-row: 10;
+  margin-bottom: 20px;
+  place-items: center;
+  width: 100%;
+}
 .form-dados .c-flash_message {
   grid-column: 1/9;
+  grid-row: 2;
 }
 
 
@@ -1379,59 +1387,6 @@ img {
 }
 /*Fim da Página Cadastro Usuário*/
 
-/*Início da Página Consulta Ordem de pedido*/
-.img-banner {
-  width: 100%;
-  height: auto;
-}
-
-.section-banner {
-  margin-top: 30px;
-}
-
-.consulta-ordem{
-  color: white;
-  margin: 0 auto;
-  padding: 20px;
-  width: 80%;
-}
-
-.section-pesquisa{
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr;
-  place-items: center;
-}
-
-.h1-pesquisa{
-  text-align: center;
-}
-
-.input-pesquisa{
-  border: none;
-  border-radius: 15px;
-  height: 30px;
-  margin-bottom: 20px;
-  width: 77.2%;
-}
-
-.input-pesquisa::placeholder{
-  color: #003049;
-  padding-left: 10px;
-}
-
-.input-group{
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr;
-  margin-bottom: 20px;
-  place-items: center;
-  width: 90%;
-}
-.label-filtro{
-  display: none;
-}
-/* Fim da Página Consulta Ordem de Pedido*/
 
 /* Início da Página de Recuperação de Senha*/
 img {
@@ -1487,6 +1442,13 @@ img {
   grid-template-columns: 1fr;
   margin-top: 30px;
   margin-bottom: 10px;
+  place-items: center;
+}
+.button-group-A{
+  display: grid;
+  grid-column: 1/9;
+  grid-row: 3;
+  width: 100%;
   place-items: center;
 }
 
@@ -1745,9 +1707,43 @@ padding: 0 10px;
   align-items: flex-start;
   border-bottom: 3px solid rgba(0, 0, 0, 0.25) ;
   width: 100%;
+  padding: 10px;
+}
+.star__img__note{
+  text-align: center;
+  color: yellow;
+  background-color: gray;
+  border-radius: 10px;
+  width: 20px;
 }
 /*Fim página de feedback*/
 
+
+/* Inicio da lista de pedidos*/
+
+.andamentoPedidos {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 2em;
+  background-color: white;
+  width: 100%;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.andamentoPedidos table {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.andamentoPedidos td {
+  border: 1px solid black;
+
+}
+
+/* Fim da lista de pedidos */
 
 /* Inicio da lista de produtos*/
 
@@ -1777,7 +1773,6 @@ padding: 0 10px;
 }
 
 /* Fim da lista de produtos */
-
 /* Inicio da pagina pagamento Credito */
 
 /*Flash message*/
@@ -2041,6 +2036,12 @@ padding: 0 10px;
   .section-dados{
     margin:auto;
     width: 80%;
+  }.input-group-1A{
+    grid-column: 1/5;
+    grid-row: 1;
+  }.input-group-5A{
+    grid-column: 5/9;
+    grid-row: 1;
   }.input-group-1{
     grid-column: 1/5;
     grid-row: 1;
@@ -2148,11 +2149,6 @@ padding: 0 10px;
     top: 20px;
     left: 85%;
     column-gap: 50px;
-  }
-
-  .menu-principal-lista__carrinho {
-    height: 40px;
-    width: 40px;
   }
 
   .menu-principal-lista__login {

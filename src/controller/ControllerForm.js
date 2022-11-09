@@ -1,4 +1,4 @@
-const {product, franqueado, evaluation, bank, order} = require("../models/models")
+const {product, franqueado, evaluation, bank, order, user} = require("../models/models")
 const mercadopago = require ("mercadopago")
 mercadopago.configurations.setAccessToken("TEST-3135694526464578-040222-f91f40177f41b05d51570be97d91f72b-209999602");
 module.exports = class Form {
@@ -58,10 +58,16 @@ module.exports = class Form {
   }
 
     static async feedbackAvaliacao(req, res) {
-
+      const userName  = await user.findOne({
+        raw:true,
+        id_user:req.session.userid
+        
+      });
       const newAvaliacao = {
+        name_feed:userName.user_name,
         note: req.body.star__nota,
         comment: req.body.feedback__comentario,
+        user_id: req.session.userid,
       };
       await evaluation.create(newAvaliacao);
   
@@ -95,5 +101,15 @@ module.exports = class Form {
         
         await mercadopago.payment.create(payment_data)
         res.redirect(ticket_url);
+      }
+
+      static async statusPagamento (){
+
+
+        order.put({
+          where: {'id_prod' : req.body.numeroPedido}
+        }).then (()=> {
+          res.redirect("/listaPedidos")
+        }).catch ((e)=> {res.send ("Pedido não conseguiu ser editado!")})
       }
 };

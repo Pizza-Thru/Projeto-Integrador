@@ -1,0 +1,51 @@
+<main>
+  <div class="status-pedido">
+    <section class="section-titulo">
+      <h1 class="h1-titulo">Resumo de Pedidos</h1>
+    </section> 
+    <section class="section-dados">
+      <form class="form-dados" action="/statusPagamentos" method="put">
+        <div class="input-group-1A">
+          <label class="form-dados__label">Nº do Pedido</label>
+          <input class="form-dados__input" type="text" name="numeroPedido">
+        </div>
+        <div class="input-group-5A">
+          <label class="form-dados__label">Status do Pagamento</label>
+          <select class="form-dados__input" name="statusDoPagamento">
+            <option value="pedidoEmAberto">Pedido em Aberto</option>
+            <option value="pagamentoAprovado">Pagamento Aprovado</option>
+            <option value="pedidoPronto">Pedido Pronto</option>
+            <option value="finalizado">Finalizado</option>
+          </select>
+          </div> 
+          <div class="button-group-A">
+            <button class="formulario__btn">Atualizar</button>
+          </div> 
+      </form>
+      <section class="form-dados">
+        <div class="andamentoPedidos">
+              <table>
+                <tr> 
+                  <th>Nº Pedido </th>
+                  <th>Cliente</th>
+                  <th>Status do Pagamento</th>
+                  </tr>
+                {{#each listaPedidos}}
+                  <tr>
+                <td>{{this.id_order}}</td>
+                <td>Nome</td>
+                <td>{{this.status_order}}</td>
+                
+                
+
+                  </tr>
+                {{/each}}
+              </table>
+        </div>
+      </section>
+      </div> 
+          <div class="cadastro--btn-back">
+          <a href="#"> Voltar </a>
+      </div> 
+</main> 
+

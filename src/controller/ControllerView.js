@@ -94,21 +94,34 @@ module.exports = class views {
   static async cadastroUsuario(req, res) {
     res.render("cadastroUsuario", { layout: "main" });
   }
-  static async consultaOrdemPedido(req, res) {
-    res.render("consultaOrdemPedido", { layout: "main" });
-  }
   static async recuperarSenha(req, res) {
     res.render("recuperarSenha", { layout: "main" });
   }
-  static async statusPedido(req, res) {
-    res.render("statusPedido", { layout: "main" });
+  static async listaPedidos(req, res) {
+
+    const listaPedidos = await order.findAll({
+      raw:true,
+    })
+    res.render("listaPedidos", { layout: "main",listaPedidos});
   }
   static async acessoUsuario(req, res) {
     res.render("acessoUsuario", { layout: "main" });
   }
   static async feedback(req, res) {
-    res.render("feedback", { layout: "main" });
+    const listFeed = await evaluation.findAll(
+
+      {
+        raw: true,
+        limit:4,
+        order:[
+          ['createdAt','DESC',]
+        ],
+        
+
+    });
+    res.render("feedback", { layout: "main",listFeed });
   }
+  
   static async pagamentocredito(req, res) {
     res.render("pagamentocredito", { layout: "main" });
   }
