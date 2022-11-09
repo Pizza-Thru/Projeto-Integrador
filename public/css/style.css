@@ -1629,7 +1629,7 @@ p {
 /*Inicio página de feedback*/
 .container__feedback{
   width: 100%;
-  height: 1500px;
+  height: 1450px;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -1655,7 +1655,7 @@ p {
 display: none;
 }
 .estrelas label i.star__nota{
-font-size: 3.5em;
+font-size: 3.5rem;
 }
 .estrelas label i.star__nota:before {
 content:'\2605';
@@ -1676,7 +1676,7 @@ justify-content: center;
 border-radius:25px ;
 width: 90%;
 background-color: #FCBF49;
-height: 50%;
+height: 500px;
 gap: 5px;
 margin: 0;
 padding:15px 0;
@@ -2468,7 +2468,7 @@ padding: 0 10px;
   display: none;
 }
 .estrelas label i.star__nota{
-  font-size: 3.5em;
+  font-size: 3.5rem;
 }
 .estrelas label i.star__nota:before {
   content:'\2605';
