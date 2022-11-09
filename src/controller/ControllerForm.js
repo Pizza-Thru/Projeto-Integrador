@@ -1,8 +1,10 @@
 const {product, franqueado, evaluation, bank, order, user} = require("../models/models")
 const mercadopago = require ("mercadopago");
-const { json, FLOAT } = require("sequelize");
-mercadopago.configurations.setAccessToken("TEST-3135694526464578-040222-f91f40177f41b05d51570be97d91f72b-209999602");
-
+const { json, FLOAT } = require("sequelize" );
+mercadopago.configurations.setAccessToken ("TEST-3135694526464578-040222-f91f40177f41b05d51570be97d91f72b-209999602");
+mercadopago.configure({
+  access_token: 'TEST-3135694526464578-040222-f91f40177f41b05d51570be97d91f72b-209999602'
+});
 module.exports = class Form {
 
   static async sejaFranqueado(req, res) {

@@ -8,23 +8,23 @@
    <form id="form-checkout" class="main__formulario" action="/pagamentoCredito" method="post">
             <div class="conteiner__formulario">
                 <label class="formulario__label" for="cardNumber"> Numero do cartão</label>
-                <input type="text" name="cardNumber" id="form-checkout__cardNumber" />
+                <input type="text" name="cardNumber" id="form-checkout__cardNumber" required/>
             </div>
             <div class="conteiner__formulario">
                 <label class="formulario__label" for="expirationDate"> Data </label>
-                <input type="text" name="expirationDate" id="form-checkout__expirationDate"/>
+                <input type="text" name="expirationDate" id="form-checkout__expirationDate" required/>
             </div>
             <div class="conteiner__formulario">
                 <label class="formulario__label" for="securityCode"> Codigo de segurança</label>
-                <input type="text" name="securityCode" id="form-checkout__securityCode" />
+                <input type="text" name="securityCode" id="form-checkout__securityCode" required/>
             </div>
             <div class="conteiner__formulario">
                 <label class="formulario__label" for="cardholderName"> Nome no cartão </label>
-                <input type="text" name="cardholderName" id="form-checkout__cardholderName" />
+                <input type="text" name="cardholderName" id="form-checkout__cardholderName" required/>
             </div>
             <div class="conteiner__formulario">
                 <label class="formulario__label" for="cardholderEmail"> Email </label>
-                <input type="text" name="cardholderEmail" id="form-checkout__cardholderEmail" />
+                <input type="email" name="cardholderEmail" id="form-checkout__cardholderEmail" required/>
             </div>
             <div class="conteiner__formulario">
                 <label class="formulario__label" for="form-checkout__issuer">Bandeira do cartão</label>
@@ -40,19 +40,18 @@
             </div>
             <div>
                 <label class="formulario__label" for="identificationNumber"> Numero do documento </label>   
-                <input type="text" name="identificationNumber" id="form-checkout__identificationNumber"/>
+                <input type="text" name="identificationNumber" id="form-checkout__identificationNumber" required/>
             </div>
             <div class="conteiner__formulario" >
                 <button class="formulario__btn" type="submit" id="form-checkout__submit">Pagar</button>
             </div>
-            <progress value="0" class="barra-credito">Carregando...</progress>   
+            <progress value="0" class="progress-bar">Carregando...</progress>   
     </form>
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="https://sdk.mercadopago.com/js/v2">
+    </script>
     <script>
-      const mp = new MercadoPago('TEST-628d8c33-9dfb-442e-b0d7-7adec5fd94f2', {
-            locale: 'pt-BR'
-        })
-      const cardForm = mp.cardForm({
+        const mp = new MercadoPago('TEST-628d8c33-9dfb-442e-b0d7-7adec5fd94f2')
+        const cardForm = mp.cardForm({
             amount: '100.5',
             autoMount: true,
             processingMode: 'aggregator',
