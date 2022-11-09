@@ -1,0 +1,49 @@
+<main class="container__feedback">
+        <h1 class="feedback__titulo">Deixe sua Avaliação</h1>
+
+        <form action="/feedback/avaliacao" method="post" class="l-formulario__feedback" name="formulario__feedback">
+            
+            <div class="l-feedback__avaliacao">
+                <h2 class="feedback__titulo__avaliacao">Avalie-nos</h2>
+                <div class="estrelas">
+                    <input type="radio" id="cm_star-empty" name="star__nota" value="" checked/>
+                    <label for="cm_star-1"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-1" name="star__nota" value='1'/>
+                    <label for="cm_star-2"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-2" name="star__nota" value='2'/>
+                    <label for="cm_star-3"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-3" name="star__nota" value='3'/>
+                    <label for="cm_star-4"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-4" name="star__nota" value='4'/>
+                    <label for="cm_star-5"><i class="star__nota"></i></label>
+                    <input type="radio" id="cm_star-5" name="star__nota" value='5'/>
+                  </div>
+                </div>
+            <label for="feedback__comentario">Deixe um comentário:</label>
+            <textarea id="feedback__comentario" name="feedback__comentario" rows="8" cols="50"></textarea>
+    
+            <input type="submit" value="ENVIAR" class="formulario__btn">
+        </form>
+
+       <section class="l-story__feedback">
+            <h1 class="story__titulo">Avaliações recentes</h1>
+            <div action="/avaliation" class="l-container__story" id="avaliacao" name="avaliacao">
+           
+          
+            {{#each listFeed}}
+                <div class="container__story">
+                <!--<li>{{this.user_id}}</li>-->
+                <li>{{this.name_feed}}</li>
+                <li class="star__img__note">{{this.note}} </li>
+                <li>{{this.comment}}</li>
+              </div>
+             {{/each}}
+
+            </div>
+        </section>
+         <div class="cadastro--btn-back">
+      <a href="#"> Voltar </a>
+    </div>
+    </main>
+    
+   
