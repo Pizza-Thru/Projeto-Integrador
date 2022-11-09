@@ -61,7 +61,7 @@ app.use("/", router);
 
 /* start server */
 conn
-  .sync()
+  //.sync()
   //.sync({force: true}) //Não tirar o comentário pois irá apagar e recriar o banco de dados!!!!!
   .then(() => {
     app.listen(process.env.PORT, () => {
