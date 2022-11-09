@@ -1,56 +1,156 @@
 <body>
-  <div class="conteiner-main__img">
+    <div class="conteiner-main__img">
     <img src="/upload/img/banner-Principal.png" alt="Monte ja sua Pizza" />
   </div>
   <section>
-    <h1 class="header-main__title">Compra no cartão</h1>
+    <h1 class="header-main__title">Compra no cartão de credito</h1>
   </section>
-  <main>
-  <form id="form-checkout" class="main__formulario">
-    <div class="conteiner__formulario">
-        <label class="formulario__label">Numero do cartão</label>
-        <input type="text" id="form-checkout__cardNumber">
-    </div>
-    <div class="conteiner__formulario">
-        <label class="formulario__label">Data de expiração</label>
-        <input type="text" id="form-checkout__expirationDate">
-    </div>
-    <div class="conteiner__formulario">
-        <label class="formulario__label">Codigo de segurança</label>
-        <input type="text" id="form-checkout__securityCode">
-    </div>
-    <div class="conteiner__formulario">
-        <label class="formulario__label">Nome como escrito no cartão</label>
-        <input type="text" id="form-checkout__cardholderName"/>
-    </div>
-    <div class="conteiner__formulario">
-        <label class="formulario__label"> Bandeira do cartão </label>
-        <select id="form-checkout__issuer"></select>
-    </div>
-    <div class="conteiner__formulario">
-        <label class="formulario__label"> Parcelas </label>
-        <select id="form-checkout__installments"></select>
-    </div>
-    <div class="conteiner__formulario">
-        <label class="formulario__label"> Identificação </label>
-        <select id="form-checkout__identificationType"></select>
-    </div>
-    <div>
-        <label class="formulario__label"> CPF </label>
-        <input type="text" id="form-checkout__identificationNumber" />
-    </div>
-    <div>
-        <label class="formulario__label"> E-mail </label>
-        <input type="email" id="form-checkout__cardholderEmail" />
-    </div>
-    
+   <form id="form-checkout" class="main__formulario" action="/pagamentoCredito" method="post">
+            <div class="conteiner__formulario">
+                <label class="formulario__label" for="cardNumber"> Numero do cartão</label>
+                <input type="text" name="cardNumber" id="form-checkout__cardNumber" />
+            </div>
+            <div class="conteiner__formulario">
+                <label class="formulario__label" for="expirationDate"> Data </label>
+                <input type="text" name="expirationDate" id="form-checkout__expirationDate"/>
+            </div>
+            <div class="conteiner__formulario">
+                <label class="formulario__label" for="securityCode"> Codigo de segurança</label>
+                <input type="text" name="securityCode" id="form-checkout__securityCode" />
+            </div>
+            <div class="conteiner__formulario">
+                <label class="formulario__label" for="cardholderName"> Nome no cartão </label>
+                <input type="text" name="cardholderName" id="form-checkout__cardholderName" />
+            </div>
+            <div class="conteiner__formulario">
+                <label class="formulario__label" for="cardholderEmail"> Email </label>
+                <input type="text" name="cardholderEmail" id="form-checkout__cardholderEmail" />
+            </div>
+            <div class="conteiner__formulario">
+                <label class="formulario__label" for="form-checkout__issuer">Bandeira do cartão</label>
+                <select name="issuer" id="form-checkout__issuer"></select>
+            </div>
+            <div class="conteiner__formulario">
+                <label class="formulario__label" for="installments"> Parcelas </label>
+                <select name="installments" id="form-checkout__installments"></select>
+            </div>
+            <div class="conteiner__formulario">
+                <label class="formulario__label" for="identificationType"> Tipo de documento </label>
+                <select name="identificationType" id="form-checkout__identificationType"></select>
+            </div>
+            <div>
+                <label class="formulario__label" for="identificationNumber"> Numero do documento </label>   
+                <input type="text" name="identificationNumber" id="form-checkout__identificationNumber"/>
+            </div>
+            <div class="conteiner__formulario" >
+                <button class="formulario__btn" type="submit" id="form-checkout__submit">Pagar</button>
+            </div>
+            <progress value="0" class="barra-credito">Carregando...</progress>   
+    </form>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+      const mp = new MercadoPago('TEST-628d8c33-9dfb-442e-b0d7-7adec5fd94f2', {
+            locale: 'pt-BR'
+        })
+      const cardForm = mp.cardForm({
+            amount: '100.5',
+            autoMount: true,
+            processingMode: 'aggregator',
+            form: {
+                id: 'form-checkout',
+                cardholderName: {
+                    id: 'form-checkout__cardholderName',
+                    placeholder: 'Cardholder name',
+                },
+                cardholderEmail: {
+                    id: 'form-checkout__cardholderEmail',
+                    placeholder: 'Email',
+                },
+                cardNumber: {
+                    id: 'form-checkout__cardNumber',
+                    placeholder: 'Card number',
+                },
+                expirationDate: {
+                    id: 'form-checkout__expirationDate',
+                    placeholder: 'MM/YYYY'
+                },
+                securityCode: {
+                    id: 'form-checkout__securityCode',
+                    placeholder: 'CVV',
+                },
+                installments: {
+                    id: 'form-checkout__installments',
+                    placeholder: 'Total installments'
+                },
+                identificationType: {
+                    id: 'form-checkout__identificationType',
+                    placeholder: 'Document type'
+                },
+                identificationNumber: {
+                    id: 'form-checkout__identificationNumber',
+                    placeholder: 'Document number'
+                },
+                issuer: {
+                    id: 'form-checkout__issuer',
+                    placeholder: 'Issuer'
+                }
+            },
+            callbacks: {
+                onFormMounted: error => {
+                    if (error) return console.warn('Form Mounted handling error: ', error)
+                    console.log('Form mounted')
+                },
+                onFormUnmounted: error => {
+                    if (error) return console.warn('Form Unmounted handling error: ', error)
+                    console.log('Form unmounted')
+                },
+                onIdentificationTypesReceived: (error, identificationTypes) => {
+                    if (error) return console.warn('identificationTypes handling error: ', error)
+                    console.log('Identification types available: ', identificationTypes)
+                },
+                onPaymentMethodsReceived: (error, paymentMethods) => {
+                    if (error) return console.warn('paymentMethods handling error: ', error)
+                    console.log('Payment Methods available: ', paymentMethods)
+                },
+                onIssuersReceived: (error, issuers) => {
+                    if (error) return console.warn('issuers handling error: ', error)
+                    console.log('Issuers available: ', issuers)
+                },
+                onInstallmentsReceived: (error, installments) => {
+                    if (error) return console.warn('installments handling error: ', error)
+                    console.log('Installments available: ', installments)
+                },
+                onCardTokenReceived: (error, token) => {
+                    if (error) return console.warn('Token handling error: ', error)
+                    console.log('Token available: ', token)
+                },
+                onSubmit: (event) => {
+                    event.preventDefault();
+                    const cardData = cardForm.getCardFormData();
+                    console.log('CardForm data available: ', cardData)
+                },
+                onFetching:(resource) => {
+                    console.log('Fetching resource: ', resource)
 
-    <button class="formulario__btn" type="submit" id="form-checkout__submit">Pagar</button>
-    <progress value="0" class="progress-bar">Carregando...</progress>
-  </form>
-  </main>
-  <script defer src="/js/finalizacaoPagamentoCartao"></script>
-  <script src="https://sdk.mercadopago.com/js/v2">
-  const mp = new MercadoPago("TEST-628d8c33-9dfb-442e-b0d7-7adec5fd94f2");
-  </script>
+                    // Animate progress bar
+                    const progressBar = document.querySelector('.progress-bar')
+                    progressBar.removeAttribute('value')
+
+                    return () => {
+                        progressBar.setAttribute('value', '0')
+                    }
+                },
+                onError: (error, event) => {
+                    console.log(event, error);
+                },
+                onValidityChange: (error, field) => {
+                    if (error) return error.forEach(e => console.log(`${field}: ${e.message}`));
+                    console.log(`${field} is valid`);
+                },
+                onReady: () => {
+                    console.log("CardForm ready");
+                }
+            }
+        })
+    </script>
 </body>
