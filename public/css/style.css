@@ -909,8 +909,7 @@ margin-bottom: -3%;
   color: #FFFFFF;
   border: black solid 1px;
   width: 30%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 #cadastro__input-err{
@@ -1533,14 +1532,13 @@ p {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   /* or 120% */
   text-align: center;
   color: #FFFFFF;
   border: black solid 1px;
   width: 40%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .container__acesso{
   width: 100%;
@@ -2438,7 +2436,7 @@ padding: 0 10px;
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
-  margin-top: 50px;
+  margin: 0 auto;
   cursor: pointer;
 }
 .botao__formulario__paulo:active{
