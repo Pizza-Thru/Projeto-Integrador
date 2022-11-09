@@ -107,7 +107,7 @@ module.exports = class views {
   static async acessoUsuario(req, res) {
     res.render("acessoUsuario", { layout: "main" });
   }
-  static async feedback(req, res) {
+  static async avaliacao(req, res) {
     const listFeed = await evaluation.findAll(
 
       {
@@ -119,7 +119,7 @@ module.exports = class views {
         
 
     });
-    res.render("feedback", { layout: "main",listFeed });
+    res.render("avaliacao", { layout: "main",listFeed });
   }
   
   static async pagamentocredito(req, res) {
