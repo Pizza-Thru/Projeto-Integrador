@@ -27,14 +27,14 @@
               <table>
                 <tr> 
                   <th>Nº Pedido </th>
-                  <th>Cliente</th>
                   <th>Status do Pagamento</th>
+                  <th>Consultar pedido</th>
                   </tr>
                 {{#each listaPedidos}}
                   <tr>
                 <td>{{this.id_order}}</td>
-                <td>Nome</td>
                 <td>{{this.status_order}}</td>
+                <td class="btn--listaPedidos"><a  href="/admin/ordem-do-pedido/{{this.id_order}}">Consultar</a></td>
                 
                 
 
