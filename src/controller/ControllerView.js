@@ -126,10 +126,6 @@ module.exports = class views {
     res.render("pagamentocredito", { layout: "main" });
   }
 
-  static async pagamentodebito(req, res) {
-    res.render("pagamentodebito", { layout: "main" });
-  }
-
   static async produtosLista(req, res) {
     const productList = await product.findAll({raw: true})
     res.render("produtosLista", { layout: "mainAdm", productList});
@@ -152,4 +148,3 @@ module.exports = class views {
   }
 
 }
-

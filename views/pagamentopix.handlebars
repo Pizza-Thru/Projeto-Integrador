@@ -7,7 +7,7 @@
   </section>
   <main>
     <div class="formulario">
-      <form class="main__formulario" id="form-checkout" action="/process_payment" method="POST">
+      <form class="main__formulario" id="form-checkout" action="/pagamentopix" method="POST">
         <div class="conteiner__formulario">
           <label class="formulario__label" for="payerFirstName">Nome</label>
           <input id="form-checkout__payerFirstName" name="payerFirstName" type="text"/>
@@ -35,13 +35,13 @@
             type="hidden"
             name="transactionAmount"
             id="transactionAmount"
-            value="100"
+            value="500"
           />
           <input
             type="hidden"
             name="description"
             id="description"
-            value="Nome do Produto"
+            value="Pizza tal"
           />
         <button class="formulario__btn" type="submit">Pagar</button>
         </div>

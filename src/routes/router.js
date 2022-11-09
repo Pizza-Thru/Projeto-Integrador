@@ -46,24 +46,19 @@ router.put('/statusPagamentos',form.statusPagamento);
 router.get('/listaPedidos',views.listaPedidos);
 
 
-router.get('/pagamentocredito', views.pagamentocredito) //falta css
+router.get('/pagamentocredito', views.pagamentocredito) 
 
-//router.post('/pagamentocredito', form.finalizarcompraCredito);
-
-router.get('/pagamentodebito', views.pagamentodebito); //falta css
-
-//router.post('/pagamentodebito', form.finalizarcompraDebito);
+router.post('/pagamentoCredito', form.pagamentoCredito);
 
 router.get('/pagamentopix', views.pagamentopix);
 
-router.get('/pagamentopix', form.PagamentoPix);
+router.post('/pagamentopix', form.PagamentoPix);
 
 router.get('/produtosLista', views.produtosLista);
 
 router.get("/del-produto/:id", views.deletarProduto);
 
 router.get("/editarProdutoView", views.editarProdutoView);
-
 
 router.get("/admin/editar-produto", form.editarProduto )
 

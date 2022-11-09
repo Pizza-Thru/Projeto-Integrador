@@ -1,6 +1,8 @@
 const {product, franqueado, evaluation, bank, order, user} = require("../models/models")
-const mercadopago = require ("mercadopago")
+const mercadopago = require ("mercadopago");
+const { json, FLOAT } = require("sequelize");
 mercadopago.configurations.setAccessToken("TEST-3135694526464578-040222-f91f40177f41b05d51570be97d91f72b-209999602");
+
 module.exports = class Form {
 
   static async sejaFranqueado(req, res) {
@@ -82,25 +84,49 @@ module.exports = class Form {
         }).catch ((e)=> {res.send ("Produto não conseguiu ser editado!")})
       }
     
-      static async PagamentoPix (req,res){
+      static async PagamentoPix (req, res){
         var payment_data = {
           transaction_amount: 100,
-          description: 'Título do produto',
+          description: req.body.description,
           payment_method_id: 'pix',
-          date_of_expiration : 300,
+                payer: {
+                      email: req.body.email,
+                      first_name: req.body.payerFirstName,
+                      last_name: req.body.payerLastName,
+                            identification: {
+                                            type: req.body.identificationType,
+                                            number: req.body.identificationNumber
+                                            } 
+                        },
+        };
+        mercadopago.payment.create(payment_data).then ((data) => {
+        let linkPagamento = data.body.point_of_interaction.transaction_data.ticket_url
+        res.redirect(linkPagamento);
+        });
+        
+}
+      static async pagamentoCredito (req, res){
+  
+        var payment_data = {
+          transaction_amount: Number(req.body.transactionAmount),
+          token: req.body.token,
+          installments: Number(req.body.installments),
+          payment_method_id: req.body.paymentMethodId,
           payer: {
-            email: req.body.form-checkout__email,
-            first_name: req.body.payerFirstName,
-            last_name: req.body.payerLastName,
-            identification: {
-                type: req.body.identificationType,
-                number: req.body.identificationNumber
-            }
+            email: req.body.email,
           }
         };
-        
-        await mercadopago.payment.create(payment_data)
-        res.redirect(ticket_url);
+
+        mercadopago.payment.create(payment_data).then((data) =>{
+            res.status(data.status).json({
+              status: data.body.status,
+              status_detail: data.body.status_detail,
+              id: data.body.id
+            });
+            res.redirect("/statusPedido");
+          })
+    
+
       }
 
       static async statusPagamento (){
@@ -112,4 +138,6 @@ module.exports = class Form {
           res.redirect("/listaPedidos")
         }).catch ((e)=> {res.send ("Pedido não conseguiu ser editado!")})
       }
-};
+
+
+}
