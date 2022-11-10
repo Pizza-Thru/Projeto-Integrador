@@ -41,10 +41,10 @@ router.get('/feedback', views.feedback);
 router.post('/feedback/avaliacao', checkAuth, form.feedbackAvaliacao);
  
 router.get('/recuperarSenha', views.recuperarSenha);
+router.post('/recuperarEmail', auth.recuperar);
 
-router.put('/statusPagamentos',form.statusPagamento);
+router.get('/statusPagamentos',form.statusPagamento);
 router.get('/listaPedidos',views.listaPedidos);
-
 
 router.get('/pagamentocredito', views.pagamentocredito) 
 
