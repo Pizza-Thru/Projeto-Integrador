@@ -89,7 +89,9 @@ module.exports = class views {
     res.render("cadastroProduto", { layout: "mainAdm" });
   }
   static async cardapioView(req, res) {
-    res.render("cardapio", { layout: "main" });
+   const products = await product.findAll({raw: true})
+    
+    res.render("cardapio", { layout: "main", products});
   }
   static async cadastroUsuario(req, res) {
     res.render("cadastroUsuario", { layout: "main" });
