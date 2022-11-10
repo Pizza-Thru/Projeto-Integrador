@@ -77,6 +77,12 @@ const product = conn.define("product", {
 		},
 	price_prod:{ type: DataTypes.STRING(10),
 		},
+	price_Small:{ type: DataTypes.STRING(10),
+		allowNull: true},
+	price_Medium:{ type: DataTypes.STRING(10),
+		allowNull: true},
+	price_Large:{ type: DataTypes.STRING(10),
+		allowNull: true},
 	stock_prod:{ type: DataTypes.STRING(5),
 		allowNull: true},
 	description_prod:{ type: DataTypes.STRING(300),
@@ -179,18 +185,6 @@ const evaluation = conn.define("evaluation", {
 
 });
 
-const product_variation = conn.define("product_variation", {
-	id_var : {
-		type: DataTypes.INTEGER,
-		autoIncrement: true,
-		primaryKey: true},
-	type_var:{ type: DataTypes.STRING(30),
-		allowNull: false,},
-	value_var:{ type: DataTypes.STRING(30),
-		allowNull: false,},
-	price_var:{ type: DataTypes.STRING(10),
-		allowNull: false,},
-});	
 
 //RELACIONAMENTOS
 
@@ -212,8 +206,5 @@ bank.belongsTo(user, { foreignKey: 'users_id' });
 //incluindo foreign key na tabela evaluation
 user.hasMany(evaluation, { foreignKey: 'user_id' });
 evaluation.belongsTo(user, { foreignKey: 'user_id' });
-//teste
-product.hasMany(product_variation, { foreignKey: 'prod_id_var' });
-product_variation.belongsTo(product, { foreignKey: 'prod_id_var' });
 
 module.exports = {user, bank,product,admin, order, franqueado, evaluation};
