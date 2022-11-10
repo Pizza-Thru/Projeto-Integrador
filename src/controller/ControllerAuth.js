@@ -81,4 +81,17 @@ module.exports = class auth {
         req.session.destroy()
         res.redirect('/login')
       }
+
+    static async recuperar (req,res){
+        const { recuperar__email} = req.body;
+        // localizar o usuario
+        const users = await user.findOne({ where: { user_email: recuperar__email } });
+
+        if (!users) {
+            req.flash('emailError', 'Usuário incorreto, tente novamente.');
+            res.render('recuperarSenha', { layout: 'main' });
+            return
+        }
+            res.redirect('/login');
+    }
 }
