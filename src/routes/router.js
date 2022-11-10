@@ -26,7 +26,9 @@ router.get("/admin/ordem-do-pedido/:id", views.admOrderView);
 
 router.post("/admin/criar-produto", form.admCreate);
 
-router.get("/cardapio", views.cardapioView); //sem css
+router.get("/cardapio", views.cardapioView);
+
+router.post("/cardapio", form.cardapio);
 
 router.get("/cadastroUsuario", views.cadastroUsuario);
 
