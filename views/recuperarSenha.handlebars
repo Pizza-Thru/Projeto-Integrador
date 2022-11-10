@@ -1,20 +1,22 @@
 <main>
-  <section class="section-banner">
-    <img class="img-banner" src="/upload/img/banner-Principal.png" alt="Banner da Pizza Thru">
-  </section>
   <div class="redefinicao-senha">
     <section class="section-titulo">
       <h1 class="h1-titulo">Redefinir senha</h1>
     </section>
-    <section class="section-email">
+    <form class="section-email" method="post" action="/recuperarEmail">
       <div class="email-group">
         <label class="label-email" for="email">Endereço de e-mail</label>
-        <input  class="input-email" type="email" id="email" name="email" required placeholder="seuemail@email.com "> 
-      </div>  
+        <input  class="input-email" type="email" name="recuperar__email" required placeholder="seuemail@email.com "> 
+      </div>
+      {{#if messages.emailError}}
+      <span class="message loginError">
+        {{messages.emailError}}
+      </span>
+      {{/if}}  
       <div class="button-group">
-        <button class="formulario__btn">Enviar o link de redefinição de senha</button>
+        <button class="formulario__btn">Redefinir senha</button>
       </div> 
-    </section>    
+    </form>    
   </div>  
    <div class="cadastro--btn-back">
       <a href="#"> Voltar </a>
