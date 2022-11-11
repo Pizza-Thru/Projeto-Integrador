@@ -5,37 +5,87 @@
   <div class="cadastro__form">
     <form action="/admin/criar-produto" method="POST">
       <div class="cadastro__box">
-          <label class="cadastro__label" for="name_prod"> Nome </label>
-          <input class="cadastro__input" type="text" id="name_prod" name="name_prod" placeholder="Nome do produto" required maxlength="30">
-          <span role="alert" id="cadastro__input-err" aria-hidden="true">
-            Por favor insira os dados
-           </span>
+        <label class="cadastro__label" for="name_prod"> Nome </label>
+        <input class="cadastro__input" type="text" id="name_prod" name="name_prod" placeholder="Nome do produto"
+          required maxlength="30">
+        <span role="alert" id="cadastro__input-err" aria-hidden="true">
+          Por favor insira os dados
+        </span>
       </div>
       <div class="cadastro__box">
-          <label class="cadastro__label" for="category_prod"> Categoria </label>
-          <input class="cadastro__input"  type="text" id="category_prod" name="category_prod" placeholder="Categoria do produto" required maxlength="30"> </input>
+        <label class="cadastro__label" for="category_prod"> Categoria </label>
+        <input class="cadastro__input" type="text" id="category_prod" name="category_prod"
+          placeholder="Categoria do produto" required maxlength="30"> </input>
       </div>
       <div class="cadastro__box">
-          <label class="cadastro__label" for="description_prod"> Descrição </label>
-          <input class="cadastro__input" type="text" id="description_prod" name="description_prod" placeholder="Descrição do produto" required maxlength="300" size="300">
-      </div>
-     <div class="cadastro__box">
-          <label class="cadastro__label" for="stock_prod"> Estoque </label>
-          <input class="cadastro__input" type="text" id="stock_prod" name="stock_prod" placeholder="Estoque do produto" maxlength="2">
+        <label class="cadastro__label" for="description_prod"> Descrição </label>
+        <input class="cadastro__input" type="text" id="description_prod" name="description_prod"
+          placeholder="Descrição do produto" required maxlength="300" size="300">
       </div>
       <div class="cadastro__box">
-          <label class="cadastro__label" for="image_prod"> Fotos </label>
-          <input class="cadastro__input" type="file" id="image_prod" name="image_prod">
+        <label class="cadastro__label" for="stock_prod"> Estoque </label>
+        <input class="cadastro__input" type="text" id="stock_prod" name="stock_prod" placeholder="Estoque do produto"
+          maxlength="2">
       </div>
       <div class="cadastro__box">
-          <label class="cadastro__label" for="price_prod"> Preço </label>
-          <input class="cadastro__input" type="number" step="0.01" id="price_prod" name="price_prod" placeholder="Insira o valor aqui" maxlength="8">
+        <label class="cadastro__label" for="image_prod"> Fotos </label>
+        <input class="cadastro__input" type="file" id="image_prod" name="image_prod">
+      </div>
+      <div class="cadastro__box">
+        <label class="cadastro__label" for="price_prod"> Preço </label>
+        <input class="cadastro__input" type="number" step="0.01" id="price_prod" name="price_prod"
+          placeholder="Insira o valor aqui" maxlength="8">
+      </div>
+      <div class="cadastro__box">
+        <label class="cadastro__label "> Variável </label>
+        <div></div>
+        <select class="cadastro__input" name="varOption" onchange="atualizouSelect()" required>
+          <option value="varOff">Este Produto não possui variável</option>
+          <option value="varOn">Cadastrar variável</option>
+        </select>
+      </div>
+
+      <div class="cadastro__box" id="variation_box">
+        <label class="cadastro__label" for="price_prod"> PP </label>
+        <input class="cadastro__input" type="number" step="0.01" name="price_pp"
+          placeholder="Insira o valor da pizza pequena" maxlength="8">
+      </div>
+      <div class="cadastro__box" id="variation_box1">
+        <label class="cadastro__label" for="price_prod"> PM </label>
+        <input class="cadastro__input" type="number" step="0.01" name="price_pm"
+          placeholder="Insira o valor da pizza média" maxlength="8">
+      </div>
+      <div class="cadastro__box" id="variation_box2">
+        <label class="cadastro__label" for="price_prod"> PG </label>
+        <input class="cadastro__input" type="number" step="0.01" name="price_pg"
+          placeholder="Insira o valor da pizza grande" maxlength="8">
       </div>
       <input class="cadastro--btn" type="submit" value="Cadastrar">
     </form>
   </div>
-    <div class="cadastro--btn-back">
-      <a href="produtosLista"> Voltar </a>
-    </div>
+
+  <div class="cadastro--btn-back">
+    <a href="produtosLista"> Voltar </a>
   </div>
+  </div>
+  <script>
+  
+    function atualizouSelect(){
+      let varOption = document.querySelector('select[name="varOption"]');
+      let optionValue = varOption.options[varOption.selectedIndex].value;
+
+    if (optionValue == "varOff") {
+      document.getElementById("variation_box").style.display = "none";
+      document.getElementById("variation_box1").style.display = "none";
+      document.getElementById("variation_box2").style.display = "none";
+    }
+    if (optionValue == "varOn") {
+      document.getElementById("variation_box").style.display = "grid";
+      document.getElementById("variation_box1").style.display = "grid";
+      document.getElementById("variation_box2").style.display = "grid";
+    }
+console.log(optionValue)
+    }
+    atualizouSelect()
+  </script>
 </main>
