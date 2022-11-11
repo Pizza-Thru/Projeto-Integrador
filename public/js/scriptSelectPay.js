@@ -5,9 +5,7 @@ formulario.addEventListener('submit', function(event){
   console.log(formadepagamento);
   if (formadepagamento.value === 'cartaocredito') {
     window.location.href = '/pagamentocredito';
-  } else if (formadepagamento.value === 'cartaodebito') {
-    window.location.href = '/pagamentodebito';
-  } else if (formadepagamento.value === 'pix') {
+  } else if (formadepagamento.value === 'pix:id') {
     window.location.href = '/pagamentopix';
   }
 });
