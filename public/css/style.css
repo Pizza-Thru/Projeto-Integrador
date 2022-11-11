@@ -1832,7 +1832,10 @@ p {
 .loginError {
   max-width: 100%;
 }
-
+/*Cadastro Produto Variação de Preço box*/
+.c-variaton{
+  display: none;
+}
 /*Inicio Cardápio*/
 .title__cardapio {
   margin-top: 40px;
@@ -2450,6 +2453,9 @@ p {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+  }
+  .c-variaton{
+    display: none;
   }
 
   .cadastro__label {
