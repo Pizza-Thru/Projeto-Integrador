@@ -1,0 +1,30 @@
+{{#if session.userid}}
+{{else}}
+<main class="container__acesso">
+  <h1 class="acesso__titulo">Entrar</h1>
+
+  <form action="/admin/login" method="post" class="l-formulario__acesso">
+    <h2 class="acesso_texto">Acessar a minha conta</h2>
+    <label class="acesso__label" for="admin_email">E-mail</label>
+    <input class="acesso__campo" type="email" name="admin_email" placeholder="Digite seu e-mail">
+    <label class="acesso__label" for="password_login_adm">Senha</label>
+    <input class="acesso__campo" type="password" name="password_login_adm" placeholder="Digite sua senha">
+    <div class="c-flash_message">
+      {{#if messages.loginError}}
+      <span class="message loginError">
+        {{messages.loginError}}
+      </span>
+      {{/if}}
+    </div>
+    <div class="l-acesso__checkbox">
+      <input class="acesso__campo__checkbox" type="checkbox" id="lembrar__acesso" name="lembrar__acesso">
+      <label class="acesso__label-checkbox" for="lembrar__acesso">Lembrar</label>
+    </div>
+
+    <a class="link__acesso" href="recuperarSenha">Esquecei a minha senha</a>
+
+    <input type="submit" value="ACESSAR" class="formulario__btn">
+  </form>
+  </div>
+</main>
+{{/if}}
