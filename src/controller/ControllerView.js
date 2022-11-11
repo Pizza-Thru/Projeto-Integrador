@@ -138,7 +138,11 @@ module.exports = class views {
   }
 
   static async pagamentopix(req, res) {
-    res.render("pagamentopix", { layout: "main" });
+    const id = req.params.id;
+    const pagamentopix = await order.findOne({ where: { id_order: id },
+      raw:true,
+    })
+    res.render("pagamentopix", { layout: "main", pagamentopix });
   }
 
   static async deletarProduto(req, res) {

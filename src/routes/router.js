@@ -61,7 +61,7 @@ router.get('/pagamentocredito', views.pagamentocredito)
 
 router.post('/pagamentoCredito', form.pagamentoCredito);
 
-router.get('/pagamentopix', views.pagamentopix);
+router.get('/pagamentopix/:id', views.pagamentopix);
 
 router.post('/pagamentopix', form.PagamentoPix);
 
@@ -71,6 +71,6 @@ router.get("/del-produto/:id", views.deletarProduto);
 
 router.get("/editar-produto/:id", views.editarProdutoView);
 
-router.put("/editar-produto/:id", form.editarProduto);
+router.post("/editar-produto/", form.editarProduto);
 
 module.exports = router

@@ -6,45 +6,48 @@
     <h1 class="header-main__title">Pagamento Pix</h1>
   </section>
   <main>
-    <div class="formulario">
+
       <form class="main__formulario" id="form-checkout" action="/pagamentopix" method="POST">
-        <div class="conteiner__formulario">
-          <label class="formulario__label" for="payerFirstName">Nome</label>
-          <input id="form-checkout__payerFirstName" name="payerFirstName" type="text"/>
-        </div>
-        <div class="conteiner__formulario">
-          <label class="formulario__label" for="payerLastName">Sobrenome</label>
-          <input id="form-checkout__payerLastName" name="payerLastName" type="text"/>
-        </div>
-        <div class="conteiner__formulario">
-          <label class="formulario__label" for="email">E-mail</label>
-          <input id="form-checkout__email" name="email" type="text" />
-        </div>
-        <div class="conteiner__formulario">
-          <label class="formulario__label" for="identificationType">Tipo de documento</label>
-          <select id="form-checkout__identificationType" name="identificationType" type="text">
-          </select>
-        </div>
-        <div class="conteiner__formulario">
-          <label class="formulario__label" for="identificationNumber">Número do
-            documento</label>
-          <input id="form-checkout__identificationNumber" name="identificationNumber" type="text"/>
-        </div>
-        <div class="conteiner__formulario">
-          <input
-            type="hidden"
-            name="transactionAmount"
-            id="transactionAmount"
-            value="500"
-          />
-          <input
-            type="hidden"
-            name="description"
-            id="description"
-            value="Pizza tal"
-          />
-        <button class="formulario__btn" type="submit">Pagar</button>
-        </div>
+      <div class="formulario">
+          <div class="conteiner__formulario">
+            <label class="formulario__label" for="id_pedido">ID do pedido</label>
+            <input id="id_pedido" name="id_pedido" readonly value="{{pagamentopix.id_order}}"/>
+          </div>
+          <div class="conteiner__formulario">
+            <label class="formulario__label" for="transaction_amount">Valor do pedido</label>
+            <input id="transaction_amount" name="transaction_amount" type="number" readonly value="{{pagamentopix.total_order}}"/>
+          </div>
+          <div class="conteiner__formulario">
+            <label class="formulario__label" for="payerFirstName">Nome</label>
+            <input id="form-checkout__payerFirstName" name="payerFirstName" type="text"/>
+          </div>
+          <div class="conteiner__formulario">
+            <label class="formulario__label" for="payerLastName">Sobrenome</label>
+            <input id="form-checkout__payerLastName" name="payerLastName" type="text"/>
+          </div>
+          <div class="conteiner__formulario">
+            <label class="formulario__label" for="email">E-mail</label>
+            <input id="form-checkout__email" name="email" type="text" />
+          </div>
+          <div class="conteiner__formulario">
+            <label class="formulario__label" for="identificationType">Tipo de documento</label>
+            <select id="form-checkout__identificationType" name="identificationType" type="text">
+            </select>
+          </div>
+          <div class="conteiner__formulario">
+            <label class="formulario__label" for="identificationNumber">Número do
+              documento</label>
+            <input id="form-checkout__identificationNumber" name="identificationNumber" type="text"/>
+          </div>
+          <div class="conteiner__formulario">
+            <input
+              type="hidden"
+              name="description"
+              id="description"
+              value="Pizza tal"
+            />
+          <button class="formulario__btn" type="submit">Pagar</button>
+          </div>
       </form>
     </div>
   </main>
