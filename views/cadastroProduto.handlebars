@@ -40,22 +40,21 @@
         <label class="cadastro__label "> Variável </label>
         <div></div>
         <select class="cadastro__input" name="varOption" onchange="atualizouSelect()" required>
-          <option value="varOff">Este Produto não possui variável</option>
+          <option selected value="varOff">Este Produto não possui variável</option>
           <option value="varOn">Cadastrar variável</option>
         </select>
       </div>
-
-      <div class="cadastro__box" id="variation_box">
+      <div class="cadastro__box c-variaton" id="variation_box">
         <label class="cadastro__label" for="price_prod"> PP </label>
         <input class="cadastro__input" type="number" step="0.01" name="price_pp"
           placeholder="Insira o valor da pizza pequena" maxlength="8">
       </div>
-      <div class="cadastro__box" id="variation_box1">
+      <div class="cadastro__box c-variaton" id="variation_box1">
         <label class="cadastro__label" for="price_prod"> PM </label>
         <input class="cadastro__input" type="number" step="0.01" name="price_pm"
           placeholder="Insira o valor da pizza média" maxlength="8">
       </div>
-      <div class="cadastro__box" id="variation_box2">
+      <div class="cadastro__box c-variaton" id="variation_box2">
         <label class="cadastro__label" for="price_prod"> PG </label>
         <input class="cadastro__input" type="number" step="0.01" name="price_pg"
           placeholder="Insira o valor da pizza grande" maxlength="8">
@@ -68,24 +67,4 @@
     <a href="produtosLista"> Voltar </a>
   </div>
   </div>
-  <script>
-  
-    function atualizouSelect(){
-      let varOption = document.querySelector('select[name="varOption"]');
-      let optionValue = varOption.options[varOption.selectedIndex].value;
-
-    if (optionValue == "varOff") {
-      document.getElementById("variation_box").style.display = "none";
-      document.getElementById("variation_box1").style.display = "none";
-      document.getElementById("variation_box2").style.display = "none";
-    }
-    if (optionValue == "varOn") {
-      document.getElementById("variation_box").style.display = "grid";
-      document.getElementById("variation_box1").style.display = "grid";
-      document.getElementById("variation_box2").style.display = "grid";
-    }
-console.log(optionValue)
-    }
-    atualizouSelect()
-  </script>
 </main>
