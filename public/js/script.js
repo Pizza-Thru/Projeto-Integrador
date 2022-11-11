@@ -52,3 +52,26 @@ window.onload = function update() {
         }
     }
 }
+
+// Cadastrando variavel
+
+function atualizouSelect(){
+    
+    let varOption = document.querySelector('select[name="varOption"]');
+    let optionValue = varOption.options[varOption.selectedIndex].value;
+
+
+  if (optionValue == "varOff") {
+    document.getElementById("variation_box").style.display = "none";
+    document.getElementById("variation_box1").style.display = "none";
+    document.getElementById("variation_box2").style.display = "none";
+  } else if (optionValue == "varOn") {
+    document.getElementById("variation_box").style.display = "grid";
+    document.getElementById("variation_box1").style.display = "grid";
+    document.getElementById("variation_box2").style.display = "grid";
+  }
+
+console.log(optionValue)
+  }
+  
+  atualizouSelect()
