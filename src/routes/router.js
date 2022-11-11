@@ -54,7 +54,7 @@ router.post('/feedback/avaliacao', checkAuth, form.feedbackAvaliacao);
 router.get('/recuperarSenha', views.recuperarSenha);
 router.post('/recuperarEmail', auth.recuperar);
 
-router.get('/statusPagamentos',form.statusPagamento);
+router.post('/statusPagamentos',form.statusPagamento);
 router.get('/admin/listaPedidos',views.listaPedidos);
 
 router.get('/pagamentocredito', views.pagamentocredito) 
