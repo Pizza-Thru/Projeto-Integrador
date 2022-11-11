@@ -39,9 +39,9 @@ const admin = conn.define("admin", {
 	admin_email :{ type: DataTypes.STRING(100),
 		allowNull: false,},
 	admin_phone	:{ type: DataTypes.STRING(11),
-		allowNull: false,},
+		allowNull: true,},
 	password_login_adm: {
-		type: DataTypes.STRING(30),
+		type: DataTypes.STRING(400),
 		allowNull: false,
 		},
 });
