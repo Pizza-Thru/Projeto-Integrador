@@ -132,15 +132,20 @@ module.exports = class Form {
 
       }
 
-      static async statusPagamento (){
-
-
-        order.put({
-          where: {'id_prod' : req.body.numeroPedido}
-        }).then (()=> {
-          res.redirect("/listaPedidos")
-        }).catch ((e)=> {res.send ("Pedido não conseguiu ser editado!")})
+      
+      static async statusPagamento (req,res){
+          const status = req.body.statusDoPagamento;
+          const num = req.body.numeroPedido;
+          console.log(num,status)
+          
+          await order.update({status_order:status},{
+            where:{
+              id_order:num
+            }
+          })
+          res.redirect("/admin/listaPedidos")
       }
+      
 
       static async cardapio(req, res) {
         const idUser= req.session.userid;
