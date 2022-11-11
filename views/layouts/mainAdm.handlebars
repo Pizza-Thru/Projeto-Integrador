@@ -17,17 +17,15 @@
     <script defer src="/public/js/verificarBotao.js"></script>
     <title>Admin Pizza Thru</title>
   </head>
-  <body>
-    <header class="menu-principalAdm__header">
+  <body class="l-body_admin">
+    {{#if session.userid }}
+    <header class="menu-principal__header">
       <div class="conteiner">
         <div class="menu-principal-conteiner__logo__adm">
           <a href="/" class="menu-principal__logo">Pizza Thru</a>
         </div>
         <div class="menu-principal-conteiner__adm__login">
-          <a href="#" class="menu-principal-lista__login"><img
-              src="/upload/img/iconelogin.png"
-              alt="Ícone de login"
-            /></a>
+          <a href="/logoutAdmin" class="menu-principal-lista__login"><img src="/upload/img/icone-logout.png" alt="icone de logout"></a>
         </div>
         <nav class="nav-principal__header">
           <button
@@ -48,11 +46,8 @@
                 href="/cadastroProduto"
               >CRIAR PRODUTO</a></li>
             <li class="menu-principal-segunda__lista"><a
-                href="/listaPedidos"
+                href="/admin/listaPedidos"
               >LISTA DE PEDIDOS</a></li>
-            <li class="menu-principal-segunda__lista"><a
-                href="/cardapio"
-              >CARDÁPIO</a></li>
             <li class="menu-principal-segunda__lista"><a
                 href="/produtosLista"
               >LISTA DE PRODUTOS</a></li>  
@@ -60,37 +55,10 @@
         </nav>
       </div>
     </header>
+     {{/if}}
     <!--Fim do cabeçalho-->
     {{{body}}}
-    <footer>
-      <!--Inicio do Rodapé-->
-      <div class="conteiner">
-        <div class="footer-conteiner__endereco__adm">
-          <div class="container_endereco">
-            <p>123 Demo Street - New York NY | (555) 555-5555 |
-              email@example.com</p>
-          </div>
-          <nav>
-            <ul class="footer-nav__links">
-              <li class="footer-nav__lista"><img
-                  src="/upload/img/instagramicon.png"
-                  alt="Ícone do Instagram"
-                /></li>
-              <li class="footer-nav__lista"><img
-                  src="/upload/img/twittericon.png"
-                  alt="Ícone do Twitter"
-                />
-              </li>
-              <li class="footer-nav__lista"><img
-                  src="/upload/img/facebookicon.png"
-                  alt="Ícone do Facebook"
-                />
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </footer>
+
   </body>
   <!--Fim do Rodapé-->
 </html>
