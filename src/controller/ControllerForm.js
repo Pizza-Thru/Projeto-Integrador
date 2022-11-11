@@ -85,7 +85,6 @@ module.exports = class Form {
           category_prod: req.body.category_prod,
           description_prod: req.body.description_prod,  
           stock_prod: req.body.stock_prod,
-          image_prod: req.body.image_prod,
           price_prod: req.body.price_prod,
         };
     
@@ -95,7 +94,7 @@ module.exports = class Form {
     
       static async PagamentoPix (req, res){
         var payment_data = {
-          transaction_amount: 100,
+          transaction_amount: Number(req.body.transaction_amount),
           description: req.body.description,
           payment_method_id: 'pix',
                 payer: {
