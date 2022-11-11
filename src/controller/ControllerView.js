@@ -104,10 +104,14 @@ module.exports = class views {
     const listaPedidos = await order.findAll({
       raw:true,
     })
-    res.render("listaPedidos", { layout: "main",listaPedidos});
+    res.render("listaPedidos", { layout: "mainAdm",listaPedidos});
   }
   static async acessoUsuario(req, res) {
     res.render("acessoUsuario", { layout: "main" });
+  }
+
+  static async acessoAdmin(req, res) {
+    res.render("acessoAdmin", { layout: "mainAdm" });
   }
   static async feedback(req, res) {
     const listFeed = await evaluation.findAll(
