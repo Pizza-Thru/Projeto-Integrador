@@ -79,11 +79,18 @@ module.exports = class Form {
     }
 
       static async editarProduto (req, res) { 
-        product.put ({
-          where: {'id_prod' : req.params.id}
-        }).then (()=> {
-          res.redirect("/produtosLista")
-        }).catch ((e)=> {res.send ("Produto não conseguiu ser editado!")})
+        const editProduct = {
+          id_prod: req.body.id_prod,
+          name_prod: req.body.name_prod,
+          category_prod: req.body.category_prod,
+          description_prod: req.body.description_prod,  
+          stock_prod: req.body.stock_prod,
+          image_prod: req.body.image_prod,
+          price_prod: req.body.price_prod,
+        };
+    
+        await product.update(editProduct);
+        res.redirect("/produtosLista");
       }
     
       static async PagamentoPix (req, res){
@@ -108,7 +115,7 @@ module.exports = class Form {
         
 }
       static async pagamentoCredito (req, res){
-  
+       
         var payment_data = {
           transaction_amount: Number(req.body.transactionAmount),
           token: req.body.token,
@@ -120,12 +127,7 @@ module.exports = class Form {
         };
 
         mercadopago.payment.create(payment_data).then((data) =>{
-            res.status(data.status).json({
-              status: data.body.status,
-              status_detail: data.body.status_detail,
-              id: data.body.id
-            });
-            res.redirect("/statusPedido");
+            res.redirect(301, "/statusPedido");
           })
     
 

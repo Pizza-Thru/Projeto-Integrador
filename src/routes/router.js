@@ -69,8 +69,8 @@ router.get('/produtosLista', views.produtosLista);
 
 router.get("/del-produto/:id", views.deletarProduto);
 
-router.get("/editarProdutoView", views.editarProdutoView);
+router.get("/editar-produto/:id", views.editarProdutoView);
 
-router.get("/admin/editar-produto", form.editarProduto )
+router.put("/editar-produto/:id", form.editarProduto);
 
 module.exports = router

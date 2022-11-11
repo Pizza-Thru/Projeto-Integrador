@@ -3,7 +3,12 @@
     <h1 class="cadastro-main__title"> Edição de Produto </h1>
   </header>
   <div class="cadastro__form">
-    <form action="/admin/editar-produto" method="PATCH">
+    {{#each products}}
+    <form action="/editar-produto{{id}}" method="PUT">
+      <div class="cadastro__box">
+        <label class="cadastro__label" for="id_prod">ID do produto</label>
+        <input class="cadastro__input" readonly  type="text" name="id_prod" id="id_prod" value="{{id_prod}}" >
+      </div>
       <div class="cadastro__box">
           <label class="cadastro__label" for="name_prod"> Nome </label>
           <input class="cadastro__input" type="text" id="name_prod" name="name_prod" placeholder="Nome do produto">
@@ -33,6 +38,7 @@
       </div>
       <input class="cadastro--btn" type="submit" value="Editar">
     </form>
+    {{/each}}
   </div>
     <div class="cadastro--btn-back">
       <a href="#"> Voltar </a>

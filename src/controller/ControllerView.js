@@ -150,7 +150,9 @@ module.exports = class views {
 }
 
   static async editarProdutoView (req, res) {
-    res.render("editarProdutoView", { layout: "mainAdm" })
+    const id = req.params.id;
+    const products = await product.findOne({ where: { id_prod: id }, raw: true, });
+    res.render("editarProduto", { layout: "mainAdm", products })
   }
-
+  
 }
