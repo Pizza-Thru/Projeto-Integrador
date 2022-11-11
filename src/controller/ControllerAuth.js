@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs');
-const { user } = require('../models/models');
+const { user, admin } = require('../models/models');
 
 
 module.exports = class auth {
@@ -94,4 +94,56 @@ module.exports = class auth {
         }
             res.redirect('/login');
     }
+
+    static async adminLogin(req, res) {
+        const { admin_email, password_login_adm } = req.body;
+        // localizar o Admin
+        const adminUsers = await admin.findOne({ where: { admin_email: admin_email } });
+
+        if (!adminUsers) {
+            req.flash('loginError', 'Usuário ou senha incorreto, tente novamente.');
+            res.render('acessoAdmin', { layout: 'mainAdm' });
+            return
+        }
+        // Comparar a senha
+        const passwordMatch = bcrypt.compareSync(password_login_adm, adminUsers.password_login_adm);
+        if (!passwordMatch) {
+            req.flash('loginError', 'Usuário ou senha incorreto, tente novamente.');
+            res.render('acessoAdmin', { layout: 'mainAdm' });
+            return
+        }
+        req.session.userid = adminUsers.id_admin;
+
+        req.session.save(() => {
+            res.redirect('/produtosLista');
+        })
+
+    }
+    static async registerAdmin(req, res) {
+        const senha = "123456";
+  
+          const salt = bcrypt.genSaltSync(10);
+          const password = bcrypt.hashSync(senha, salt);
+  
+           const newAdmin = {
+            admin_name:"PizzaThru",
+              admin_email:"pizzathru@gmail.com",
+              password_login_adm: password,
+          };
+  
+          admin.create(newAdmin)
+              .then((newAdmin) => {
+                  req.session.userid = newAdmin.id_admin;
+                  req.session.save(() => {
+                  })
+              })
+              .catch((err) => {
+                  console.log(err);
+              });
+      }
+      static logoutAdm(req, res) {
+        req.session.destroy()
+        res.redirect('/admin')
+      }
+      
 }
