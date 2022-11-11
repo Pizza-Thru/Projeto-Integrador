@@ -4,7 +4,7 @@
       <h1 class="h1-titulo">Resumo de Pedidos</h1>
     </section> 
     <section class="section-dados">
-      <form class="form-dados" action="/statusPagamentos" method="put">
+      <form class="form-dados" action="/statusPagamentos" method="post">
         <div class="input-group-1A">
           <label class="form-dados__label">Nº do Pedido</label>
           <input class="form-dados__input" type="text" name="numeroPedido">
@@ -12,10 +12,10 @@
         <div class="input-group-5A">
           <label class="form-dados__label">Status do Pagamento</label>
           <select class="form-dados__input" name="statusDoPagamento">
-            <option value="pedidoEmAberto">Pedido em Aberto</option>
-            <option value="pagamentoAprovado">Pagamento Aprovado</option>
-            <option value="pedidoPronto">Pedido Pronto</option>
-            <option value="finalizado">Finalizado</option>
+            <option value="Pedido em aberto">Pedido em Aberto</option>
+            <option value="Pagamento Aprovado">Pagamento Aprovado</option>
+            <option value="Pedido Pronto">Pedido Pronto</option>
+            <option value="Finalizado">Finalizado</option>
           </select>
           </div> 
           <div class="button-group-A">
@@ -36,8 +36,6 @@
                 <td>{{this.status_order}}</td>
                 <td class="btn--listaPedidos"><a  href="/admin/ordem-do-pedido/{{this.id_order}}">Consultar</a></td>
                 
-                
-
                   </tr>
                 {{/each}}
               </table>
