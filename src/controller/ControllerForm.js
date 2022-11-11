@@ -54,6 +54,9 @@ module.exports = class Form {
       stock_prod: req.body.stock_prod,
       image_prod: req.body.image_prod,
       price_prod: req.body.price_prod,
+      price_Small: req.body.price_pp,
+      price_Medium: req.body.price_pm,
+      price_Large: req.body.price_pg,
     };
 
     await product.create(newProduct);
