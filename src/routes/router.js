@@ -34,8 +34,17 @@ router.get("/cadastroUsuario", views.cadastroUsuario);
 
 router.post("/cadastroUsuario", auth.register);
 
+router.get('/admin', views.acessoAdmin);
+router.get('/admin/login', views.acessoAdmin);
+router.post('/admin/login', auth.adminLogin);
+
+router.get("/registeruser", auth.registerAdmin)
+router.post("/registeruser", auth.registerAdmin)
+
 router.get('/login', views.acessoUsuario);
 router.post('/login', auth.login);
+
+router.get('/logoutAdmin', auth.logoutAdm); 
 router.get('/logout', auth.logout); 
 
 router.get('/feedback', views.feedback);
@@ -46,7 +55,7 @@ router.get('/recuperarSenha', views.recuperarSenha);
 router.post('/recuperarEmail', auth.recuperar);
 
 router.get('/statusPagamentos',form.statusPagamento);
-router.get('/listaPedidos',views.listaPedidos);
+router.get('/admin/listaPedidos',views.listaPedidos);
 
 router.get('/pagamentocredito', views.pagamentocredito) 
 
