@@ -10,7 +10,7 @@ router.get("/", views.home);
 
 router.get("/finalizarCompra/:id", views.finalizarCompra);
 
-router.get("/realizePedido", views.realizePedido);
+router.get("/realizePedido", checkAuth, views.realizePedido);
 router.post("/realizePedido", checkAuth, form.realizePedido);
 
 router.get("/sejaFranqueado", views.sejaFranqueado);
