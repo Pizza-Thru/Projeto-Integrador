@@ -158,5 +158,12 @@ module.exports = class views {
     const products = await product.findOne({ where: { id_prod: id }, raw: true, });
     res.render("editarProduto", { layout: "mainAdm", products })
   }
-  
+
+  static async deletarPedido(req, res) {
+    order.destroy({
+      where: {'id_order': req.params.id}
+    }).then(() => { 
+    res.redirect("/admin/listaPedidos")
+  }).catch((e)=>{ res.send("Falha ao apagar pedido!")})
+}
 }

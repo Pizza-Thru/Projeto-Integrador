@@ -68,6 +68,7 @@ router.post('/pagamentopix', form.PagamentoPix);
 router.get('/produtosLista', views.produtosLista);
 
 router.get("/del-produto/:id", views.deletarProduto);
+router.get("/del-pedido/:id", views.deletarPedido);
 
 router.get("/editar-produto/:id", views.editarProdutoView);
 

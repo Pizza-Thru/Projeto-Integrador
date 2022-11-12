@@ -29,13 +29,16 @@
                   <th>Nº Pedido </th>
                   <th>Status do Pagamento</th>
                   <th>Consultar pedido</th>
+                  <th>Excluir</th>
                   </tr>
                 {{#each listaPedidos}}
                   <tr>
                 <td>{{this.id_order}}</td>
                 <td>{{this.status_order}}</td>
                 <td class="btn--listaPedidos"><a  href="/admin/ordem-do-pedido/{{this.id_order}}">Consultar</a></td>
-                
+                <td><a href="/del-pedido/{{this.id_order}}"><button><i><span class="material-symbols-outlined">
+                delete
+               </span></i></button></a></td>
                   </tr>
                 {{/each}}
               </table>
