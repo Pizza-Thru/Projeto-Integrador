@@ -19,6 +19,7 @@ router.post("/sejaFranqueado", form.sejaFranqueado);
 
 router.get("/cadastroProduto", checkAuthAdm, views.cadastroProduto);
 
+router.get("/meu-pedido",checkAuth, views.meuPedidoView);
 router.get("/meu-pedido/:id",checkAuth, views.meuPedidoView);
 
 router.get("/pedido-realizado/:id",checkAuth, views.pedRealizadoView);
