@@ -4,6 +4,7 @@ const views = require("../controller/ControllerView");
 const form = require("../controller/ControllerForm");
 const auth = require("../controller/ControllerAuth");
 const checkAuth = require("../helpers/auth").checkAuth;
+const checkAuthAdm = require("../helpers/authAdmin").checkAuthAdm;
 
 router.get("/", views.home);
 
@@ -16,19 +17,15 @@ router.get("/sejaFranqueado", views.sejaFranqueado);
 
 router.post("/sejaFranqueado", form.sejaFranqueado);
 
-router.get("/cadastroProduto", views.cadastroProduto);
+router.get("/cadastroProduto", checkAuthAdm, views.cadastroProduto);
 
 router.get("/meu-pedido/:id",checkAuth, views.meuPedidoView);
 
 router.get("/pedido-realizado/:id",checkAuth, views.pedRealizadoView);
 
-router.get("/admin/ordem-do-pedido/:id", views.admOrderView);
+router.get("/admin/ordem-do-pedido/:id", checkAuthAdm, views.admOrderView);
 
-router.post("/admin/criar-produto", form.admCreate);
-
-router.get("/cardapio", views.cardapioView);
-
-router.post("/cardapio", form.cardapio);
+router.post("/admin/criar-produto", checkAuthAdm, form.admCreate);
 
 router.get("/cadastroUsuario", views.cadastroUsuario);
 
@@ -55,7 +52,8 @@ router.get('/recuperarSenha', views.recuperarSenha);
 router.post('/recuperarEmail', auth.recuperar);
 
 router.post('/statusPagamentos',form.statusPagamento);
-router.get('/admin/listaPedidos',views.listaPedidos);
+router.post('/feedback/avaliacao', checkAuth, form.feedbackAvaliacao);
+router.get('/admin/listaPedidos',checkAuthAdm,views.listaPedidos);
 
 router.get('/pagamentocredito', views.pagamentocredito) 
 
