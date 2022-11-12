@@ -45,7 +45,7 @@ router.post('/login', auth.login);
 router.get('/logoutAdmin', auth.logoutAdm); 
 router.get('/logout', auth.logout); 
 
-router.get('/feedback', views.feedback);
+router.get('/feedback',checkAuth, views.feedback);
 
 router.post('/feedback/avaliacao', checkAuth, form.feedbackAvaliacao);
  
