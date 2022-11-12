@@ -148,34 +148,6 @@ module.exports = class Form {
           })
           res.redirect("/admin/listaPedidos")
       }
-      
-
-      static async cardapio(req, res) {
-        const idUser= req.session.userid;
-        const prices = req.body.sliceprice
-        const price = parseInt(prices)
-
-        const newOrder = {
-        qnt_slice: req.body.qnt_slice,
-        qnt_flavor: "1",
-        flavor_1: req.body.name_prod,
-        flavor_2: "null",
-        type_pasta: "Tradicional",
-        type_border: "Sem Recheio",
-        item_add_1: null,
-        item_add_2: null,
-        obs: null,
-        total_order:parseInt(req.body.sliceprice),
-        user_id: req.session.userid,
-        status_order: "Pedido em aberto",
-        prod_id: req.body.id_prod,
-        
-      };
-
-      await order.create(newOrder);
-      res.redirect(`/finalizarCompra/${idUser}`);
-    }
-
-
+  
 
 }

@@ -4,10 +4,11 @@ const { where } = require("sequelize");
 // create a new controller to render the view
 module.exports = class views {
   static async meuPedidoView(req, res) {
+    const idUser= req.session.userid;
     const id = req.params.id;
     const orders = await order.findOne({ where: { id_order: id }, raw: true, });
 
-    res.render("meuPedido", { layout: "main", orders });
+    res.render("meuPedido", { layout: "main", orders, idUser });
   };
   static async pedRealizadoView(req, res) {
     const id = req.params.id;
@@ -87,11 +88,6 @@ module.exports = class views {
   }
   static async cadastroProduto(req, res) {
     res.render("cadastroProduto", { layout: "mainAdm" });
-  }
-  static async cardapioView(req, res) {
-   const products = await product.findAll({raw: true})
-    
-    res.render("cardapio", { layout: "main", products});
   }
   static async cadastroUsuario(req, res) {
     res.render("cadastroUsuario", { layout: "main" });
