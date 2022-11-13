@@ -3,22 +3,6 @@
     <h1 class="header__title">Finalizar a Compra</h1>
   </header>
   <section class="formulario">
-    <h2 class="header__title">Formas de Pagamento</h2>
-    <form  class="section__formulario" name="formadepagamento">
-      <div class="conteiner-escolhas__pagamentos">
-        <div class="conteiner-formas__pagamento">
-          <label for="cartaodecredito" class="formulario__label" id="label__credito">Cartão de Crédito</label>
-          <input class="c-radio" type="radio" name="Name" id="cartaodecredito" value="cartaocredito"/>
-        </div>
-        <div class="conteiner-formas__pagamento">
-          <label for="cartaodedebito" class="formulario__label" id="label__debito">Cartão de Débito</label>
-          <input class="c-radio" type="radio" name="Name" id="cartaodedebito" value="cartaodebito"/>
-        </div>
-        <div class="conteiner-formas__pagamento">
-          <label for="pix" class="formulario__label" id="label__pix">Pix</label>
-          <input class="c-radio" type="radio" name="Name" id="pix" value="pix"/>
-        </div>
-      </div>
     <section class="resumo__pedido">
       <h2 class="header__title">Resumo do Pedido</h2>
       <div class="formulario__section">
@@ -54,9 +38,10 @@
           <p class="formulario__label">TOTAL</p>
           <span class="itensDoPedido">{{orders.total_order}}</span>
         </div>
-        <input type="submit" class="formulario__btn" value="Finalizar Compra" />
+        <h2 class="header__title">Formas de Pagamento</h2>
+        <a href="/pagamentopix/{{orders.id_order}}"><input type="submit" class="formulario__btn" value="Pagamento PIX" /></a>
+        <a href="/pagamentocredito/{{orders.id_order}}"><input type="submit" class="formulario__btn" value="Pagamento Crédito" /></a>
       </div>
-    </form>
     </section>
   </section>
 </main>
