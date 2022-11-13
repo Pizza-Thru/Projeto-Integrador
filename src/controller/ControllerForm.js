@@ -95,8 +95,11 @@ module.exports = class Form {
           price_prod: req.body.price_prod,
         };
     
-        await product.update(editProduct);
-        res.redirect("/produtosLista");
+        await product.update(editProduct, {
+          where: {'id_prod' : req.body.id_prod}
+        }).then (()=> {
+          res.redirect("/produtosLista")
+        }).catch ((e)=> {res.send ("Produto não conseguiu ser editado!")})
       }
     
       static async PagamentoPix (req, res){

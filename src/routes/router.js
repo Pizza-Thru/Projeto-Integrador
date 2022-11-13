@@ -56,7 +56,7 @@ router.post('/statusPagamentos',form.statusPagamento);
 router.post('/feedback/avaliacao', checkAuth, form.feedbackAvaliacao);
 router.get('/admin/listaPedidos',checkAuthAdm,views.listaPedidos);
 
-router.get('/pagamentocredito', views.pagamentocredito) 
+router.get('/pagamentocredito/:id', views.pagamentocredito) 
 
 router.post('/pagamentoCredito', form.pagamentoCredito);
 
