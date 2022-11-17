@@ -71,14 +71,15 @@ Se tudo estiver correto, o programa ira rodar e criar um banco de dados dentro d
 
 ## 🛠️ Construído com
 
-Linguagens utilizadas
-  <img src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white'/>
-  <img src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white'/>      
-  <img src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black'/> 
-  <img src='https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white'/>
+ - **Linguagens utilizadas** 
+
+<div> <img src='https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black'/> </div>
+<div> <img src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white'/> </div>     
+<div> <img src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black'/> </div>
+<div> <img src='https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white'/> </div>
 
 
-Tecnologias utilizadas
+- **Tecnologias utilizadas**
 
 * [Bcryptjs](https://github.com/kelektiv/node.bcrypt.js) - Encriptador de senhas.
 * [Cookie-session](https://expressjs.com/en/resources/middleware/cookie-session.html) - Recurso de middleware  usado para criar sessões.
