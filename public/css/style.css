@@ -1800,10 +1800,22 @@ p {
 }
 
 /* Fim da lista de produtos */
+
 /* Inicio da pagina pagamento Credito */
 .progress-bar {
   width: 100%;
   height: 20px;
+}
+
+.formulario__pagamento {
+  display: block;
+  width: 80%;
+  height: 40px;
+  color: #fff;
+  background: #d62828;
+  border-radius: 12px;
+  margin: 30px auto;
+  border: none;
 }
 
 /* Fim da pagina pagamento Credito */
@@ -2068,6 +2080,19 @@ p {
     margin: 50px auto;
     border: none;
     cursor: pointer;
+  }
+
+   .formulario__pagamento {
+    display: block;
+    width: 30%;
+    height: 40px;
+    color: #fff;
+    background: #D62828;
+    border-radius: 12px;
+    margin: 50px auto;
+    border: none;
+    cursor: pointer;
+    margin-left: 40%;
   }
 
   .formulario__btn:hover {

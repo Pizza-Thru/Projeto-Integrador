@@ -126,7 +126,7 @@ module.exports = class views {
   
   static async pagamentocredito(req, res) {
     const id = req.params.id;
-    const pagamentocredito = await order.findOne({ where: { user_id: id },
+    const pagamentocredito = await order.findOne({ where: { id_order: id },
       raw:true,
     })
     res.render("pagamentocredito", { layout: "main", pagamentocredito });
@@ -139,7 +139,7 @@ module.exports = class views {
 
   static async pagamentopix(req, res) {
     const id = req.params.id;
-    const pagamentopix = await order.findOne({ where: { user_id: id },
+    const pagamentopix = await order.findOne({ where: { id_order: id },
       raw:true,
     })
     res.render("pagamentopix", { layout: "main", pagamentopix });

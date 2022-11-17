@@ -3,7 +3,7 @@
     <img src="/upload/img/banner-Principal.png" alt="Monte ja sua Pizza" />
   </div>
   <section>
-    <h1 class="header-main__title">Compra no cartão de credito</h1>
+    <h1 class="header-main__title">Compra no cartão de credito (Em construção)</h1>
   </section>
    <form id="form-checkout" class="main__formulario" action="/pagamentoCredito" method="post">
             <div class="conteiner__formulario">
@@ -38,12 +38,12 @@
                 <label class="formulario__label" for="identificationType"> Tipo de documento </label>
                 <select name="identificationType" id="form-checkout__identificationType"></select>
             </div>
-            <div>
+            <div class="conteiner__formulario">
                 <label class="formulario__label" for="identificationNumber"> Numero do documento </label>   
                 <input type="text" name="identificationNumber" id="form-checkout__identificationNumber" required/>
             </div>
             <div class="conteiner__formulario" >
-                <button class="formulario__btn" type="submit" id="form-checkout__submit">Pagar</button>
+                <button class="formulario__pagamento" type="submit" id="form-checkout__submit">Pagar</button>
             </div>
             <progress value="0" class="progress-bar">Carregando...</progress>   
     </form>
