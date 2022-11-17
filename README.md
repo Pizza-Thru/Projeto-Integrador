@@ -82,8 +82,8 @@ Tecnologias utilizadas
 
 * [Bcryptjs](https://github.com/kelektiv/node.bcrypt.js) - Encriptador de senhas.
 * [Cookie-session](https://expressjs.com/en/resources/middleware/cookie-session.html) - Recurso de middleware  usado para criar sessões.
-* [Cookie-parser](https://expressjs.com/en/resources/middleware/cookie-parser.html) - 
-* [Dotenv](https://www.npmjs.com/package/dotenv)
+* [Cookie-parser](https://expressjs.com/en/resources/middleware/cookie-parser.html) - Recurso de middleware usado para cookies.
+* [Dotenv](https://www.npmjs.com/package/dotenv) - Maneira mais fácil de carregar variáveis de configuração personalizadas que o seu aplicativo precisará ter.
 * [Express](https://expressjs.com/) - Web Framework utilizado.
 * [Express-flash](https://www.npmjs.com/package/express-flash) - Extensão do express utilizada para definir uma mensagem flash e renderizar sem um request.
 * [Express-handlebars](https://www.npmjs.com/package/express-handlebars) - Extensão utilizado para usar handlebars juntamente com o express.
