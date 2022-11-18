@@ -110,4 +110,4 @@ Se tudo estiver correto, o programa ira rodar e criar um banco de dados dentro d
 * Agradecimento a Digital House pela realização do projeto;
 * Agradecimento a todos que nos apoiaram nessa grande caminhada seja pais, amigos, esposa, namorada;
 
-- **Um agradecimento especial de toda a equipe, pelo otimo professor que nos ensinou e nos auxilou em varios momentos, mesmo fora dos momentos de aula, sempre esteve lá disposto as nos ajudar e a nos ensinar, sem duvidas um dos maiores professores que existe, que vai ser levado para fora das aulas e do curso como um grande amigo por todos os momentos passados dentro desses 6 meses.**
+- **Um agradecimento especial de toda a equipe, pelos otimos professores, Willian e Awnar que nos ensinou e nos auxilou em varios momentos, mesmo fora dos momentos de aula, sempre esteve lá disposto as nos ajudar e a nos ensinar, sem duvidas um dos maiores professores que existe, que vai ser levado para fora das aulas e do curso como um grande amigo por todos os momentos passados dentro desses 6 meses.**
