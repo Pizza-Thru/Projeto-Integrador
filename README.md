@@ -103,6 +103,7 @@ Se tudo estiver correto, o programa ira rodar e criar um banco de dados dentro d
 * **Desenvolvedora** -  [Aylla Duarte](https://github.com/AyllaDuarte)
 * **Desenvolvedor** -  [Guilherme Venturim](https://github.com/GuilhermeVenturim)
 * **Desenvolvedora** -  [Flavia Castro](https://github.com/fflaviacastro)
+* **Redatora** -  [Johanna Ramos](https://github.com/hannaramosz)
 ## 🎁 Expressões de gratidão
 
 * Agradecimento a todos dessa equipe que foram incriveis ao longo do projeto;
